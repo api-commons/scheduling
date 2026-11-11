@@ -25,7 +25,7 @@ concepts:
     - availabilities
     properties:
       end_at: endDate
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/luma-health-openapi.yaml#GET /availabilities
     - openapi/_original/luma-health-openapi.yaml#GET /availabilities/{availabilitiesId}

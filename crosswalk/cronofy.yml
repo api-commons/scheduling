@@ -23,8 +23,9 @@ concepts:
       location: location
       end_at: end
       start_at: start
+      calendar_id: calendar_id
       name: summary
-    core_coverage: 0.75
+    core_coverage: 0.7
     evidence:
     - openapi/_original/cronofy-openapi.yml#DELETE /calendars/{calendar_id}/events
     - openapi/_original/cronofy-openapi.yml#GET /events

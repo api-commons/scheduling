@@ -6,8 +6,10 @@ concepts:
   calendar:
     path_segment:
     - calendars
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      name: name
+      is_primary: primary
+    core_coverage: 0.5
     evidence:
     - openapi/_original/cal-com-openapi.json#GET /v2/calendars
   calendar_event:
@@ -26,9 +28,13 @@ concepts:
       start_at:
       - start
       - startTime
-      name: title
+      name:
+      - title
+      - name
+      organizer_id: host
       status: status
-    core_coverage: 0.75
+      visibility: visibility
+    core_coverage: 0.7
     evidence:
     - openapi/_original/cal-com-openapi.json#DELETE /v2/events/{uuid}
     - openapi/_original/cal-com-openapi.json#GET /v2/calendars/{calendar}/event/{eventUid}

@@ -28,8 +28,10 @@ concepts:
   availability:
     path_segment:
     - available_slots
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      end_at: end_time
+      staff_id: provider_id
+    core_coverage: 0.5
     evidence:
     - openapi/_original/nexhealth-openapi-original.json#GET /available_slots
   service:
@@ -39,7 +41,6 @@ concepts:
       id: id
       name: name
       duration: minutes
-      location_id: location_id
     core_coverage: 0.75
     evidence:
     - openapi/_original/nexhealth-openapi-original.json#DELETE /appointment_types/{id}

@@ -62,10 +62,10 @@ concepts:
     - appointment-types
     properties:
       id: id
+      name: name
       created_at: createdAt
       is_active: active
-      location_id: locationId
-    core_coverage: 0.25
+    core_coverage: 0.5
     evidence:
     - openapi/_original/zoca-platform-openapi.yml#DELETE /addon-groups/{entityId}/{groupId}/services/{serviceId}
     - openapi/_original/zoca-platform-openapi.yml#DELETE /addons/{entityId}/{addonId}/services/{serviceId}

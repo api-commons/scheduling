@@ -26,6 +26,6 @@ concepts:
       start_at: start
       calendar_id: calendarId
       subject: subject
-    core_coverage: 0.75
+    core_coverage: 0.7
     evidence:
     - openapi/_original/recal-openapi.json#GET /v1/users/{userId}/calendar/events

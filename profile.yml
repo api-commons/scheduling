@@ -66,8 +66,8 @@ concepts:
       - calendar_id
     - name: name
       tier: core
-      providers: 6
-      share: 0.5
+      providers: 7
+      share: 0.583
       type: string
       spellings:
       - name
@@ -82,6 +82,14 @@ concepts:
       - hexColor
       - hex_color
       - backgroundColor
+    - name: is_primary
+      tier: extended
+      providers: 4
+      share: 0.333
+      type: boolean
+      spellings:
+      - primary
+      - is_primary
     - name: description
       tier: extended
       providers: 3
@@ -89,14 +97,6 @@ concepts:
       type: string
       spellings:
       - description
-    - name: is_primary
-      tier: extended
-      providers: 3
-      share: 0.25
-      type: boolean
-      spellings:
-      - primary
-      - is_primary
     - name: time_zone
       tier: extended
       providers: 3
@@ -105,12 +105,15 @@ concepts:
       spellings:
       - timeZone
       - timezone
-    long_tail_count: 79
+    long_tail_count: 81
     long_tail_sample:
     - access_role
+    - credential_id
+    - external_id
     - location
     - metadata
     - provider
+    - read_only
     - a_date
     - a_time
     - a_timezone_data
@@ -133,20 +136,17 @@ concepts:
     - color_hex
     - config_id
     - connected
-    - connected_calendars
     - created_at
-    - credential_id
     - daily_tasks
     - deduplication_policy
     - default_online_meeting_provider
     - default_reminders
+    - delegation_credential_id
     - deployed_plans
     - depot_id
-    - destination_calendar
     - dt_date
+    - email
     - entity_id
-    - etag
-    - external_id
   calendar_event:
     segments_seen:
       events: 9
@@ -231,6 +231,14 @@ concepts:
       spellings:
       - start
       - startTime
+    - name: calendar_id
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - calendarId
+      - calendar_id
     - name: name
       tier: core
       providers: 5
@@ -239,6 +247,16 @@ concepts:
       spellings:
       - title
       - summary
+      - name
+    - name: organizer_id
+      tier: core
+      providers: 5
+      share: 0.556
+      type: object
+      spellings:
+      - organizer
+      - host
+      - organizerId
     - name: recurrence
       tier: core
       providers: 5
@@ -247,22 +265,6 @@ concepts:
       spellings:
       - recurrence
       - recurring
-    - name: calendar_id
-      tier: extended
-      providers: 4
-      share: 0.444
-      type: string
-      spellings:
-      - calendarId
-      - calendar_id
-    - name: organizer_id
-      tier: extended
-      providers: 4
-      share: 0.444
-      type: object
-      spellings:
-      - organizer
-      - organizerId
     - name: status
       tier: extended
       providers: 4
@@ -310,7 +312,14 @@ concepts:
       spellings:
       - updated
       - updated_at
-    long_tail_count: 175
+    - name: visibility
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - visibility
+    long_tail_count: 192
     long_tail_sample:
     - capacity
     - categories
@@ -321,37 +330,37 @@ concepts:
     - locations
     - online_meeting_provider
     - online_meeting_url
+    - reminders
+    - response_status
     - sensitivity
     - show_as
     - type
-    - visibility
     - actor_id
     - allocated_time_chunks
     - allow_new_time_proposals
+    - allowed_edit_types
+    - allowed_recurrence_edit_types
     - assignment_id
     - assignment_sub_id
     - assist
     - attachments
+    - attendees_and_resources
     - background
     - body_preview
     - business_lat
     - business_lng
     - busy
     - calendar_event_owner
+    - can_invite_others
+    - can_modify
+    - can_rsvp
+    - can_see_other_guests
     - cancellation_reason
     - cancelled_at
     - category_override
     - change_key
     - changed_at
     - check_in_closes_at
-    - check_in_opens_at
-    - color
-    - conference_call
-    - confirmed_count
-    - context
-    - cover_image_url
-    - created_date_time
-    - currency
   appointment:
     segments_seen:
       appointments: 16
@@ -534,7 +543,7 @@ concepts:
       type: object
       spellings:
       - patient
-    long_tail_count: 347
+    long_tail_count: 340
     long_tail_sample:
     - metadata
     - source
@@ -574,8 +583,8 @@ concepts:
     - answers
     - appointment_number
     - appointment_status
-    - appointments_count
     - appointments_per_timeslot
+    - appt
   availability:
     segments_seen:
       slots: 5
@@ -612,34 +621,42 @@ concepts:
       tier: long-tail
     properties:
     - name: end_at
-      tier: extended
-      providers: 5
-      share: 0.455
+      tier: core
+      providers: 7
+      share: 0.636
       type: string
       spellings:
       - end_time
       - end
       - endDate
     - name: start_at
-      tier: extended
-      providers: 4
-      share: 0.364
+      tier: core
+      providers: 6
+      share: 0.545
       type: string
       spellings:
       - start_time
       - start
-    long_tail_count: 68
+    - name: staff_id
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: integer
+      spellings:
+      - provider_id
+      - userId
+    long_tail_count: 58
     long_tail_sample:
     - id
     - request_id
     - address_services
     - appointment_type
     - appointment_types
-    - attendees
     - availability_filter_entity_ids
     - availability_filter_values
     - availability_rules
     - booked
+    - booking_url
     - business_lat
     - business_lng
     - calendar_blocked
@@ -653,23 +670,23 @@ concepts:
     - email
     - emails
     - error
-    - expected_host
     - external_id
     - facility
-    - failures
     - filters
-    - first_availability
     - hero_metrics
     - insurance_accepted
     - insurance_providers
-    - interval
     - interval_minutes
     - items
-    - lid
     - locked
-    - meeting_type_override
-    - meeting_type_ref
-    - metadata
+    - offer
+    - operatory_id
+    - order
+    - participants
+    - points
+    - provider
+    - provider_name
+    - required
   service:
     segments_seen:
       services: 6
@@ -727,8 +744,8 @@ concepts:
       - service_id
     - name: name
       tier: core
-      providers: 13
-      share: 0.867
+      providers: 14
+      share: 0.933
       type: string
       spellings:
       - name
@@ -791,14 +808,6 @@ concepts:
       type: string
       spellings:
       - color
-    - name: location_id
-      tier: extended
-      providers: 3
-      share: 0.2
-      type: integer
-      spellings:
-      - location_id
-      - locationId
     - name: slug
       tier: extended
       providers: 3
@@ -814,6 +823,7 @@ concepts:
     - custom_name
     - default_duration
     - deleted_at
+    - location_id
     - locations
     - metadata
     - staff_ids
@@ -848,4 +858,3 @@ concepts:
     - booking_proposal_count
     - booking_requires_authentication
     - booking_window
-    - business_lat

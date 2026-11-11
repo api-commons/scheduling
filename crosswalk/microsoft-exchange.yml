@@ -29,10 +29,10 @@ concepts:
       location: location
       end_at: end
       start_at: start
-      recurrence: recurrence
       organizer_id: organizer
+      recurrence: recurrence
       subject: subject
-    core_coverage: 0.875
+    core_coverage: 0.8
     evidence:
     - openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#DELETE /me/events/{event-id}
     - openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#GET /me/calendars/{calendar-id}/events

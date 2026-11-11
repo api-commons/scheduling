@@ -12,11 +12,11 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| calendar | 13 | 12 | id 67%, name 50% | calendars 7, calendar 6 |
-| calendar_event | 9 | 9 | description 89%, attendees 78%, id 78%, location 78%, end_at 67%, start_at 67%, name 56%, recurrence 56% | events 9, event 3 |
+| calendar | 13 | 12 | id 67%, name 58% | calendars 7, calendar 6 |
+| calendar_event | 9 | 9 | description 89%, attendees 78%, id 78%, location 78%, end_at 67%, start_at 67%, calendar_id 56%, name 56%, organizer_id 56%, recurrence 56% | events 9, event 3 |
 | appointment | 29 | 26 | id 88%, start_at 69%, status 62%, end_at 58% | appointments 16, bookings 12, meetings 4, booking 2 |
-| availability | 13 | 11 |  | slots 5, availability 5, available_slots 2, availabilities 2 |
-| service | 15 | 15 | id 93%, name 87%, description 60%, duration 53% | services 6, appointment_types 4, event-types 2, appointment-types 2 |
+| availability | 13 | 11 | end_at 64%, start_at 55% | slots 5, availability 5, available_slots 2, availabilities 2 |
+| service | 15 | 15 | id 93%, name 93%, description 60%, duration 53% | services 6, appointment_types 4, event-types 2, appointment-types 2 |
 
 Cohort: 112 providers with harvested OpenAPI, 38 crosswalks. Of the providers exposing a calendar: 38% create, 92% list, 31% fetch, 31% update, 23% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -27,7 +27,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 ## What the measurement shows
 
 - Calendar events agree more than anything else here: description, attendees, location, start and end, and recurrence are all core -- the iCalendar shape every calendar API inherits.
-- Availability barely agrees: only end_at reaches half of the providers that expose it. Some return free/busy blocks, some bookable slots, some opening hours.
+- Availability agrees only on start and end: some providers return free/busy blocks, some bookable slots, some opening hours, and a time window is all they share.
 - The cohort is thin for its size (112 tagged providers, 37 mapped). Most scheduling products publish no OpenAPI of their own.
 
 ## Artifacts

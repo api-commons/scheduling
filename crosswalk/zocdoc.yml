@@ -20,7 +20,8 @@ concepts:
   availability:
     path_segment:
     - availability
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      start_at: start_time
+    core_coverage: 0.5
     evidence:
     - openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/provider_locations/availability

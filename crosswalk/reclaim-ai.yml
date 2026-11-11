@@ -22,18 +22,19 @@ concepts:
       attendees: attendees
       id: id
       location: location
-      name: title
-      recurrence:
-      - recurrence
-      - recurring
       calendar_id: calendarId
+      name: title
       organizer_id:
       - organizerId
       - organizer
+      recurrence:
+      - recurrence
+      - recurring
       status: status
       etag: etag
       updated_at: updated
-    core_coverage: 0.75
+      visibility: visibility
+    core_coverage: 0.8
     evidence:
     - openapi/_original/reclaim-ai-openapi.yml#GET /api/changelog/events
     - openapi/_original/reclaim-ai-openapi.yml#GET /api/events

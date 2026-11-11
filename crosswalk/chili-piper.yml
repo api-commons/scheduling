@@ -19,7 +19,8 @@ concepts:
   availability:
     path_segment:
     - slots
-    properties: {}
+    properties:
+      staff_id: userId
     core_coverage: 0.0
     evidence:
     - openapi/_original/chili-piper-availability-inspector-openapi.yaml#POST /v1/org/availability/slots

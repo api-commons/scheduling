@@ -65,6 +65,16 @@
         "startTime"
       ]
     },
+    "calendar_id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "calendarId",
+        "calendar_id"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
@@ -72,7 +82,19 @@
       "x-commons-providers": 5,
       "x-commons-spellings": [
         "title",
-        "summary"
+        "summary",
+        "name"
+      ]
+    },
+    "organizer_id": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "organizer",
+        "host",
+        "organizerId"
       ]
     },
     "recurrence": {
@@ -83,26 +105,6 @@
       "x-commons-spellings": [
         "recurrence",
         "recurring"
-      ]
-    },
-    "calendar_id": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 4,
-      "x-commons-spellings": [
-        "calendarId",
-        "calendar_id"
-      ]
-    },
-    "organizer_id": {
-      "type": "object",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 4,
-      "x-commons-spellings": [
-        "organizer",
-        "organizerId"
       ]
     },
     "status": {
@@ -165,6 +167,15 @@
         "updated_at"
       ],
       "format": "date-time"
+    },
+    "visibility": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "visibility"
+      ]
     }
   },
   "required": [

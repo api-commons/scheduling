@@ -36,8 +36,15 @@
      "GET collection"
     ],
     "properties": {
-     "connectedCalendars": "array",
-     "destinationCalendar": "object"
+     "externalId": "string",
+     "integration": "string",
+     "name": "string",
+     "primary": "boolean",
+     "readOnly": "boolean",
+     "email": "string",
+     "isSelected": "boolean",
+     "credentialId": "number",
+     "delegationCredentialId": "string"
     },
     "evidence": [
      "openapi/_original/cal-com-openapi.json#GET /v2/calendars"
@@ -345,8 +352,6 @@
      "POST collection"
     ],
     "properties": {
-     "asset_events": "array",
-     "total_entries": "integer",
      "id": "integer",
      "asset_id": "integer",
      "uri": null,
@@ -385,7 +390,6 @@
      "source_task_id": "string",
      "timestamp": "string",
      "total_entries": "integer",
-     "asset_events": "array",
      "id": "integer",
      "asset_id": "integer",
      "uri": null,
@@ -509,6 +513,12 @@
      "hosts": "array",
      "calendarEventOwner": "object",
      "source": null,
+     "email": "string",
+     "name": "string",
+     "responseStatus": null,
+     "self": "boolean",
+     "optional": "boolean",
+     "host": "boolean",
      "uuid": "string",
      "slug": "string",
      "startTime": "string",
@@ -604,16 +614,18 @@
      "POST collection"
     ],
     "properties": {
-     "pages": "object",
-     "events": "array",
-     "event_id": "string",
+     "calendar_id": "string",
+     "event_uid": "string",
      "summary": "string",
      "description": "string",
      "start": "string",
      "end": "string",
-     "tzid": "string",
      "location": "object",
-     "attendees": "object",
+     "deleted": "boolean",
+     "free_busy_status": "string",
+     "attendees": "array",
+     "event_id": "string",
+     "tzid": "string",
      "transparency": "string"
     },
     "evidence": [
@@ -675,8 +687,6 @@
      "publish_time": "string",
      "location_id": "string",
      "payload": "object",
-     "events": "array",
-     "pagination": "object",
      "client_id": "integer"
     },
     "evidence": [
@@ -1103,12 +1113,26 @@
      "eventMatcher": null,
      "message": "string",
      "existingMatcher": null,
-     "events": "array",
-     "taskOrHabit": null,
-     "timeoutReached": "boolean",
-     "userInfoMessage": "string",
-     "series": "array",
-     "nextUpcomingEvent": null
+     "attendeesAndResources": "array",
+     "eventDate": "object",
+     "dateMode": "string",
+     "originalStart": "string",
+     "visibility": "string",
+     "freeBusy": "string",
+     "reminders": null,
+     "platformData": "object",
+     "reclaimData": "object",
+     "versionData": "object",
+     "parentRecurrence": null,
+     "conferenceData": null,
+     "selfOrganized": "boolean",
+     "canModify": "boolean",
+     "canInviteOthers": "boolean",
+     "canSeeOtherGuests": "boolean",
+     "canRsvp": "boolean",
+     "isOptimistic": "boolean",
+     "allowedRecurrenceEditTypes": "array",
+     "allowedEditTypes": null
     },
     "evidence": [
      "openapi/_original/reclaim-ai-openapi.yml#GET /api/changelog/events",
@@ -1130,8 +1154,14 @@
      "GET collection"
     ],
     "properties": {
-     "next": "integer",
-     "events": "array"
+     "createdAt": "string",
+     "id": "string",
+     "type": "string",
+     "clusterId": "string",
+     "message": "string",
+     "reason": "string",
+     "source": "string",
+     "involvedObject": "object"
     },
     "evidence": [
      "openapi/_original/runai-openapi-original.json#GET /api/v1/workloads/inferences/revisions/{revisionId}/events",
@@ -1179,9 +1209,11 @@
      "GET collection"
     ],
     "properties": {
-     "events": "array",
-     "hasMore": "boolean",
-     "paginationToken": "string"
+     "data": "string",
+     "delivery": "object",
+     "eventTime": "string",
+     "id": "string",
+     "object": "string"
     },
     "evidence": [
      "openapi/_original/spruce-health-openapi.json#GET /webhooks/endpoints/{endpointId}/events",
@@ -1460,9 +1492,7 @@
      "event_memberships": "array",
      "event_guests": "array",
      "cancellation": "object",
-     "calendar_event": "object",
-     "collection": "array",
-     "pagination": "object"
+     "calendar_event": "object"
     },
     "evidence": [
      "openapi/_original/calendly-openapi.yml#GET /scheduled_events",
@@ -1507,9 +1537,6 @@
      "GET item"
     ],
     "properties": {
-     "bookings": "array",
-     "total_entries": "integer",
-     "links": "object",
      "id": "integer",
      "starts_at": "string",
      "ends_at": "string",
@@ -1523,7 +1550,8 @@
      "appointment_type": "object",
      "business": "object",
      "practitioner": "object",
-     "conflicts": "object"
+     "conflicts": "object",
+     "links": "object"
     },
     "evidence": [
      "openapi/_original/cliniko-openapi.yml#GET /bookings",
@@ -1900,10 +1928,7 @@
      "date": "string",
      "duration": "integer",
      "source": "string",
-     "status": "string",
-     "response": "array",
-     "page": "integer",
-     "size": "integer"
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/luma-health-openapi.yaml#DELETE /appointments/{appointmentId}",
@@ -2226,8 +2251,6 @@
      "POST collection"
     ],
     "properties": {
-     "appointments": "array",
-     "appointmentsCount": "integer",
      "id": "string",
      "provider_id": "string",
      "appointment_type_id": "string",
@@ -2302,11 +2325,6 @@
      "GET item"
     ],
     "properties": {
-     "_items": "array",
-     "page": "integer",
-     "limit": "integer",
-     "pages": "integer",
-     "total": "integer",
      "id": "string",
      "status": "string",
      "start_at": "string",
@@ -2453,8 +2471,10 @@
      "GET collection"
     ],
     "properties": {
-     "slots": "array",
-     "metadata": "object"
+     "start_time": "string",
+     "end_time": "string",
+     "provider_id": "integer",
+     "provider_name": "string"
     },
     "evidence": [
      "openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/available_slots",
@@ -2505,13 +2525,9 @@
      "POST collection"
     ],
     "properties": {
-     "meetingTypeRef": "object",
-     "startTimes": "array",
-     "failures": "object",
-     "expectedHost": null,
-     "attendees": "array",
-     "meetingTypeOverride": "object",
-     "interval": "object"
+     "userId": "string",
+     "required": "boolean",
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/chili-piper-availability-inspector-openapi.yaml#POST /v1/org/availability/slots"
@@ -2527,10 +2543,10 @@
      "POST collection"
     ],
     "properties": {
-     "pages": "object",
-     "free_busy": "array",
+     "calendar_id": "string",
      "start": "string",
      "end": "string",
+     "free_busy_status": "string",
      "participants": "array",
      "required_duration": "object",
      "available_periods": "array"
@@ -2549,12 +2565,20 @@
      "POST collection"
     ],
     "properties": {
-     "timezone": "string",
-     "slotsByVisitType": "array",
-     "providers": "object",
-     "departments": "object",
-     "searchContext": "string",
-     "slots": "array",
+     "previousEndDate": "string",
+     "nextStartDate": "string",
+     "visitTypeDisplayName": "string",
+     "visitTypeName": "string",
+     "visitTypeEmrId": "string",
+     "visitTypeUuids": "array",
+     "forNewPatient": "boolean",
+     "forEstablishedPatient": "boolean",
+     "modality": "string",
+     "scheduleDays": "array",
+     "npi": "string",
+     "departmentEhrIdentifier": "string",
+     "visitTypeId": "string",
+     "duration": "number",
      "latitude": "number",
      "longitude": "number",
      "clinicTypes": "array",
@@ -2668,9 +2692,6 @@
      "PUT item"
     ],
     "properties": {
-     "response": "array",
-     "page": "integer",
-     "size": "integer",
      "_id": "string",
      "user": "string",
      "deleted": "number",
@@ -2754,11 +2775,11 @@
      "GET collection"
     ],
     "properties": {
-     "lid": "integer",
-     "pid": "integer",
+     "time": "string",
+     "end_time": "string",
      "operatory_id": "integer",
-     "slots": "array",
-     "next_available_date": "string"
+     "provider_id": "integer",
+     "working_hour_label_id": "integer"
     },
     "evidence": [
      "openapi/_original/nexhealth-openapi-original.json#GET /available_slots"
@@ -2976,9 +2997,9 @@
     ],
     "properties": {
      "request_id": "string",
-     "provider_location_id": "string",
-     "first_availability": "object",
-     "timeslots": "array"
+     "start_time": "string",
+     "visit_reason_id": "string",
+     "booking_url": "string"
     },
     "evidence": [
      "openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/provider_locations/availability"
@@ -3201,8 +3222,6 @@
      "POST collection"
     ],
     "properties": {
-     "collection": "array",
-     "pagination": "object",
      "active": "boolean",
      "admin_managed": "boolean",
      "booking_method": "string",
@@ -3272,9 +3291,6 @@
      "GET item"
     ],
     "properties": {
-     "appointment_types": "array",
-     "total_entries": "integer",
-     "links": "object",
      "id": "string",
      "name": "string",
      "category": "string",
@@ -3288,7 +3304,8 @@
      "billable_item": "object",
      "product": "object",
      "practitioners": "object",
-     "treatment_note_template": "object"
+     "treatment_note_template": "object",
+     "links": "object"
     },
     "evidence": [
      "openapi/_original/cliniko-openapi.yml#GET /appointment_types",
@@ -3429,9 +3446,6 @@
      "externalId": "object",
      "visible": "integer",
      "dependents": "array",
-     "response": "array",
-     "page": "integer",
-     "size": "integer",
      "deletedBy": "string",
      "deletedAt": "string",
      "specialty": "string",
@@ -3491,8 +3505,6 @@
      "PUT collection"
     ],
     "properties": {
-     "PaginationResponse": "object",
-     "Services": "array",
      "Price": "number",
      "OnlinePrice": "number",
      "TaxIncluded": "number",
@@ -3855,9 +3867,10 @@
      "businessLng": "number",
      "points": "array",
      "heroMetrics": "object",
-     "services": "array",
-     "locationId": "string",
-     "merchantId": "string"
+     "name": "string",
+     "version": "number",
+     "priceMoney": "object",
+     "serviceDuration": "number"
     },
     "evidence": [
      "openapi/_original/zoca-platform-openapi.yml#DELETE /addon-groups/{entityId}/{groupId}/services/{serviceId}",
@@ -4910,7 +4923,6 @@
     "servicetitan",
     "skedulo",
     "spruce-health",
-    "spurwing",
     "zoca"
    ],
    "PascalCase": [

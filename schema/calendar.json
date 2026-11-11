@@ -18,8 +18,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 6,
+      "x-commons-share": 0.583,
+      "x-commons-providers": 7,
       "x-commons-spellings": [
         "name",
         "summary"
@@ -37,6 +37,16 @@
         "backgroundColor"
       ]
     },
+    "is_primary": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "primary",
+        "is_primary"
+      ]
+    },
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -44,16 +54,6 @@
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "description"
-      ]
-    },
-    "is_primary": {
-      "type": "boolean",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 3,
-      "x-commons-spellings": [
-        "primary",
-        "is_primary"
       ]
     },
     "time_zone": {
