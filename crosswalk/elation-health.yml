@@ -15,7 +15,6 @@ concepts:
       duration: duration
       cancellation_reason: reason
       patient: patient
-      metadata: metadata
     core_coverage: 0.5
     evidence:
     - openapi/_original/elation-api-settings.json#DELETE /appointments/{id}/
@@ -29,7 +28,7 @@ concepts:
     properties:
       end_at: end_time
       start_at: start_time
-    core_coverage: 1.0
+    core_coverage: 0.0
     evidence:
     - openapi/_original/elation-api-settings.json#GET /physicians/{id}/availabilities
     - openapi/_original/elation-api-settings.json#PUT /physicians/{id}/availabilities

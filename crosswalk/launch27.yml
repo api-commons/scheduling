@@ -14,9 +14,6 @@ concepts:
       name:
       - name
       - summary
-      metadata:
-      - custom
-      - custom_fields
     core_coverage: 0.5
     evidence:
     - openapi/_original/launch27-openapi.yml#GET /customer/bookings

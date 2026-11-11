@@ -1469,6 +1469,35 @@
      "openapi/_original/calendly-openapi.yml#GET /scheduled_events/{uuid}"
     ]
    },
+   "chili-piper": {
+    "segments": [
+     "meetings"
+    ],
+    "operations": [
+     "PUT collection"
+    ],
+    "properties": {
+     "data": null,
+     "hasMore": "string",
+     "hasMoreItems": "boolean",
+     "workspaceIds": "array",
+     "start": "string",
+     "end": "string",
+     "page": "integer",
+     "pageSize": "integer",
+     "status": "array",
+     "assigneeIds": "array",
+     "hostIds": "array",
+     "guestEmail": "string",
+     "meetingTypeIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/chili-piper-distribution-analysis-openapi.yaml#PUT /v2/org/meetings/meetings",
+     "openapi/_original/chili-piper-meeting-inspector-openapi.yaml#PUT /v2/org/meetings/meetings",
+     "openapi/_original/chili-piper-no-show-analyzer-openapi.yaml#PUT /v2/org/meetings/meetings",
+     "openapi/_original/chili-piper-org-meeting-openapi.yaml#PUT /v2/org/meetings/meetings"
+    ]
+   },
    "cliniko": {
     "segments": [
      "bookings"
@@ -2468,6 +2497,26 @@
      "openapi/_original/cal-com-openapi.json#GET /v2/slots"
     ]
    },
+   "chili-piper": {
+    "segments": [
+     "slots"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "meetingTypeRef": "object",
+     "startTimes": "array",
+     "failures": "object",
+     "expectedHost": null,
+     "attendees": "array",
+     "meetingTypeOverride": "object",
+     "interval": "object"
+    },
+    "evidence": [
+     "openapi/_original/chili-piper-availability-inspector-openapi.yaml#POST /v1/org/availability/slots"
+    ]
+   },
    "cronofy": {
     "segments": [
      "free_busy",
@@ -2489,6 +2538,43 @@
     "evidence": [
      "openapi/_original/cronofy-openapi.yml#GET /free_busy",
      "openapi/_original/cronofy-openapi.yml#POST /availability"
+    ]
+   },
+   "dexcare": {
+    "segments": [
+     "slots"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "timezone": "string",
+     "slotsByVisitType": "array",
+     "providers": "object",
+     "departments": "object",
+     "searchContext": "string",
+     "slots": "array",
+     "latitude": "number",
+     "longitude": "number",
+     "clinicTypes": "array",
+     "radius": "integer",
+     "visitTypeNames": "array",
+     "startDate": "string",
+     "endDate": "string",
+     "patient": "object",
+     "ehrInstances": "array",
+     "departmentIds": "array",
+     "clinicianNPIs": "array",
+     "specialty": "string",
+     "gender": "string",
+     "newOrEstablishedPatient": "string"
+    },
+    "evidence": [
+     "openapi/_original/CareOptionsAPI.json#GET /availability/slots",
+     "openapi/_original/CareOptionsAPI.json#POST /availability/slots",
+     "openapi/_original/dexcare-care-options-openapi.yml#GET /availability/slots",
+     "openapi/_original/dexcare-care-options-openapi.yml#POST /availability/slots"
     ]
    },
    "elation-health": {
@@ -3533,6 +3619,24 @@
     "evidence": [
      "openapi/_original/nomad-http-api-openapi.yml#GET /allocation/{allocID}/services",
      "openapi/_original/nomad-http-api-openapi.yml#GET /services"
+    ]
+   },
+   "planning-center": {
+    "segments": [
+     "service_types"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "relationships": "object",
+     "links": "object"
+    },
+    "evidence": [
+     "openapi/_original/planning-center-openapi.yml#GET /services/v2/service_types"
     ]
    },
    "servicefusion": {
@@ -4717,8 +4821,10 @@
     "cal-com",
     "calendly",
     "checkiday-national-holiday-api",
+    "chili-piper",
     "cliniko",
     "cronofy",
+    "dexcare",
     "digitail",
     "elation-health",
     "gingr",
@@ -4785,6 +4891,8 @@
     "aurinko",
     "cal-com",
     "checkiday-national-holiday-api",
+    "chili-piper",
+    "dexcare",
     "digitail",
     "google-calendar",
     "later",

@@ -201,7 +201,7 @@ paths:
       tags:
       - Appointments
       x-commons-tier: core
-      x-commons-share: 0.893
+      x-commons-share: 0.862
       responses:
         '200':
           description: OK
@@ -226,7 +226,7 @@ paths:
       tags:
       - Appointments
       x-commons-tier: core
-      x-commons-share: 0.714
+      x-commons-share: 0.69
       responses:
         '200':
           description: OK
@@ -247,7 +247,7 @@ paths:
       tags:
       - Appointments
       x-commons-tier: core
-      x-commons-share: 0.75
+      x-commons-share: 0.724
       responses:
         '200':
           description: OK
@@ -260,7 +260,7 @@ paths:
       tags:
       - Appointments
       x-commons-tier: extended
-      x-commons-share: 0.464
+      x-commons-share: 0.448
       responses:
         '200':
           description: OK
@@ -278,7 +278,7 @@ paths:
       tags:
       - Appointments
       x-commons-tier: extended
-      x-commons-share: 0.286
+      x-commons-share: 0.276
       responses:
         '200':
           description: OK
@@ -292,7 +292,7 @@ paths:
       tags:
       - Availabilities
       x-commons-tier: core
-      x-commons-share: 1.0
+      x-commons-share: 0.923
       responses:
         '200':
           description: OK
@@ -317,7 +317,7 @@ paths:
       tags:
       - Availabilities
       x-commons-tier: extended
-      x-commons-share: 0.25
+      x-commons-share: 0.308
       responses:
         '200':
           description: OK

@@ -14,11 +14,11 @@ generated. Every number below is a count of providers.
 | --- | ---: | ---: | --- | --- |
 | calendar | 13 | 12 | id 67%, name 50% | calendars 7, calendar 6 |
 | calendar_event | 9 | 9 | description 89%, attendees 78%, id 78%, location 78%, end_at 67%, start_at 67%, name 56%, recurrence 56% | events 9, event 3 |
-| appointment | 28 | 25 | id 92%, start_at 68%, status 60%, end_at 56% | appointments 16, bookings 12, meetings 3, booking 2 |
-| availability | 12 | 10 | end_at 50% | availability 5, slots 4, available_slots 2, availabilities 2 |
+| appointment | 29 | 26 | id 88%, start_at 69%, status 62%, end_at 58% | appointments 16, bookings 12, meetings 4, booking 2 |
+| availability | 13 | 11 |  | slots 5, availability 5, available_slots 2, availabilities 2 |
 | service | 15 | 15 | id 93%, name 87%, description 60%, duration 53% | services 6, appointment_types 4, event-types 2, appointment-types 2 |
 
-Cohort: 112 providers with harvested OpenAPI, 37 crosswalks. Of the providers exposing a calendar: 38% create, 92% list, 31% fetch, 31% update, 23% delete. Generated 2026-11-10 by build.py.
+Cohort: 112 providers with harvested OpenAPI, 38 crosswalks. Of the providers exposing a calendar: 38% create, 92% list, 31% fetch, 31% update, 23% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

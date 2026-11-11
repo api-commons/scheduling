@@ -356,45 +356,45 @@ concepts:
     segments_seen:
       appointments: 16
       bookings: 12
-      meetings: 3
+      meetings: 4
       booking: 2
       scheduled_events: 1
-    providers_exposing: 28
-    providers_with_readable_schema: 25
+    providers_exposing: 29
+    providers_with_readable_schema: 26
     operations:
     - operation: GET collection
       providers: 25
-      share: 0.893
+      share: 0.862
       tier: core
     - operation: GET item
       providers: 21
-      share: 0.75
+      share: 0.724
       tier: core
     - operation: POST collection
       providers: 20
-      share: 0.714
+      share: 0.69
       tier: core
     - operation: UPDATE item
       providers: 13
-      share: 0.464
+      share: 0.448
       tier: extended
     - operation: DELETE item
       providers: 8
-      share: 0.286
+      share: 0.276
       tier: extended
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.069
+      tier: long-tail
     - operation: POST item
       providers: 1
-      share: 0.036
-      tier: long-tail
-    - operation: UPDATE collection
-      providers: 1
-      share: 0.036
+      share: 0.034
       tier: long-tail
     properties:
     - name: id
       tier: core
       providers: 23
-      share: 0.92
+      share: 0.885
       type: integer
       spellings:
       - id
@@ -405,8 +405,8 @@ concepts:
       - appointment_id
     - name: start_at
       tier: core
-      providers: 17
-      share: 0.68
+      providers: 18
+      share: 0.692
       type: string
       spellings:
       - start_time
@@ -418,8 +418,8 @@ concepts:
       - startsAt
     - name: status
       tier: core
-      providers: 15
-      share: 0.6
+      providers: 16
+      share: 0.615
       type: string
       spellings:
       - status
@@ -427,8 +427,8 @@ concepts:
       - Status
     - name: end_at
       tier: core
-      providers: 14
-      share: 0.56
+      providers: 15
+      share: 0.577
       type: string
       spellings:
       - end_time
@@ -441,7 +441,7 @@ concepts:
     - name: created_at
       tier: extended
       providers: 11
-      share: 0.44
+      share: 0.423
       type: string
       spellings:
       - createdAt
@@ -451,7 +451,7 @@ concepts:
     - name: service_id
       tier: extended
       providers: 11
-      share: 0.44
+      share: 0.423
       type: object
       spellings:
       - service
@@ -465,7 +465,7 @@ concepts:
     - name: location_id
       tier: extended
       providers: 9
-      share: 0.36
+      share: 0.346
       type: string
       spellings:
       - location_id
@@ -475,7 +475,7 @@ concepts:
     - name: customer_id
       tier: extended
       providers: 8
-      share: 0.32
+      share: 0.308
       type: integer
       spellings:
       - patient_id
@@ -487,7 +487,7 @@ concepts:
     - name: description
       tier: extended
       providers: 8
-      share: 0.32
+      share: 0.308
       type: string
       spellings:
       - notes
@@ -496,7 +496,7 @@ concepts:
     - name: duration
       tier: extended
       providers: 7
-      share: 0.28
+      share: 0.269
       type: integer
       spellings:
       - duration
@@ -504,7 +504,7 @@ concepts:
     - name: updated_at
       tier: extended
       providers: 7
-      share: 0.28
+      share: 0.269
       type: string
       spellings:
       - updated_at
@@ -512,7 +512,7 @@ concepts:
     - name: cancellation_reason
       tier: extended
       providers: 6
-      share: 0.24
+      share: 0.231
       type: string
       spellings:
       - cancellation_reason
@@ -521,7 +521,7 @@ concepts:
     - name: name
       tier: extended
       providers: 6
-      share: 0.24
+      share: 0.231
       type: string
       spellings:
       - name
@@ -530,33 +530,19 @@ concepts:
     - name: patient
       tier: extended
       providers: 6
-      share: 0.24
+      share: 0.231
       type: object
       spellings:
       - patient
-    - name: metadata
-      tier: extended
-      providers: 5
-      share: 0.2
-      type: object
-      spellings:
-      - metadata
-      - attributes
-      - custom
-      - custom_fields
-    - name: source
-      tier: extended
-      providers: 5
-      share: 0.2
-      type: string
-      spellings:
-      - source
-    long_tail_count: 339
+    long_tail_count: 347
     long_tail_sample:
+    - metadata
+    - source
     - canceled_at
     - staff_id
     - type
     - email
+    - page_size
     - payment
     - address
     - booked_at
@@ -565,7 +551,6 @@ concepts:
     - datetime
     - event_id
     - guest
-    - page_size
     - phone_number
     - price
     - provider
@@ -591,47 +576,45 @@ concepts:
     - appointment_status
     - appointments_count
     - appointments_per_timeslot
-    - appt
-    - archived_at
   availability:
     segments_seen:
+      slots: 5
       availability: 5
-      slots: 4
       available_slots: 2
       availabilities: 2
       free-busy: 1
-    providers_exposing: 12
-    providers_with_readable_schema: 10
+    providers_exposing: 13
+    providers_with_readable_schema: 11
     operations:
     - operation: GET collection
       providers: 12
-      share: 1.0
+      share: 0.923
       tier: core
     - operation: POST collection
-      providers: 3
-      share: 0.25
+      providers: 4
+      share: 0.308
       tier: extended
     - operation: UPDATE collection
       providers: 2
-      share: 0.167
+      share: 0.154
       tier: long-tail
     - operation: DELETE item
       providers: 1
-      share: 0.083
+      share: 0.077
       tier: long-tail
     - operation: GET item
       providers: 1
-      share: 0.083
+      share: 0.077
       tier: long-tail
     - operation: UPDATE item
       providers: 1
-      share: 0.083
+      share: 0.077
       tier: long-tail
     properties:
     - name: end_at
-      tier: core
+      tier: extended
       providers: 5
-      share: 0.5
+      share: 0.455
       type: string
       spellings:
       - end_time
@@ -640,18 +623,19 @@ concepts:
     - name: start_at
       tier: extended
       providers: 4
-      share: 0.4
+      share: 0.364
       type: string
       spellings:
       - start_time
       - start
-    long_tail_count: 61
+    long_tail_count: 68
     long_tail_sample:
     - id
     - request_id
     - address_services
     - appointment_type
     - appointment_types
+    - attendees
     - availability_filter_entity_ids
     - availability_filter_values
     - availability_rules
@@ -669,24 +653,23 @@ concepts:
     - email
     - emails
     - error
+    - expected_host
     - external_id
     - facility
+    - failures
     - filters
     - first_availability
     - hero_metrics
     - insurance_accepted
     - insurance_providers
+    - interval
     - interval_minutes
     - items
     - lid
     - locked
+    - meeting_type_override
+    - meeting_type_ref
     - metadata
-    - next_available_date
-    - offer
-    - operatory_id
-    - order
-    - participants
-    - pid
   service:
     segments_seen:
       services: 6

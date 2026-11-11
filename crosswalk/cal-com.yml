@@ -58,7 +58,6 @@ concepts:
       name:
       - title
       - name
-      metadata: metadata
     core_coverage: 1.0
     evidence:
     - openapi/_original/cal-com-openapi.json#GET /v2/bookings

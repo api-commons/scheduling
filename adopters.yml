@@ -39,6 +39,12 @@ adopters:
   concepts:
   - appointment
   - service
+- provider: chili-piper
+  apis_io: https://apis.io/providers/chili-piper/
+  crosswalk: crosswalk/chili-piper.yml
+  concepts:
+  - appointment
+  - availability
 - provider: cliniko
   apis_io: https://apis.io/providers/cliniko/
   crosswalk: crosswalk/cliniko.yml

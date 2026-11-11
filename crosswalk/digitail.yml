@@ -16,7 +16,6 @@ concepts:
       duration: duration
       cancellation_reason: cancellation_reason
       patient: patient
-      source: source
     core_coverage: 0.75
     evidence:
     - openapi/_original/digitail-openapi.json#GET /api/v1/appointments

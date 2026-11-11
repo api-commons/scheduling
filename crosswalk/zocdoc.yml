@@ -12,7 +12,6 @@ concepts:
       description: notes
       cancellation_reason: cancellation_reason
       patient: patient
-      source: source
     core_coverage: 0.5
     evidence:
     - openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/appointments

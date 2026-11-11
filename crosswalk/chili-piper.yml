@@ -1,0 +1,25 @@
+provider: chili-piper
+apis_io: https://apis.io/providers/chili-piper/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - meetings
+    properties:
+      start_at: start
+      status: status
+      end_at: end
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/chili-piper-distribution-analysis-openapi.yaml#PUT /v2/org/meetings/meetings
+    - openapi/_original/chili-piper-meeting-inspector-openapi.yaml#PUT /v2/org/meetings/meetings
+    - openapi/_original/chili-piper-no-show-analyzer-openapi.yaml#PUT /v2/org/meetings/meetings
+    - openapi/_original/chili-piper-org-meeting-openapi.yaml#PUT /v2/org/meetings/meetings
+  availability:
+    path_segment:
+    - slots
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/chili-piper-availability-inspector-openapi.yaml#POST /v1/org/availability/slots

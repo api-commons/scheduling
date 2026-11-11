@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/scheduling/main/schema/availability.json",
   "title": "Availability",
-  "description": "The common availability in Calendars and Scheduling, distilled from 10 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common availability in Calendars and Scheduling, distilled from 11 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "end_at": {
       "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.5,
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
       "x-commons-providers": 5,
       "x-commons-spellings": [
         "end_time",
@@ -20,7 +20,7 @@
     "start_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
+      "x-commons-share": 0.364,
       "x-commons-providers": 4,
       "x-commons-spellings": [
         "start_time",
@@ -33,7 +33,7 @@
   "x-commons": {
     "context": "scheduling",
     "concept": "availability",
-    "providers": 10,
+    "providers": 11,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"
