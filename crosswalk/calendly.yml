@@ -1,0 +1,43 @@
+provider: calendly
+apis_io: https://apis.io/providers/calendly/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - scheduled_events
+    properties:
+      id: uri
+      start_at: start_time
+      status: status
+      end_at: end_time
+      created_at: created_at
+      service_id: event_type
+      location_id: location
+      updated_at: updated_at
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/calendly-openapi.yml#GET /scheduled_events
+    - openapi/_original/calendly-openapi.yml#GET /scheduled_events/{uuid}
+  service:
+    path_segment:
+    - event_types
+    properties:
+      id: uri
+      name: name
+      description: description
+      duration: duration
+      created_at: created_at
+      is_active: active
+      updated_at: updated_at
+      color: color
+      slug:
+      - scheduling_url
+      - slug
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/calendly-openapi.yml#GET /event_types
+    - openapi/_original/calendly-openapi.yml#GET /event_types/{uuid}
+    - openapi/_original/calendly-openapi.yml#PATCH /event_types/{uuid}
+    - openapi/_original/calendly-openapi.yml#POST /event_types

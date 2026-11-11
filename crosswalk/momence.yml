@@ -1,0 +1,20 @@
+provider: momence
+apis_io: https://apis.io/providers/momence/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - bookings
+    - appointments
+    properties:
+      id: id
+      start_at: startsAt
+      end_at: endsAt
+      created_at: createdAt
+      service_id: service
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/momence-openapi.yml#GET /api/v2/host/members/{memberId}/appointments
+    - openapi/_original/momence-openapi.yml#GET /api/v2/host/sessions/{sessionId}/bookings
+    - openapi/_original/momence-openapi.yml#POST /api/v2/host/sessions/{sessionId}/waitlist/bookings

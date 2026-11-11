@@ -1,0 +1,844 @@
+[
+ {
+  "slug": "7shifts",
+  "specs": [
+   "openapi/_original/7shifts-openapi.yml"
+  ]
+ },
+ {
+  "slug": "acuity-scheduling",
+  "specs": [
+   "openapi/_original/acuity-scheduling-openapi.yml"
+  ]
+ },
+ {
+  "slug": "advancedmd",
+  "specs": [
+   "openapi/_original/advancedmd-application-access-apis-swagger.json",
+   "openapi/_original/advancedmd-fhir-bulk-api-openapi.json",
+   "openapi/_original/advancedmd-fhir-single-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "agendapro",
+  "specs": [
+   "openapi/_original/agendapro-connect-v3-openapi.yml",
+   "openapi/_original/platform-connect-v3.json"
+  ]
+ },
+ {
+  "slug": "airflow",
+  "specs": [
+   "openapi/_original/airflow-openapi.yml"
+  ]
+ },
+ {
+  "slug": "alayacare",
+  "specs": [
+   "openapi/_original/alayacare-accounting-openapi.yml",
+   "openapi/_original/alayacare-careplan-openapi.yml",
+   "openapi/_original/alayacare-client-openapi.yml",
+   "openapi/_original/alayacare-clinical-openapi.yml",
+   "openapi/_original/alayacare-employee-openapi.yml",
+   "openapi/_original/alayacare-employee-skills-openapi.yml",
+   "openapi/_original/alayacare-employee-unavailability-openapi.yml",
+   "openapi/_original/alayacare-files-openapi.yml",
+   "openapi/_original/alayacare-forms-openapi.yml",
+   "openapi/_original/alayacare-market-openapi.yml",
+   "openapi/_original/alayacare-medication-openapi.yml",
+   "openapi/_original/alayacare-scheduler-openapi.yml",
+   "openapi/_original/alayacare-services-openapi.yml",
+   "openapi/_original/alayacare-tasks-openapi.yml",
+   "openapi/_original/alayacare-tasks-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "amazon-eventbridge-scheduler",
+  "specs": [
+   "openapi/_original/amazon-eventbridge-scheduler-openapi.yml"
+  ]
+ },
+ {
+  "slug": "amazon-workmail",
+  "specs": [
+   "openapi/_original/amazon-workmail-openapi-original.yaml"
+  ]
+ },
+ {
+  "slug": "apache-airflow",
+  "specs": [
+   "openapi/_original/apache-airflow-openapi.yaml",
+   "openapi/_original/apache-airflow-openapi.yml"
+  ]
+ },
+ {
+  "slug": "ashby",
+  "specs": [
+   "openapi/_original/ashby-api-openapi.json",
+   "openapi/_original/ashby-assessments-partner-openapi.json"
+  ]
+ },
+ {
+  "slug": "ashby-hq",
+  "specs": [
+   "openapi/_original/ashby-openapi.yml"
+  ]
+ },
+ {
+  "slug": "assembled",
+  "specs": [
+   "openapi/_original/assembled-assist-api-openapi.yml",
+   "openapi/_original/assembled-filters-api-openapi.yml",
+   "openapi/_original/assembled-qa-api-openapi.yml",
+   "openapi/_original/assembled-scheduling-rules-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "aurinko",
+  "specs": [
+   "openapi/_original/aurinko-openapi.json"
+  ]
+ },
+ {
+  "slug": "avoca",
+  "specs": [
+   "openapi/_original/avoca-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "aws-batch",
+  "specs": [
+   "openapi/_original/aws-batch-openapi.yml"
+  ]
+ },
+ {
+  "slug": "best-practice",
+  "specs": [
+   "openapi/_original/haloconnect-desktop-openapi.json",
+   "openapi/_original/haloconnect-integrator-openapi.json"
+  ]
+ },
+ {
+  "slug": "buildxact",
+  "specs": [
+   "openapi/_original/buildxact-public-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cal-com",
+  "specs": [
+   "openapi/_original/cal-com-openapi.json"
+  ]
+ },
+ {
+  "slug": "calendar-api-ma",
+  "specs": [
+   "openapi/_original/calendar-api-ma-calendar-api-openapi.json",
+   "openapi/_original/calendar-api-ma-calendar-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "calendarific",
+  "specs": [
+   "openapi/_original/calendarific-openapi.yml"
+  ]
+ },
+ {
+  "slug": "calendly",
+  "specs": [
+   "openapi/_original/calendly-openapi.yml"
+  ]
+ },
+ {
+  "slug": "checkiday-national-holiday-api",
+  "specs": [
+   "openapi/_original/checkiday-openapi.yml"
+  ]
+ },
+ {
+  "slug": "chili-piper",
+  "specs": [
+   "openapi/_original/chili-piper-availability-inspector-openapi.yaml",
+   "openapi/_original/chili-piper-chat-conversation-inspector-openapi.yaml",
+   "openapi/_original/chili-piper-concierge-debugger-openapi.yaml",
+   "openapi/_original/chili-piper-concierge-router-builder-openapi.yaml",
+   "openapi/_original/chili-piper-concierge-router-configuration-openapi.yaml",
+   "openapi/_original/chili-piper-distribution-analysis-openapi.yaml",
+   "openapi/_original/chili-piper-distro-debugger-openapi.yaml",
+   "openapi/_original/chili-piper-distro-router-configuration-openapi.yaml",
+   "openapi/_original/chili-piper-handoff-router-configuration-openapi.yaml",
+   "openapi/_original/chili-piper-meeting-inspector-openapi.yaml",
+   "openapi/_original/chili-piper-meeting-type-management-openapi.yaml",
+   "openapi/_original/chili-piper-no-show-analyzer-openapi.yaml",
+   "openapi/_original/chili-piper-org-meeting-openapi.yaml",
+   "openapi/_original/chili-piper-routing-audit-openapi.yaml",
+   "openapi/_original/chili-piper-scheduling-link-management-openapi.yaml",
+   "openapi/_original/chili-piper-user-copy-openapi.yaml",
+   "openapi/_original/chili-piper-user-details-openapi.yaml",
+   "openapi/_original/chili-piper-user-meetings-openapi.yaml",
+   "openapi/_original/chili-piper-user-offboarding-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "cliniko",
+  "specs": [
+   "openapi/_original/cliniko-openapi.yml"
+  ]
+ },
+ {
+  "slug": "commusoft",
+  "specs": [
+   "openapi/_original/commusoft-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "connecteam",
+  "specs": [
+   "openapi/_original/connecteam-openapi.json"
+  ]
+ },
+ {
+  "slug": "cronitor",
+  "specs": [
+   "openapi/_original/cronitor-openapi.json"
+  ]
+ },
+ {
+  "slug": "cronofy",
+  "specs": [
+   "openapi/_original/cronofy-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cyclecalcs",
+  "specs": [
+   "openapi/_original/cyclecalcs-astronomy-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "deputy",
+  "specs": [
+   "openapi/_original/deputy-deputy-openapi.yml",
+   "openapi/_original/deputy-deputy-readme-slices.json",
+   "openapi/_original/deputy-resource-api-readme-slices.json",
+   "openapi/_original/deputy-v1-my-api-readme-slices.json",
+   "openapi/_original/deputy-v1-resource-api-readme-slices.json",
+   "openapi/_original/deputy-v1-supervise-api-readme-slices.json",
+   "openapi/_original/deputy-v2-api-readme-slices.json",
+   "openapi/_original/deputy-v2-scoped-api-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "dexcare",
+  "specs": [
+   "openapi/_original/CareOptionsAPI.json",
+   "openapi/_original/OmniSearchBundled.yaml",
+   "openapi/_original/dexcare-care-options-openapi.yml",
+   "openapi/_original/dexcare-omni-search-openapi.yml",
+   "openapi/_original/dexcare-provider-data-management-openapi.yml",
+   "openapi/_original/dexcare-slots-availability-openapi.yml",
+   "openapi/_original/dexcare-visit-booking-openapi.yml",
+   "openapi/_original/dexcare-visit-service-openapi.yml",
+   "openapi/_original/forq-availabilityBundled.json",
+   "openapi/_original/pdmapi-swagger.yaml",
+   "openapi/_original/v9bundled_public.json",
+   "openapi/_original/visit-booking.json"
+  ]
+ },
+ {
+  "slug": "digitail",
+  "specs": [
+   "openapi/_original/digitail-openapi.json"
+  ]
+ },
+ {
+  "slug": "elation-health",
+  "specs": [
+   "openapi/_original/elation-api-authentication.json",
+   "openapi/_original/elation-api-settings.json",
+   "openapi/_original/elation-billing-api.json",
+   "openapi/_original/elation-care-gaps-api-1.json",
+   "openapi/_original/elation-elation-import-api.json",
+   "openapi/_original/elation-event-subscription-api.json",
+   "openapi/_original/elation-health-api-full-openapi.yaml",
+   "openapi/_original/elation-health-elation-health-api-openapi.yml",
+   "openapi/_original/elation-insurance-api.json",
+   "openapi/_original/elation-messaging-api.json",
+   "openapi/_original/elation-orders-api.json",
+   "openapi/_original/elation-patient-document-api.json",
+   "openapi/_original/elation-patient-profile-api.json",
+   "openapi/_original/elation-practice-api.json",
+   "openapi/_original/elation-premium-patient-insurance-api.json",
+   "openapi/_original/elation-reference-data-api.json",
+   "openapi/_original/elation-scheduling-api.json",
+   "openapi/_original/elation-user-management-api.json",
+   "openapi/_original/elation-visit-notes-api.json"
+  ]
+ },
+ {
+  "slug": "eventwren",
+  "specs": [
+   "openapi/_original/eventwren-openapi-original.yml",
+   "openapi/_original/eventwren-openapi.yml",
+   "openapi/_original/eventwren-openapi_2.yml",
+   "openapi/_original/eventwren-openapi_3.yml"
+  ]
+ },
+ {
+  "slug": "fieldpulse",
+  "specs": [
+   "openapi/_original/fieldpulse-api-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "fulcrumpro",
+  "specs": [
+   "openapi/_original/fulcrumpro-openapi.json"
+  ]
+ },
+ {
+  "slug": "gingr",
+  "specs": [
+   "openapi/_original/gingr-openapi.json"
+  ]
+ },
+ {
+  "slug": "google-calendar",
+  "specs": [
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "google-cloud-scheduler",
+  "specs": [
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "google-workspace",
+  "specs": [
+   "openapi/_original/admin-sdk-directory-api.yml"
+  ]
+ },
+ {
+  "slug": "gorilladesk",
+  "specs": [
+   "openapi/_original/gorilladesk-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hami",
+  "specs": [
+   "openapi/_original/hami-website-discovery-openapi.json"
+  ]
+ },
+ {
+  "slug": "harri",
+  "specs": [
+   "openapi/_original/harri-employee-openapi.yml",
+   "openapi/_original/harri-employer-openapi.json"
+  ]
+ },
+ {
+  "slug": "hashicorp-nomad",
+  "specs": [
+   "openapi/_original/hashicorp-nomad-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hhaexchange",
+  "specs": [
+   "openapi/_original/hhaexchange-fhir-openapi.yml"
+  ]
+ },
+ {
+  "slug": "holidays",
+  "specs": [
+   "openapi/_original/holidays-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "honeybook",
+  "specs": [
+   "openapi/_original/honeybook-openapi.json"
+  ]
+ },
+ {
+  "slug": "hootsuite",
+  "specs": [
+   "openapi/_original/hootsuite-amplify-api-swagger.json",
+   "openapi/_original/hootsuite-analytics-api-openapi.yaml",
+   "openapi/_original/hootsuite-inbox-api-openapi.yaml",
+   "openapi/_original/hootsuite-rest-api-swagger.yaml"
+  ]
+ },
+ {
+  "slug": "housecall-pro",
+  "specs": [
+   "openapi/_original/housecall-pro-public-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "humanity",
+  "specs": [
+   "openapi/_original/humanity-default-openapi.yml",
+   "openapi/_original/humanity-default-readme-slices.json",
+   "openapi/_original/humanity-json-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "intakeq",
+  "specs": [
+   "openapi/_original/intakeq-openapi.yml"
+  ]
+ },
+ {
+  "slug": "intelycare",
+  "specs": [
+   "openapi/_original/intelycare-external-scheduling-openapi.yml",
+   "openapi/_original/intelycare-openapi.json"
+  ]
+ },
+ {
+  "slug": "jane-app",
+  "specs": [
+   "openapi/_original/jane-app-jdp-openapi.yml"
+  ]
+ },
+ {
+  "slug": "jobber",
+  "specs": [
+   "openapi/_original/jobber-developer-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "joblogic",
+  "specs": [
+   "openapi/_original/joblogic-openapi.yml"
+  ]
+ },
+ {
+  "slug": "later",
+  "specs": [
+   "openapi/_original/later-influence-api-openapi-original.json",
+   "openapi/_original/later-influence-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "launch27",
+  "specs": [
+   "openapi/_original/launch27-openapi.yml"
+  ]
+ },
+ {
+  "slug": "leandata",
+  "specs": [
+   "openapi/_original/leandata-bookit-openapi.yml",
+   "openapi/_original/leandata-graph-openapi.yml",
+   "openapi/_original/leandata-matching-openapi.yml"
+  ]
+ },
+ {
+  "slug": "luma",
+  "specs": [
+   "openapi/_original/luma-openapi.json"
+  ]
+ },
+ {
+  "slug": "luma-health",
+  "specs": [
+   "openapi/_original/luma-health-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "marubox",
+  "specs": [
+   "openapi/_original/marubox-openapi.json"
+  ]
+ },
+ {
+  "slug": "microsoft-365",
+  "specs": [
+   "openapi/_original/microsoft-365-openapi.yml"
+  ]
+ },
+ {
+  "slug": "microsoft-azure-batch",
+  "specs": [
+   "openapi/_original/microsoft-azure-batch-batch-service-openapi.json",
+   "openapi/_original/microsoft-azure-batch-management-openapi.json"
+  ]
+ },
+ {
+  "slug": "microsoft-exchange",
+  "specs": [
+   "openapi/_original/microsoft-exchange-admin-api-openapi.yml",
+   "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml",
+   "openapi/_original/microsoft-exchange-graph-contacts-openapi.yml",
+   "openapi/_original/microsoft-exchange-graph-import-export-openapi.yml",
+   "openapi/_original/microsoft-exchange-graph-mail-openapi.yml",
+   "openapi/_original/microsoft-exchange-graph-people-openapi.yml"
+  ]
+ },
+ {
+  "slug": "microsoft-outlook",
+  "specs": [
+   "openapi/_original/microsoft-graph-mail-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mindbody",
+  "specs": [
+   "openapi/_original/mindbody-public-api-v6-openapi-original.yml",
+   "openapi/_original/mindbody-webhooks-api-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "momence",
+  "specs": [
+   "openapi/_original/momence-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mv-sistemas",
+  "specs": [
+   "openapi/_original/mv-sistemas-clinic-agenda-openapi.yaml",
+   "openapi/_original/mv-sistemas-clinic-connect-attendance-openapi.yaml",
+   "openapi/_original/mv-sistemas-clinic-connect-openapi.yaml",
+   "openapi/_original/mv-sistemas-clinic-connect-performance-schedule-openapi.yml",
+   "openapi/_original/mv-sistemas-clinic-patient-audit-openapi.yaml",
+   "openapi/_original/mv-sistemas-events-openapi.json",
+   "openapi/_original/mv-sistemas-face-recognition-openapi.json",
+   "openapi/_original/mv-sistemas-gestao-beneficiarios-openapi.json",
+   "openapi/_original/mv-sistemas-hub-operadora-openapi.yaml",
+   "openapi/_original/mv-sistemas-news-openapi.json",
+   "openapi/_original/mv-sistemas-pendencias-saude-openapi.json",
+   "openapi/_original/mv-sistemas-performance-schedule-webhook-openapi.yml",
+   "openapi/_original/mv-sistemas-personal-attendance-openapi.json",
+   "openapi/_original/mv-sistemas-personal-health-ficha-clinica-openapi.json",
+   "openapi/_original/mv-sistemas-protocolo-entrada-openapi.json",
+   "openapi/_original/mv-sistemas-regulacao-openapi.yaml",
+   "openapi/_original/mv-sistemas-shared-request-openapi.yaml",
+   "openapi/_original/mv-sistemas-users-openapi.json"
+  ]
+ },
+ {
+  "slug": "nexhealth",
+  "specs": [
+   "openapi/_original/nexhealth-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "nomad",
+  "specs": [
+   "openapi/_original/nomad-http-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "nylas",
+  "specs": [
+   "openapi/_original/nylas-api-openapi.yml",
+   "openapi/_original/nylas-templates-workflows-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "optibus",
+  "specs": [
+   "openapi/_original/optibus-operations-openapi.yml"
+  ]
+ },
+ {
+  "slug": "oracle-primavera",
+  "specs": [
+   "openapi/_original/oracle-primavera-p6-eppm-openapi.yml"
+  ]
+ },
+ {
+  "slug": "planning-center",
+  "specs": [
+   "openapi/_original/planning-center-openapi.yml"
+  ]
+ },
+ {
+  "slug": "popp",
+  "specs": [
+   "openapi/_original/popp-api-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "postiz",
+  "specs": [
+   "openapi/_original/postiz-openapi.yml",
+   "openapi/_original/postiz-platform-swagger-openapi.json",
+   "openapi/_original/postiz-public-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "powerschool",
+  "specs": [
+   "openapi/_original/powerschool-powerschool-sis-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "publer",
+  "specs": [
+   "openapi/_original/publer-openapi.yml"
+  ]
+ },
+ {
+  "slug": "publora",
+  "specs": [
+   "openapi/_original/publora-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "qminder",
+  "specs": [
+   "openapi/_original/qminder-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "quinyx",
+  "specs": [
+   "openapi/_original/quinyx-api-v2-openapi.yml",
+   "openapi/_original/quinyx-api-v3-openapi.yml",
+   "openapi/_original/quinyx-userapi-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "recal",
+  "specs": [
+   "openapi/_original/recal-openapi.json"
+  ]
+ },
+ {
+  "slug": "reclaim-ai",
+  "specs": [
+   "openapi/_original/reclaim-ai-openapi.yml"
+  ]
+ },
+ {
+  "slug": "runai",
+  "specs": [
+   "openapi/_original/runai-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "rundeck",
+  "specs": [
+   "openapi/_original/rundeck-openapi.yml"
+  ]
+ },
+ {
+  "slug": "savvycal",
+  "specs": [
+   "openapi/_original/savvycal-meetings-openapi.yml"
+  ]
+ },
+ {
+  "slug": "servicefusion",
+  "specs": [
+   "openapi/_original/servicefusion-openapi.yml"
+  ]
+ },
+ {
+  "slug": "servicem8",
+  "specs": [
+   "openapi/_original/servicem8-openapi.yml"
+  ]
+ },
+ {
+  "slug": "servicetitan",
+  "specs": [
+   "openapi/_original/servicetitan-accounting-api-openapi.yml",
+   "openapi/_original/servicetitan-crm-api-openapi.yml",
+   "openapi/_original/servicetitan-dispatch-api-openapi.yml",
+   "openapi/_original/servicetitan-equipment-systems-api-openapi.yml",
+   "openapi/_original/servicetitan-inventory-api-openapi.yml",
+   "openapi/_original/servicetitan-jpm-api-openapi.yml",
+   "openapi/_original/servicetitan-pricebook-api-openapi.yml",
+   "openapi/_original/servicetitan-settings-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "sesame-hr",
+  "specs": [
+   "openapi/_original/sesame-hr-openapi.yml"
+  ]
+ },
+ {
+  "slug": "shyft",
+  "specs": [
+   "openapi/_original/shyft-customer-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "simpro",
+  "specs": [
+   "openapi/_original/simpro-openapi.yml"
+  ]
+ },
+ {
+  "slug": "skedulo",
+  "specs": [
+   "openapi/_original/skedulo-authentication-openapi.yml",
+   "openapi/_original/skedulo-authorization-openapi.yml",
+   "openapi/_original/skedulo-availability-openapi.yml",
+   "openapi/_original/skedulo-changehistory-openapi.yml",
+   "openapi/_original/skedulo-configurations-openapi.yml",
+   "openapi/_original/skedulo-customfields-openapi.yml",
+   "openapi/_original/skedulo-files-openapi.yml",
+   "openapi/_original/skedulo-geoservices-openapi.yml",
+   "openapi/_original/skedulo-graphql-openapi.yml",
+   "openapi/_original/skedulo-ical-openapi.yml",
+   "openapi/_original/skedulo-notifications-openapi.yml",
+   "openapi/_original/skedulo-onboarding-openapi.yml",
+   "openapi/_original/skedulo-optimization-openapi.yml",
+   "openapi/_original/skedulo-planr-openapi.yml",
+   "openapi/_original/skedulo-recurring-openapi.yml",
+   "openapi/_original/skedulo-resource-tracking-openapi.yml",
+   "openapi/_original/skedulo-rules-openapi.yml",
+   "openapi/_original/skedulo-schedule-openapi.yml",
+   "openapi/_original/skedulo-triggered-actions-openapi.yml",
+   "openapi/_original/skedulo-virtualmeetings-openapi.yml",
+   "openapi/_original/skedulo-webhooks-openapi.yml"
+  ]
+ },
+ {
+  "slug": "skimmer-pool",
+  "specs": [
+   "openapi/_original/skimmer-pool-openapi.yml"
+  ]
+ },
+ {
+  "slug": "spruce-health",
+  "specs": [
+   "openapi/_original/spruce-health-contact-fields-openapi.yml",
+   "openapi/_original/spruce-health-contact-tags-openapi.yml",
+   "openapi/_original/spruce-health-contacts-openapi.yml",
+   "openapi/_original/spruce-health-conversation-item-openapi.yml",
+   "openapi/_original/spruce-health-conversation-tags-openapi.yml",
+   "openapi/_original/spruce-health-conversations-openapi.yml",
+   "openapi/_original/spruce-health-internal-endpoints-openapi.yml",
+   "openapi/_original/spruce-health-media-openapi.yml",
+   "openapi/_original/spruce-health-openapi.json",
+   "openapi/_original/spruce-health-organization-openapi.yml",
+   "openapi/_original/spruce-health-phone-lines-openapi.yml",
+   "openapi/_original/spruce-health-saved-messages-openapi.yml",
+   "openapi/_original/spruce-health-scheduled-messages-openapi.yml",
+   "openapi/_original/spruce-health-teams-openapi.yml",
+   "openapi/_original/spruce-health-transcription-openapi.yml",
+   "openapi/_original/spruce-health-webhooks-openapi.yml"
+  ]
+ },
+ {
+  "slug": "spurwing",
+  "specs": [
+   "openapi/_original/spurwing-openapi.yml"
+  ]
+ },
+ {
+  "slug": "teachworks",
+  "specs": [
+   "openapi/_original/teachworks-openapi.yml"
+  ]
+ },
+ {
+  "slug": "teambridge",
+  "specs": [
+   "openapi/_original/teambridge-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "tradify",
+  "specs": [
+   "openapi/_original/tradify-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tutorcruncher",
+  "specs": [
+   "openapi/_original/tutorcruncher-openapi.yml"
+  ]
+ },
+ {
+  "slug": "volcano",
+  "specs": [
+   "openapi/_original/volcano-job-openapi.yml",
+   "openapi/_original/volcano-podgroup-openapi.yml",
+   "openapi/_original/volcano-queue-openapi.yml"
+  ]
+ },
+ {
+  "slug": "weave",
+  "specs": [
+   "openapi/_original/weave-openapi.yml"
+  ]
+ },
+ {
+  "slug": "wellnessliving",
+  "specs": [
+   "openapi/_original/wellnessliving-openapi.yml"
+  ]
+ },
+ {
+  "slug": "when-i-work",
+  "specs": [
+   "openapi/_original/when-i-work-openapi.yml"
+  ]
+ },
+ {
+  "slug": "workiz",
+  "specs": [
+   "openapi/_original/workiz-openapi.yml"
+  ]
+ },
+ {
+  "slug": "yodeck-signage",
+  "specs": [
+   "openapi/_original/yodeck-signage-openapi.yml"
+  ]
+ },
+ {
+  "slug": "zcal",
+  "specs": [
+   "openapi/_original/zcal-openapi.yml"
+  ]
+ },
+ {
+  "slug": "znanylekarz",
+  "specs": [
+   "openapi/_original/znanylekarz-integrations-api-openapi.json",
+   "openapi/_original/znanylekarz-integrations-api.yml"
+  ]
+ },
+ {
+  "slug": "zoca",
+  "specs": [
+   "openapi/_original/zoca-platform-openapi.yml",
+   "openapi/_original/zoca-platform-swagger.json",
+   "openapi/_original/zoca-public-openapi.yml",
+   "openapi/_original/zoca-public-swagger.json",
+   "openapi/_original/zoca-tasks-openapi.yml",
+   "openapi/_original/zoca-tasks-swagger.json"
+  ]
+ },
+ {
+  "slug": "zocdoc",
+  "specs": [
+   "openapi/_original/zocdoc-zocdoc-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "zoho-mail",
+  "specs": [
+   "openapi/_original/openapi.json"
+  ]
+ },
+ {
+  "slug": "zuper",
+  "specs": [
+   "openapi/_original/zuper-rest-api-openapi.yml"
+  ]
+ }
+]

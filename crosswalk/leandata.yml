@@ -1,0 +1,12 @@
+provider: leandata
+apis_io: https://apis.io/providers/leandata/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - meetings
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/leandata-bookit-openapi.yml#GET /v1/meetings

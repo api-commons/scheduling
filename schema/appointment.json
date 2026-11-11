@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/scheduling/main/schema/appointment.json",
+  "title": "Appointment",
+  "description": "The common appointment in Calendars and Scheduling, distilled from 25 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.92,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "id",
+        "uri",
+        "record_id",
+        "Id",
+        "_id",
+        "appointment_id"
+      ]
+    },
+    "start_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.68,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "start_time",
+        "start",
+        "start_at",
+        "startTime",
+        "starts_at",
+        "StartDate",
+        "startsAt"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "Status"
+      ]
+    },
+    "end_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.56,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "end_time",
+        "end",
+        "end_at",
+        "ends_at",
+        "end_datetime",
+        "endsAt",
+        "endTime"
+      ],
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.44,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created_date",
+        "createdOn"
+      ],
+      "format": "date-time"
+    },
+    "service_id": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.44,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "service",
+        "appointment_type_id",
+        "eventTypeId",
+        "eventType",
+        "appointment_type",
+        "service_id",
+        "event_type",
+        "ServiceId"
+      ]
+    },
+    "location_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.36,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "location_id",
+        "location",
+        "locationId",
+        "LocationId"
+      ]
+    },
+    "customer_id": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.32,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "patient_id",
+        "client_id",
+        "attendee",
+        "ClientId",
+        "booker",
+        "customerId"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.32,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "notes",
+        "description",
+        "note"
+      ]
+    },
+    "duration": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.28,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "duration",
+        "Duration"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.28,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt"
+      ],
+      "format": "date-time"
+    },
+    "cancellation_reason": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "cancellation_reason",
+        "reason",
+        "cancellationReason"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "name",
+        "summary",
+        "title"
+      ]
+    },
+    "patient": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "patient"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "custom",
+        "custom_fields"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "source"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "scheduling",
+    "concept": "appointment",
+    "providers": 25,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

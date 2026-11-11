@@ -1,0 +1,42 @@
+provider: reclaim-ai
+apis_io: https://apis.io/providers/reclaim-ai/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendars
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/reclaim-ai-openapi.yml#GET /api/accounts/calendars
+    - openapi/_original/reclaim-ai-openapi.yml#GET /api/accounts/{accountId}/calendars
+  calendar_event:
+    path_segment:
+    - events
+    - event
+    properties:
+      description: description
+      attendees: attendees
+      id: id
+      location: location
+      name: title
+      recurrence:
+      - recurrence
+      - recurring
+      calendar_id: calendarId
+      organizer_id:
+      - organizerId
+      - organizer
+      status: status
+      etag: etag
+      updated_at: updated
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/reclaim-ai-openapi.yml#GET /api/changelog/events
+    - openapi/_original/reclaim-ai-openapi.yml#GET /api/events
+    - openapi/_original/reclaim-ai-openapi.yml#GET /api/events/{eventId}
+    - openapi/_original/reclaim-ai-openapi.yml#GET /api/schedule-policy/{policyId}/events
+    - openapi/_original/reclaim-ai-openapi.yml#POST /api/matcher/event

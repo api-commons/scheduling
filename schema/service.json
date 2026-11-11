@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/scheduling/main/schema/service.json",
+  "title": "Service",
+  "description": "The common service in Calendars and Scheduling, distilled from 15 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.933,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "id",
+        "uuid",
+        "uri",
+        "_id",
+        "service_id"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.867,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "displayName"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "duration": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.533,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "duration",
+        "duration_in_minutes",
+        "durationMinutes",
+        "minutes"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created_date"
+      ],
+      "format": "date-time"
+    },
+    "is_active": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.467,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "active",
+        "hidden",
+        "status"
+      ]
+    },
+    "price": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "price"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt"
+      ],
+      "format": "date-time"
+    },
+    "color": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.267,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "color"
+      ]
+    },
+    "location_id": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "location_id",
+        "locationId"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "slug",
+        "scheduling_url"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "scheduling",
+    "concept": "service",
+    "providers": 15,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

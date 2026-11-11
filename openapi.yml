@@ -1,0 +1,465 @@
+openapi: 3.1.0
+info:
+  title: Calendars and Scheduling (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Calendars and Scheduling interface, distilled from the harvested OpenAPI of 112 providers
+    in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /calendars:
+    get:
+      operationId: listCalendars
+      summary: List calendars
+      tags:
+      - Calendars
+      x-commons-tier: core
+      x-commons-share: 0.923
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Calendar'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCalendar
+      summary: Create a calendar
+      tags:
+      - Calendars
+      x-commons-tier: extended
+      x-commons-share: 0.385
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /calendars/{calendar_id}:
+    parameters:
+    - $ref: '#/components/parameters/calendar_id'
+    get:
+      operationId: getCalendar
+      summary: Get a calendar
+      tags:
+      - Calendars
+      x-commons-tier: extended
+      x-commons-share: 0.308
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateCalendar
+      summary: Update a calendar
+      tags:
+      - Calendars
+      x-commons-tier: extended
+      x-commons-share: 0.308
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    delete:
+      operationId: deleteCalendar
+      summary: Delete a calendar
+      tags:
+      - Calendars
+      x-commons-tier: extended
+      x-commons-share: 0.231
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /calendars/{calendar_id}/events:
+    parameters:
+    - $ref: '#/components/parameters/calendar_id'
+    get:
+      operationId: listCalendarEvents
+      summary: List events
+      tags:
+      - Calendar Events
+      x-commons-tier: core
+      x-commons-share: 0.889
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/CalendarEvent'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCalendarEvent
+      summary: Create a calendar event
+      tags:
+      - Calendar Events
+      x-commons-tier: core
+      x-commons-share: 0.889
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /calendars/{calendar_id}/events/{calendar_event_id}:
+    parameters:
+    - $ref: '#/components/parameters/calendar_id'
+    - $ref: '#/components/parameters/calendar_event_id'
+    get:
+      operationId: getCalendarEvent
+      summary: Get a calendar event
+      tags:
+      - Calendar Events
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteCalendarEvent
+      summary: Delete a calendar event
+      tags:
+      - Calendar Events
+      x-commons-tier: core
+      x-commons-share: 0.556
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateCalendarEvent
+      summary: Update a calendar event
+      tags:
+      - Calendar Events
+      x-commons-tier: core
+      x-commons-share: 0.556
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /appointments:
+    get:
+      operationId: listAppointments
+      summary: List appointments
+      tags:
+      - Appointments
+      x-commons-tier: core
+      x-commons-share: 0.893
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Appointment'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAppointment
+      summary: Create an appointment
+      tags:
+      - Appointments
+      x-commons-tier: core
+      x-commons-share: 0.714
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /appointments/{appointment_id}:
+    parameters:
+    - $ref: '#/components/parameters/appointment_id'
+    get:
+      operationId: getAppointment
+      summary: Get an appointment
+      tags:
+      - Appointments
+      x-commons-tier: core
+      x-commons-share: 0.75
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateAppointment
+      summary: Update an appointment
+      tags:
+      - Appointments
+      x-commons-tier: extended
+      x-commons-share: 0.464
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteAppointment
+      summary: Delete an appointment
+      tags:
+      - Appointments
+      x-commons-tier: extended
+      x-commons-share: 0.286
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /availability:
+    get:
+      operationId: listAvailabilities
+      summary: List availability
+      tags:
+      - Availabilities
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Availability'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAvailability
+      summary: Create an availability
+      tags:
+      - Availabilities
+      x-commons-tier: extended
+      x-commons-share: 0.25
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /services:
+    get:
+      operationId: listServices
+      summary: List services
+      tags:
+      - Services
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Service'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createService
+      summary: Create a service
+      tags:
+      - Services
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /services/{service_id}:
+    parameters:
+    - $ref: '#/components/parameters/service_id'
+    get:
+      operationId: getService
+      summary: Get a service
+      tags:
+      - Services
+      x-commons-tier: core
+      x-commons-share: 0.733
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    delete:
+      operationId: deleteService
+      summary: Delete a service
+      tags:
+      - Services
+      x-commons-tier: core
+      x-commons-share: 0.533
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateService
+      summary: Update a service
+      tags:
+      - Services
+      x-commons-tier: extended
+      x-commons-share: 0.467
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+components:
+  schemas:
+    Calendar:
+      $ref: ./schema/calendar.json
+    CalendarEvent:
+      $ref: ./schema/calendar_event.json
+    Appointment:
+      $ref: ./schema/appointment.json
+    Availability:
+      $ref: ./schema/availability.json
+    Service:
+      $ref: ./schema/service.json
+  parameters:
+    calendar_id:
+      name: calendar_id
+      in: path
+      required: true
+      schema:
+        type: string
+    calendar_event_id:
+      name: calendar_event_id
+      in: path
+      required: true
+      schema:
+        type: string
+    appointment_id:
+      name: appointment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    availability_id:
+      name: availability_id
+      in: path
+      required: true
+      schema:
+        type: string
+    service_id:
+      name: service_id
+      in: path
+      required: true
+      schema:
+        type: string

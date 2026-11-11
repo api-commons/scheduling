@@ -1,0 +1,62 @@
+provider: znanylekarz
+apis_io: https://apis.io/providers/znanylekarz/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendar
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/calendar
+    - openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/calendar
+  appointment:
+    path_segment:
+    - bookings
+    properties:
+      id: id
+      start_at: start_at
+      status: status
+      end_at: end_at
+      duration: duration
+      cancellation_reason: reason
+      patient: patient
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}
+    - openapi/_original/znanylekarz-integrations-api.yml#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}
+    - openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings
+  availability:
+    path_segment:
+    - slots
+    properties:
+      end_at: end
+      start_at: start
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots/{date}
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#PUT /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots
+    - openapi/_original/znanylekarz-integrations-api.yml#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots/{date}
+    - openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots
+  service:
+    path_segment:
+    - services
+    properties:
+      id:
+      - id
+      - service_id
+      name: name
+      description: description
+      duration: duration
+      price: price
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#GET /services
+    - openapi/_original/znanylekarz-integrations-api-openapi.json#PATCH /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}

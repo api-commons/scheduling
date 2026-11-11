@@ -1,0 +1,45 @@
+provider: aurinko
+apis_io: https://apis.io/providers/aurinko/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendars
+    properties:
+      id: id
+      name: name
+      color: color
+      description: description
+      is_primary: primary
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/aurinko-openapi.json#GET /v1/calendars
+    - openapi/_original/aurinko-openapi.json#GET /v1/calendars/{id}
+    - openapi/_original/aurinko-openapi.json#PATCH /v1/calendars/{id}
+    - openapi/_original/aurinko-openapi.json#POST /v1/calendars
+  calendar_event:
+    path_segment:
+    - events
+    properties:
+      description: description
+      id: id
+      location: location
+      end_at: end
+      start_at: start
+      recurrence: recurrence
+      calendar_id: calendarId
+      organizer_id: organizer
+      created_at:
+      - createdTime
+      - createdAt
+      etag: etag
+      html_link: htmlLink
+      subject: subject
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/aurinko-openapi.json#DELETE /v1/calendars/{calendarId}/events/{eventId}
+    - openapi/_original/aurinko-openapi.json#GET /v1/calendars/{calendarId}/events/{eventId}
+    - openapi/_original/aurinko-openapi.json#GET /v1/email/tracking/events
+    - openapi/_original/aurinko-openapi.json#GET /v1/email/tracking/{id}/events
+    - openapi/_original/aurinko-openapi.json#GET /v1/email/tracking/{trackingId}/events/{id}

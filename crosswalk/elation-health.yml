@@ -1,0 +1,54 @@
+provider: elation-health
+apis_io: https://apis.io/providers/elation-health/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: id
+      status: status
+      created_at: created_date
+      service_id: appointment_type_id
+      description: description
+      duration: duration
+      cancellation_reason: reason
+      patient: patient
+      metadata: metadata
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/elation-api-settings.json#DELETE /appointments/{id}/
+    - openapi/_original/elation-api-settings.json#GET /appointments/
+    - openapi/_original/elation-api-settings.json#GET /appointments/{id}/
+    - openapi/_original/elation-api-settings.json#PATCH /appointments/{id}/
+    - openapi/_original/elation-api-settings.json#POST /appointments/
+  availability:
+    path_segment:
+    - availabilities
+    properties:
+      end_at: end_time
+      start_at: start_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/elation-api-settings.json#GET /physicians/{id}/availabilities
+    - openapi/_original/elation-api-settings.json#PUT /physicians/{id}/availabilities
+    - openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/physicians/{id}/availabilities/
+    - openapi/_original/elation-health-api-full-openapi.yaml#PUT /api/2.0/physicians/{id}/availabilities/
+    - openapi/_original/elation-practice-api.json#GET /api/2.0/physicians/{id}/availabilities/
+  service:
+    path_segment:
+    - appointment_types
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created_date
+      color: color
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/elation-api-settings.json#GET /appointment_types/
+    - openapi/_original/elation-api-settings.json#GET /appointment_types/{id}
+    - openapi/_original/elation-api-settings.json#PATCH /appointment_types/{id}
+    - openapi/_original/elation-health-api-full-openapi.yaml#DELETE /api/2.0/appointment_types/{id}/
+    - openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/appointment_types/

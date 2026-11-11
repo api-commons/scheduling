@@ -1,0 +1,93 @@
+provider: cal-com
+apis_io: https://apis.io/providers/cal-com/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendars
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cal-com-openapi.json#GET /v2/calendars
+  calendar_event:
+    path_segment:
+    - events
+    - event
+    properties:
+      description: description
+      attendees: attendees
+      id:
+      - id
+      - uuid
+      end_at:
+      - end
+      - endTime
+      start_at:
+      - start
+      - startTime
+      name: title
+      status: status
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/cal-com-openapi.json#DELETE /v2/events/{uuid}
+    - openapi/_original/cal-com-openapi.json#GET /v2/calendars/{calendar}/event/{eventUid}
+    - openapi/_original/cal-com-openapi.json#GET /v2/events
+    - openapi/_original/cal-com-openapi.json#GET /v2/events/{uuid}
+    - openapi/_original/cal-com-openapi.json#GET /v2/teams/{teamId}/events
+  appointment:
+    path_segment:
+    - bookings
+    properties:
+      id: id
+      start_at: start
+      status: status
+      end_at: end
+      created_at: createdAt
+      service_id:
+      - eventTypeId
+      - eventType
+      location_id:
+      - location
+      - locationId
+      customer_id: attendee
+      description: description
+      duration: duration
+      updated_at: updatedAt
+      cancellation_reason: cancellationReason
+      name:
+      - title
+      - name
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cal-com-openapi.json#GET /v2/bookings
+    - openapi/_original/cal-com-openapi.json#GET /v2/bookings/{bookingUid}
+    - openapi/_original/cal-com-openapi.json#GET /v2/events/{uuid}/bookings
+    - openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/bookings
+    - openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/teams/{teamId}/bookings
+  availability:
+    path_segment:
+    - slots
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/cal-com-openapi.json#GET /v2/slots
+  service:
+    path_segment:
+    - event-types
+    properties:
+      id: id
+      name: title
+      description: description
+      is_active: hidden
+      price: price
+      color: color
+      slug: slug
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/cal-com-openapi.json#DELETE /v2/event-types/{eventTypeId}
+    - openapi/_original/cal-com-openapi.json#DELETE /v2/organizations/{orgId}/teams/{teamId}/event-types/{eventTypeId}
+    - openapi/_original/cal-com-openapi.json#DELETE /v2/teams/{teamId}/event-types/{eventTypeId}
+    - openapi/_original/cal-com-openapi.json#GET /v2/event-types
+    - openapi/_original/cal-com-openapi.json#GET /v2/event-types/{eventTypeId}

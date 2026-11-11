@@ -1,0 +1,43 @@
+provider: servicetitan
+apis_io: https://apis.io/providers/servicetitan/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    - bookings
+    properties:
+      id: id
+      start_at: start
+      status: status
+      end_at: end
+      created_at: createdOn
+      customer_id: customerId
+      name:
+      - name
+      - summary
+      source: source
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/servicetitan-crm-api-openapi.yml#GET /bookings
+    - openapi/_original/servicetitan-crm-api-openapi.yml#POST /bookings
+    - openapi/_original/servicetitan-jpm-api-openapi.yml#GET /appointments
+    - openapi/_original/servicetitan-jpm-api-openapi.yml#GET /appointments/{id}
+    - openapi/_original/servicetitan-jpm-api-openapi.yml#PATCH /appointments/{id}
+  service:
+    path_segment:
+    - services
+    properties:
+      id: id
+      name: displayName
+      description: description
+      is_active: active
+      price: price
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/servicetitan-pricebook-api-openapi.yml#DELETE /services/{id}
+    - openapi/_original/servicetitan-pricebook-api-openapi.yml#GET /services
+    - openapi/_original/servicetitan-pricebook-api-openapi.yml#GET /services/{id}
+    - openapi/_original/servicetitan-pricebook-api-openapi.yml#PATCH /services/{id}
+    - openapi/_original/servicetitan-pricebook-api-openapi.yml#POST /services

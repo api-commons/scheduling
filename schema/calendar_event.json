@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/scheduling/main/schema/calendar_event.json",
+  "title": "Calendar Event",
+  "description": "The common calendar_event in Calendars and Scheduling, distilled from 9 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.889,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "description",
+        "body"
+      ]
+    },
+    "attendees": {
+      "type": "array",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "attendees",
+        "participants"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "id",
+        "uuid"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "location",
+        "conferencing"
+      ]
+    },
+    "end_at": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "end",
+        "endTime"
+      ]
+    },
+    "start_at": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "start",
+        "startTime"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "title",
+        "summary"
+      ]
+    },
+    "recurrence": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "recurrence",
+        "recurring"
+      ]
+    },
+    "calendar_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "calendarId",
+        "calendar_id"
+      ]
+    },
+    "organizer_id": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "organizer",
+        "organizerId"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "status"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "createdTime",
+        "createdAt",
+        "created",
+        "created_at"
+      ],
+      "format": "date-time"
+    },
+    "etag": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "etag"
+      ]
+    },
+    "html_link": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "htmlLink",
+        "html_link"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "subject"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "updated",
+        "updated_at"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "scheduling",
+    "concept": "calendar_event",
+    "providers": 9,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

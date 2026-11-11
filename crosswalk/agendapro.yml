@@ -1,0 +1,57 @@
+provider: agendapro
+apis_io: https://apis.io/providers/agendapro/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - bookings
+    properties:
+      id: id
+      start_at: start_time
+      status: status
+      end_at: end_time
+      created_at: created_at
+      service_id:
+      - service_id
+      - service
+      location_id: location_id
+      customer_id: client_id
+      description: notes
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/bookings
+    - openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/bookings/{id}
+    - openapi/_original/agendapro-connect-v3-openapi.yml#PATCH /v3/bookings/{id}
+    - openapi/_original/agendapro-connect-v3-openapi.yml#POST /v3/bookings
+    - openapi/_original/platform-connect-v3.json#GET /v3/bookings
+  availability:
+    path_segment:
+    - available_slots
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/available_slots
+    - openapi/_original/platform-connect-v3.json#GET /v3/available_slots
+  service:
+    path_segment:
+    - services
+    properties:
+      id:
+      - id
+      - uuid
+      name: name
+      description: description
+      duration: duration
+      created_at: created_at
+      is_active: active
+      price: price
+      updated_at: updated_at
+      location_id: location_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/services
+    - openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/services/{id}
+    - openapi/_original/platform-connect-v3.json#GET /v3/services
+    - openapi/_original/platform-connect-v3.json#GET /v3/services/{id}

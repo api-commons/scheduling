@@ -1,0 +1,75 @@
+provider: zoca
+apis_io: https://apis.io/providers/zoca/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendar
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /social-media/calendar
+    - openapi/_original/zoca-platform-openapi.yml#GET /content-queue/{entityId}/calendar
+    - openapi/_original/zoca-platform-openapi.yml#GET /scheduling/bookings/calendar
+    - openapi/_original/zoca-platform-openapi.yml#PUT /social-media/calendar
+    - openapi/_original/zoca-platform-swagger.json#DELETE /social-media/calendar
+  calendar_event:
+    path_segment:
+    - events
+    - event
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zoca-platform-openapi.yml#POST /events
+    - openapi/_original/zoca-platform-swagger.json#POST /events
+    - openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/hubspot/events/send
+    - openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/pipedrive/process/moengage/event
+    - openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/social-media/moengage/event
+  appointment:
+    path_segment:
+    - booking
+    - bookings
+    - meetings
+    - appointments
+    properties:
+      id: id
+      created_at: createdAt
+      name: summary
+      metadata: metadata
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /scheduling/policies/booking/{id}
+    - openapi/_original/zoca-platform-openapi.yml#GET /entities/{entityId}/hubspot/meetings
+    - openapi/_original/zoca-platform-openapi.yml#GET /entities/{entityId}/meetings
+    - openapi/_original/zoca-platform-openapi.yml#GET /frontdesk/bookings/{entityId}
+    - openapi/_original/zoca-platform-openapi.yml#GET /scheduling/bookings
+  availability:
+    path_segment:
+    - slots
+    - availability
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zoca-platform-openapi.yml#GET /acuity/slots
+    - openapi/_original/zoca-platform-openapi.yml#POST /vagaro/{entityId}/availability
+    - openapi/_original/zoca-platform-swagger.json#GET /acuity/slots
+    - openapi/_original/zoca-platform-swagger.json#POST /vagaro/{entityId}/availability
+    - openapi/_original/zoca-tasks-openapi.yml#GET /tasks/api/v1/frontdesk/widget/{entityId}/availability
+  service:
+    path_segment:
+    - services
+    - appointment-types
+    properties:
+      id: id
+      created_at: createdAt
+      is_active: active
+      location_id: locationId
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /addon-groups/{entityId}/{groupId}/services/{serviceId}
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /addons/{entityId}/{addonId}/services/{serviceId}
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /bundles/{entityId}/{bundleId}/services/{serviceVariationId}
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /offers/{id}/services/{serviceId}
+    - openapi/_original/zoca-platform-openapi.yml#DELETE /services/batch

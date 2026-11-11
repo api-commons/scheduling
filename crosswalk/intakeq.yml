@@ -1,0 +1,22 @@
+provider: intakeq
+apis_io: https://apis.io/providers/intakeq/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: Id
+      start_at: StartDate
+      status: Status
+      service_id: ServiceId
+      location_id: LocationId
+      customer_id: ClientId
+      duration: Duration
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/intakeq-openapi.yml#GET /appointments
+    - openapi/_original/intakeq-openapi.yml#GET /appointments/{appointmentId}
+    - openapi/_original/intakeq-openapi.yml#POST /appointments
+    - openapi/_original/intakeq-openapi.yml#PUT /appointments

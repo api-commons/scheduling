@@ -1,0 +1,12 @@
+provider: housecall-pro
+apis_io: https://apis.io/providers/housecall-pro/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/housecall-pro-public-api-openapi.yml#GET /jobs/{job_id}/appointments

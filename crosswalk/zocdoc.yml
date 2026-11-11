@@ -1,0 +1,27 @@
+provider: zocdoc
+apis_io: https://apis.io/providers/zocdoc/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: appointment_id
+      start_at: start_time
+      description: notes
+      cancellation_reason: cancellation_reason
+      patient: patient
+      source: source
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/appointments
+    - openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/appointments/{appointment_id}
+    - openapi/_original/zocdoc-zocdoc-api-openapi.yml#POST /v1/appointments
+  availability:
+    path_segment:
+    - availability
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/provider_locations/availability

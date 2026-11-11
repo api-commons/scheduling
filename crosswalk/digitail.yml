@@ -1,0 +1,26 @@
+provider: digitail
+apis_io: https://apis.io/providers/digitail/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id:
+      - id
+      - record_id
+      status: status
+      end_at: end_datetime
+      customer_id: patient_id
+      duration: duration
+      cancellation_reason: cancellation_reason
+      patient: patient
+      source: source
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/digitail-openapi.json#GET /api/v1/appointments
+    - openapi/_original/digitail-openapi.json#GET /api/v1/appointments/{id}
+    - openapi/_original/digitail-openapi.json#GET /api/v1/reports/appointments
+    - openapi/_original/digitail-openapi.json#POST /api/v1/appointments
+    - openapi/_original/digitail-openapi.json#PUT /api/v1/appointments/{id}

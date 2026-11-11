@@ -1,0 +1,16 @@
+provider: qminder
+apis_io: https://apis.io/providers/qminder/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: id
+      start_at: startTime
+      end_at: endTime
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/qminder-openapi-original.json#PATCH /v1/appointments/{ticketId}
+    - openapi/_original/qminder-openapi-original.json#POST /v1/appointments

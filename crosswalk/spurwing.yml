@@ -1,0 +1,26 @@
+provider: spurwing
+apis_io: https://apis.io/providers/spurwing/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: id
+      service_id: appointment_type_id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/spurwing-openapi.yml#DELETE /appointments/{appointment_id}
+    - openapi/_original/spurwing-openapi.yml#GET /appointments
+    - openapi/_original/spurwing-openapi.yml#POST /appointments
+  service:
+    path_segment:
+    - appointment_types
+    properties:
+      id: id
+      name: name
+      duration: duration
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/spurwing-openapi.yml#GET /appointment_types.json

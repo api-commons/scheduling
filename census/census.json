@@ -1,0 +1,4820 @@
+{
+ "cohort_size": 112,
+ "unreadable": [],
+ "concepts": {
+  "calendar": {
+   "aurinko": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "color": "string",
+     "description": "string",
+     "accessRole": "string",
+     "primary": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/aurinko-openapi.json#GET /v1/calendars",
+     "openapi/_original/aurinko-openapi.json#GET /v1/calendars/{id}",
+     "openapi/_original/aurinko-openapi.json#PATCH /v1/calendars/{id}",
+     "openapi/_original/aurinko-openapi.json#POST /v1/calendars"
+    ]
+   },
+   "cal-com": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "connectedCalendars": "array",
+     "destinationCalendar": "object"
+    },
+    "evidence": [
+     "openapi/_original/cal-com-openapi.json#GET /v2/calendars"
+    ]
+   },
+   "cronofy": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "provider_name": "string",
+     "profile_id": "string",
+     "profile_name": "string",
+     "calendar_id": "string",
+     "calendar_name": "string",
+     "calendar_readonly": "boolean",
+     "calendar_deleted": "boolean",
+     "calendar_primary": "boolean",
+     "permission_level": "string",
+     "name": "string",
+     "color": "string"
+    },
+    "evidence": [
+     "openapi/_original/cronofy-openapi.yml#GET /calendars",
+     "openapi/_original/cronofy-openapi.yml#POST /calendars"
+    ]
+   },
+   "google-calendar": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "kind": "string",
+     "etag": "string",
+     "id": "string",
+     "summary": "string",
+     "description": "string",
+     "location": "string",
+     "timeZone": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#DELETE /calendars/{calendarId}",
+     "openapi/_original/openapi.yml#GET /calendars/{calendarId}",
+     "openapi/_original/openapi.yml#POST /calendars",
+     "openapi/_original/openapi.yml#PUT /calendars/{calendarId}"
+    ]
+   },
+   "microsoft-exchange": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "color": "string",
+     "hexColor": "string",
+     "isDefaultCalendar": "boolean",
+     "changeKey": "string",
+     "canEdit": "boolean",
+     "canShare": "boolean",
+     "canViewPrivateItems": "boolean",
+     "isRemovable": "boolean",
+     "isTallyingResponses": "boolean",
+     "owner": "object",
+     "allowedOnlineMeetingProviders": "array",
+     "defaultOnlineMeetingProvider": "string"
+    },
+    "evidence": [
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#DELETE /me/calendars/{calendar-id}",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#GET /me/calendars",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#GET /me/calendars/{calendar-id}",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#PATCH /me/calendars/{calendar-id}",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#POST /me/calendars"
+    ]
+   },
+   "nylas": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "request_id": "string",
+     "data": "array",
+     "next_cursor": [
+      "string",
+      "null"
+     ],
+     "description": "string",
+     "grant_id": "string",
+     "hex_color": "string",
+     "hex_foreground_color": "string",
+     "id": "string",
+     "is_owned_by_user": "boolean",
+     "is_primary": [
+      "boolean"
+     ],
+     "location": "string",
+     "metadata": "object",
+     "name": "string",
+     "object": "string",
+     "owner_email": "string",
+     "read_only": "boolean",
+     "timezone": "string",
+     "notetaker_settings": "object",
+     "config_id": "string",
+     "autocreate": "boolean",
+     "deduplication_policy": "string",
+     "meeting_settings": null,
+     "rules": "object",
+     "notetaker": "object"
+    },
+    "evidence": [
+     "openapi/_original/nylas-api-openapi.yml#DELETE /v3/grants/{grant_id}/calendars/{calendar_id}",
+     "openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/calendars",
+     "openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/calendars/{calendar_id}",
+     "openapi/_original/nylas-api-openapi.yml#POST /v3/grants/{grant_id}/calendars",
+     "openapi/_original/nylas-api-openapi.yml#PUT /v3/grants/{grant_id}/calendars/{calendar_id}"
+    ]
+   },
+   "optibus": {
+    "segments": [
+     "calendar"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "calendarVehicleAssignments": "array",
+     "blocks": "array",
+     "tasks": "array",
+     "DailyTasks": "array",
+     "deployedPlans": "array",
+     "depotId": "string"
+    },
+    "evidence": [
+     "openapi/_original/optibus-operations-openapi.yml#GET /{depotId}/calendar"
+    ]
+   },
+   "recal": {
+    "segments": [
+     "calendar"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "original": null,
+     "provider": null,
+     "accessRole": null,
+     "backgroundColor": "string",
+     "foregroundColor": "string",
+     "primary": "boolean",
+     "selected": "boolean",
+     "subject": "string",
+     "timeZone": "string"
+    },
+    "evidence": [
+     "openapi/_original/recal-openapi.json#GET /v1/users/{userId}/calendar"
+    ]
+   },
+   "reclaim-ai": {
+    "segments": [
+     "calendars"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "id": "integer",
+     "externalId": "string",
+     "connected": "boolean",
+     "colorHex": "string",
+     "credentialId": "integer",
+     "reason": null,
+     "writableFor": "array",
+     "provider": "string",
+     "googleMeetAllowed": "boolean",
+     "microsoftTeamsAllowed": "boolean",
+     "defaultReminders": "array",
+     "reminderDefaults": "array",
+     "useType": "string",
+     "otherConnectedCalendarsExist": "boolean",
+     "accessDomainRead": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/accounts/calendars",
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/accounts/{accountId}/calendars"
+    ]
+   },
+   "shyft": {
+    "segments": [
+     "calendar"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/shyft-customer-openapi-original.json#GET /api/customer/user_role/schedule_elements/calendar"
+    ]
+   },
+   "wellnessliving": {
+    "segments": [
+     "calendar"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "a_date": null,
+     "a_time": null,
+     "a_timezone_data": null,
+     "a_week_name": null,
+     "can_backwards": null,
+     "dt_date": null,
+     "i_capacity": null,
+     "i_capacity_waitlist": null,
+     "i_week_end": null,
+     "i_week_start": null,
+     "is_waitlist": null,
+     "k_location": null
+    },
+    "evidence": [
+     "openapi/_original/wellnessliving-openapi.yml#GET /Wl/Appointment/Book/Schedule/Calendar.json"
+    ]
+   },
+   "znanylekarz": {
+    "segments": [
+     "calendar"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "string"
+    },
+    "evidence": [
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/calendar",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/calendar"
+    ]
+   },
+   "zoca": {
+    "segments": [
+     "calendar"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "id": "number",
+     "entityId": "string",
+     "attribute": "string",
+     "value": "object",
+     "metadata": "object",
+     "createdAt": "object"
+    },
+    "evidence": [
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /social-media/calendar",
+     "openapi/_original/zoca-platform-openapi.yml#GET /content-queue/{entityId}/calendar",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/bookings/calendar",
+     "openapi/_original/zoca-platform-openapi.yml#PUT /social-media/calendar",
+     "openapi/_original/zoca-platform-swagger.json#DELETE /social-media/calendar",
+     "openapi/_original/zoca-platform-swagger.json#GET /content-queue/{entityId}/calendar",
+     "openapi/_original/zoca-platform-swagger.json#GET /scheduling/bookings/calendar",
+     "openapi/_original/zoca-platform-swagger.json#PUT /social-media/calendar",
+     "openapi/_original/zoca-tasks-openapi.yml#GET /tasks/api/v1/content-queue/{entityId}/calendar",
+     "openapi/_original/zoca-tasks-swagger.json#GET /tasks/api/v1/content-queue/{entityId}/calendar"
+    ]
+   }
+  },
+  "calendar_event": {
+   "airflow": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "asset_events": "array",
+     "total_entries": "integer",
+     "id": "integer",
+     "asset_id": "integer",
+     "uri": null,
+     "name": null,
+     "group": null,
+     "extra": null,
+     "source_task_id": null,
+     "source_dag_id": null,
+     "source_run_id": null,
+     "source_map_index": "integer",
+     "created_dagruns": "array",
+     "timestamp": "string",
+     "partition_key": null
+    },
+    "evidence": [
+     "openapi/_original/airflow-openapi.yml#GET /api/v2/assets/events",
+     "openapi/_original/airflow-openapi.yml#POST /api/v2/assets/events"
+    ]
+   },
+   "apache-airflow": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "created_dagruns": "array",
+     "dataset_id": "integer",
+     "dataset_uri": "string",
+     "extra": "object",
+     "source_dag_id": "string",
+     "source_map_index": "integer",
+     "source_run_id": "string",
+     "source_task_id": "string",
+     "timestamp": "string",
+     "total_entries": "integer",
+     "asset_events": "array",
+     "id": "integer",
+     "asset_id": "integer",
+     "uri": null,
+     "name": null,
+     "group": null,
+     "partition_key": null,
+     "access_control": null
+    },
+    "evidence": [
+     "openapi/_original/apache-airflow-openapi.yaml#GET /datasets/events",
+     "openapi/_original/apache-airflow-openapi.yml#GET /api/v2/assets/events",
+     "openapi/_original/apache-airflow-openapi.yml#POST /api/v2/assets/events"
+    ]
+   },
+   "aurinko": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "etag": "string",
+     "calendarId": "string",
+     "createdTime": "string",
+     "lastModifiedTime": "string",
+     "subject": "string",
+     "description": "string",
+     "location": "string",
+     "start": "object",
+     "end": "object",
+     "organizer": "object",
+     "meetingInfo": "object",
+     "recurrenceType": "string",
+     "recurrence": "object",
+     "occurrenceInfo": "object",
+     "iCalUid": "string",
+     "globalId": "string",
+     "showAs": "string",
+     "sensitivity": "string",
+     "categories": "array",
+     "htmlLink": "string",
+     "hasAttachments": "boolean",
+     "attachments": "array",
+     "omitted": "array",
+     "iCalUId": "string",
+     "record": "object",
+     "onlineMeetingProvider": "string",
+     "onlineMeetingDetails": "object",
+     "createdAt": "string",
+     "eventType": "string",
+     "userAgent": "string",
+     "referrer": "string",
+     "remoteAddr": "string",
+     "threadId": "string",
+     "messageId": "string",
+     "internetMessageId": "string",
+     "trackingId": "integer",
+     "trackingThreadId": "string",
+     "trackingMessageId": "string",
+     "trackingInternetMessageId": "string",
+     "context": "string",
+     "trackingCode": "string"
+    },
+    "evidence": [
+     "openapi/_original/aurinko-openapi.json#DELETE /v1/calendars/{calendarId}/events/{eventId}",
+     "openapi/_original/aurinko-openapi.json#GET /v1/calendars/{calendarId}/events/{eventId}",
+     "openapi/_original/aurinko-openapi.json#GET /v1/email/tracking/events",
+     "openapi/_original/aurinko-openapi.json#GET /v1/email/tracking/{id}/events",
+     "openapi/_original/aurinko-openapi.json#GET /v1/email/tracking/{trackingId}/events/{id}",
+     "openapi/_original/aurinko-openapi.json#PATCH /v1/calendars/{calendarId}/events/{eventId}",
+     "openapi/_original/aurinko-openapi.json#POST /v1/calendars/{calendarId}/events"
+    ]
+   },
+   "avoca": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "action": "string",
+     "customer_id": [
+      "string",
+      "null"
+     ],
+     "created_at": "string",
+     "customer_phone_number": "string"
+    },
+    "evidence": [
+     "openapi/_original/avoca-openapi-original.json#GET /api/v1/teams/{teamId}/outbound/events"
+    ]
+   },
+   "cal-com": {
+    "segments": [
+     "events",
+     "event"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "start": "object",
+     "end": "object",
+     "id": "string",
+     "title": "string",
+     "description": "string",
+     "locations": "array",
+     "attendees": "array",
+     "status": null,
+     "hosts": "array",
+     "calendarEventOwner": "object",
+     "source": null,
+     "uuid": "string",
+     "slug": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "checkInOpensAt": "string",
+     "checkInClosesAt": "string",
+     "timeZone": "string",
+     "visibility": "string",
+     "category": "string",
+     "hidden": "boolean",
+     "publishedAt": "string",
+     "cancelledAt": "string",
+     "coverImageUrl": "string",
+     "requiresApproval": "boolean",
+     "paymentTimeoutMinutes": "number",
+     "waitlistEnabled": "boolean",
+     "showOrganizerEmail": "boolean",
+     "guestList": "string",
+     "showPresentedBy": "boolean",
+     "confirmedCount": "number",
+     "liveStreams": "array",
+     "theme": "string",
+     "poster": "object",
+     "lineup": "object",
+     "schedule": "array",
+     "background": "object",
+     "registrationFields": "array",
+     "capacity": "number",
+     "price": "number",
+     "currency": "string",
+     "paymentsEnabled": "boolean",
+     "cancellationReason": "string",
+     "userId": "number",
+     "teamId": "number"
+    },
+    "evidence": [
+     "openapi/_original/cal-com-openapi.json#DELETE /v2/events/{uuid}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/calendars/{calendar}/event/{eventUid}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/events",
+     "openapi/_original/cal-com-openapi.json#GET /v2/events/{uuid}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/teams/{teamId}/events",
+     "openapi/_original/cal-com-openapi.json#PATCH /v2/calendars/{calendar}/events/{eventUid}",
+     "openapi/_original/cal-com-openapi.json#PATCH /v2/events/{uuid}",
+     "openapi/_original/cal-com-openapi.json#POST /v2/events",
+     "openapi/_original/cal-com-openapi.json#POST /v2/teams/{teamId}/events"
+    ]
+   },
+   "calendly": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "start_time": "string",
+     "end_time": "string"
+    },
+    "evidence": [
+     "openapi/_original/calendly-openapi.yml#POST /data_compliance/deletion/events"
+    ]
+   },
+   "checkiday-national-holiday-api": {
+    "segments": [
+     "events",
+     "event"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "adult": "boolean",
+     "date": "string",
+     "timezone": "string",
+     "events": "array",
+     "multiday_starting": "array",
+     "multiday_ongoing": "array",
+     "rateLimit": "object",
+     "event": "object"
+    },
+    "evidence": [
+     "openapi/_original/checkiday-openapi.yml#GET /event",
+     "openapi/_original/checkiday-openapi.yml#GET /events"
+    ]
+   },
+   "cronofy": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "pages": "object",
+     "events": "array",
+     "event_id": "string",
+     "summary": "string",
+     "description": "string",
+     "start": "string",
+     "end": "string",
+     "tzid": "string",
+     "location": "object",
+     "attendees": "object",
+     "transparency": "string"
+    },
+    "evidence": [
+     "openapi/_original/cronofy-openapi.yml#DELETE /calendars/{calendar_id}/events",
+     "openapi/_original/cronofy-openapi.yml#GET /events",
+     "openapi/_original/cronofy-openapi.yml#POST /calendars/{calendar_id}/events"
+    ]
+   },
+   "google-calendar": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "kind": "string",
+     "etag": "string",
+     "id": "string",
+     "status": "string",
+     "htmlLink": "string",
+     "created": "string",
+     "updated": "string",
+     "summary": "string",
+     "description": "string",
+     "location": "string",
+     "start": "object",
+     "end": "object",
+     "attendees": "array",
+     "recurrence": "array"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#DELETE /calendars/{calendarId}/events/{eventId}",
+     "openapi/_original/openapi.yml#GET /calendars/{calendarId}/events",
+     "openapi/_original/openapi.yml#GET /calendars/{calendarId}/events/{eventId}",
+     "openapi/_original/openapi.yml#PATCH /calendars/{calendarId}/events/{eventId}",
+     "openapi/_original/openapi.yml#POST /calendars/{calendarId}/events",
+     "openapi/_original/openapi.yml#PUT /calendars/{calendarId}/events/{eventId}"
+    ]
+   },
+   "harri": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "event_code": "string",
+     "webhook": "string",
+     "status": "string",
+     "publish_time": "string",
+     "location_id": "string",
+     "payload": "object",
+     "events": "array",
+     "pagination": "object",
+     "client_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v1/events",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v1/events/{eventId}",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/events",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/events/{eventId}",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v2/events",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v2/franchisees/{franchiseeId}/events"
+    ]
+   },
+   "humanity": {
+    "segments": [
+     "event"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "notes": "string"
+    },
+    "evidence": [
+     "openapi/_original/humanity-default-openapi.yml#GET /timeclocks/event/{timeclock}"
+    ]
+   },
+   "later": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "email": "string",
+     "status": "string",
+     "reason": "string",
+     "userAgent": "string",
+     "ip": "string",
+     "occurredAt": "string",
+     "event": "object",
+     "sgEventId": "string",
+     "messageId": "object",
+     "id": "number"
+    },
+    "evidence": [
+     "openapi/_original/later-influence-api-openapi-original.json#GET /v1/messages/{messageId}/events",
+     "openapi/_original/later-influence-api-openapi.json#GET /v1/messages/{messageId}/events"
+    ]
+   },
+   "microsoft-365": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/microsoft-365-openapi.yml#GET /me/events"
+    ]
+   },
+   "microsoft-exchange": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "subject": "string",
+     "body": "object",
+     "bodyPreview": "string",
+     "start": "object",
+     "end": "object",
+     "location": "object",
+     "locations": "array",
+     "attendees": "array",
+     "organizer": "object",
+     "isAllDay": "boolean",
+     "isCancelled": "boolean",
+     "isDraft": "boolean",
+     "isOnlineMeeting": "boolean",
+     "isOrganizer": "boolean",
+     "isReminderOn": "boolean",
+     "onlineMeeting": "object",
+     "onlineMeetingProvider": "string",
+     "onlineMeetingUrl": "string",
+     "recurrence": "object",
+     "reminderMinutesBeforeStart": "integer",
+     "responseRequested": "boolean",
+     "responseStatus": "object",
+     "sensitivity": "string",
+     "seriesMasterId": "string",
+     "showAs": "string",
+     "type": "string",
+     "importance": "string",
+     "hasAttachments": "boolean",
+     "categories": "array",
+     "allowNewTimeProposals": "boolean",
+     "iCalUId": "string",
+     "changeKey": "string",
+     "createdDateTime": "string",
+     "lastModifiedDateTime": "string",
+     "webLink": "string",
+     "transactionId": "string",
+     "hideAttendees": "boolean",
+     "originalStartTimeZone": "string",
+     "originalEndTimeZone": "string"
+    },
+    "evidence": [
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#DELETE /me/events/{event-id}",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#GET /me/calendars/{calendar-id}/events",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#GET /me/events",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#GET /me/events/{event-id}",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#PATCH /me/events/{event-id}",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#POST /me/calendars/{calendar-id}/events",
+     "openapi/_original/microsoft-exchange-graph-calendar-openapi.yml#POST /me/events"
+    ]
+   },
+   "mv-sistemas": {
+    "segments": [
+     "event",
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "hashKey": "string",
+     "person": "string",
+     "professional": "string",
+     "documentNumber": "string",
+     "documentType": "string",
+     "healthPlanAnsCode": "string",
+     "healthPlanName": "string",
+     "healthPlanCode": "string",
+     "healthPlanTypeAnsCode": "string",
+     "healthPlanTypeName": "string",
+     "healthPlanTypeCode": "string",
+     "healthPlanCardName": "string",
+     "dependent": "boolean",
+     "cnes": "string",
+     "serviceName": "string",
+     "scheduleTime": "number",
+     "timeZone": "string",
+     "birthDate": "string",
+     "cardNumber": "number",
+     "checkin": "object",
+     "id": "integer",
+     "login": "string",
+     "status": "string",
+     "statusMessage": "string",
+     "type": "string",
+     "qrCodeContent": "string",
+     "locator": "string",
+     "isFutureEvent": "boolean",
+     "hasPendencies": "boolean",
+     "appointment": "object",
+     "patient": "object"
+    },
+    "evidence": [
+     "openapi/_original/mv-sistemas-events-openapi.json#GET /events",
+     "openapi/_original/mv-sistemas-events-openapi.json#POST /api/v1/event"
+    ]
+   },
+   "nylas": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "request_id": "string",
+     "data": "array",
+     "next_cursor": [
+      "string",
+      "null"
+     ],
+     "busy": "boolean",
+     "calendar_id": [
+      "string",
+      "null"
+     ],
+     "conferencing": "object",
+     "created_at": [
+      "integer",
+      "null"
+     ],
+     "description": [
+      "string",
+      "null"
+     ],
+     "text_description": [
+      "string",
+      "null"
+     ],
+     "hide_participants": "boolean",
+     "grant_id": "string",
+     "html_link": "string",
+     "ical_uid": [
+      "string",
+      "null"
+     ],
+     "id": "string",
+     "is_owner": "boolean",
+     "location": [
+      "string",
+      "null"
+     ],
+     "master_event_id": [
+      "string",
+      "null"
+     ],
+     "metadata": "object",
+     "object": "string",
+     "organizer": "object",
+     "participants": "array",
+     "resources": "array",
+     "read_only": "boolean",
+     "reminders": "object",
+     "recurrence": "array",
+     "status": "string",
+     "title": "string",
+     "updated_at": [
+      "integer",
+      "null"
+     ],
+     "visibility": [
+      "string",
+      "null"
+     ],
+     "when": [
+      "object",
+      "null"
+     ],
+     "original_start_time": "integer",
+     "notetaker": "object",
+     "capacity": "integer"
+    },
+    "evidence": [
+     "openapi/_original/nylas-api-openapi.yml#DELETE /v3/grants/{grant_id}/events/{event_id}",
+     "openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/events",
+     "openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/events/{event_id}",
+     "openapi/_original/nylas-api-openapi.yml#POST /v3/grants/{grant_id}/events",
+     "openapi/_original/nylas-api-openapi.yml#PUT /v3/grants/{grant_id}/events/{event_id}"
+    ]
+   },
+   "planning-center": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "relationships": "object",
+     "links": "object"
+    },
+    "evidence": [
+     "openapi/_original/planning-center-openapi.yml#GET /calendar/v2/events",
+     "openapi/_original/planning-center-openapi.yml#GET /check-ins/v2/events",
+     "openapi/_original/planning-center-openapi.yml#GET /groups/v2/events",
+     "openapi/_original/planning-center-openapi.yml#GET /webhooks/v2/subscriptions/{subscription_id}/events"
+    ]
+   },
+   "quinyx": {
+    "segments": [
+     "events",
+     "event"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "startTime": "string",
+     "endTime": "string",
+     "externalConfigurationId": "string",
+     "externalVariableId": "string",
+     "externalUnitId": "string",
+     "externalSectionId": "string",
+     "id": "string",
+     "eventCategoryId": "string",
+     "parentEvent": "object",
+     "groupId": "integer",
+     "eventEffects": "array",
+     "eventEffectValue": "number",
+     "comment": "string",
+     "active": "boolean",
+     "hierarchyEnabled": "boolean",
+     "groupIds": "array",
+     "forecastConfigurationIds": "array",
+     "eventEffectType": "string"
+    },
+    "evidence": [
+     "openapi/_original/quinyx-api-v2-openapi.yml#DELETE /v2/forecast-events/groups/{groupId}/events/{eventId}",
+     "openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/forecast-events/groups/{groupId}/events",
+     "openapi/_original/quinyx-api-v2-openapi.yml#POST /v2/forecast-calculation/customer/{customerId}/events",
+     "openapi/_original/quinyx-api-v2-openapi.yml#POST /v2/forecast-events/groups/{groupId}/event",
+     "openapi/_original/quinyx-api-v2-openapi.yml#POST /v2/forecast-events/groups/{groupId}/events",
+     "openapi/_original/quinyx-api-v2-openapi.yml#PUT /v2/forecast-events/groups/{groupId}/events/{eventId}"
+    ]
+   },
+   "recal": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "attendees": "array",
+     "calendarId": "string",
+     "id": "string",
+     "original": null,
+     "description": "string",
+     "end": "string",
+     "location": "string",
+     "metaId": "string",
+     "start": "string",
+     "subject": "string"
+    },
+    "evidence": [
+     "openapi/_original/recal-openapi.json#GET /v1/users/{userId}/calendar/events"
+    ]
+   },
+   "reclaim-ai": {
+    "segments": [
+     "events",
+     "event"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "integer",
+     "changedAt": "string",
+     "reclaimEventType": null,
+     "assignmentId": "integer",
+     "assignmentSubId": "integer",
+     "eventId": "string",
+     "organizerId": "string",
+     "actorId": "string",
+     "reason": "string",
+     "lockChangedMetadata": null,
+     "periodSkippedMetadata": null,
+     "eventMovedMetadata": null,
+     "periodSkippedDueToReservedWordMetadata": null,
+     "googleMetadata": null,
+     "schedulingLinkId": "string",
+     "schedulingLinkMeetingId": "string",
+     "underAssistControl": "boolean",
+     "assist": "object",
+     "personalSync": "boolean",
+     "reclaimManaged": "boolean",
+     "reclaimManagedAndSelfOrganized": "boolean",
+     "calendarId": "integer",
+     "key": "object",
+     "priority": "string",
+     "prioritySource": null,
+     "title": "string",
+     "titleSeenByOthers": "string",
+     "location": "string",
+     "onlineMeetingUrlRaw": "string",
+     "onlineMeetingUrl": "string",
+     "description": "string",
+     "descriptionOmitted": "boolean",
+     "titleTruncated": "boolean",
+     "sourceDetails": "object",
+     "mergeDetails": "object",
+     "status": "string",
+     "published": "boolean",
+     "type": "string",
+     "subType": "string",
+     "meetingType": "string",
+     "categoryOverride": "object",
+     "eventStart": "string",
+     "eventEnd": "string",
+     "timeChunks": "integer",
+     "allocatedTimeChunks": "integer",
+     "recurringEventId": "string",
+     "updated": "string",
+     "recurringException": "boolean",
+     "recurrence": "string",
+     "recurrenceMax": "string",
+     "recurring": "boolean",
+     "recurringInstance": "boolean",
+     "private": "boolean",
+     "public": "boolean",
+     "color": "string",
+     "organizer": "string",
+     "numAttendees": "integer",
+     "attendees": "array",
+     "free": "boolean",
+     "category": "object",
+     "rsvpStatus": "string",
+     "requiresTravel": "boolean",
+     "conferenceCall": "boolean",
+     "etag": "string",
+     "smartSeriesId": "integer",
+     "sourceEventType": "string",
+     "version": "string",
+     "manuallyStarted": "boolean",
+     "inheritedExternalId": "string",
+     "eventMatcher": null,
+     "message": "string",
+     "existingMatcher": null,
+     "events": "array",
+     "taskOrHabit": null,
+     "timeoutReached": "boolean",
+     "userInfoMessage": "string",
+     "series": "array",
+     "nextUpcomingEvent": null
+    },
+    "evidence": [
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/changelog/events",
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/events",
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/events/{eventId}",
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/schedule-policy/{policyId}/events",
+     "openapi/_original/reclaim-ai-openapi.yml#POST /api/matcher/event",
+     "openapi/_original/reclaim-ai-openapi.yml#POST /api/planner/reschedule/habit/event/{eventId}",
+     "openapi/_original/reclaim-ai-openapi.yml#POST /api/planner/reschedule/task/event/{eventId}",
+     "openapi/_original/reclaim-ai-openapi.yml#POST /api/planner/skip/habit/event/{eventId}",
+     "openapi/_original/reclaim-ai-openapi.yml#POST /aws/ses/events"
+    ]
+   },
+   "runai": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "next": "integer",
+     "events": "array"
+    },
+    "evidence": [
+     "openapi/_original/runai-openapi-original.json#GET /api/v1/workloads/inferences/revisions/{revisionId}/events",
+     "openapi/_original/runai-openapi-original.json#GET /api/v1/workloads/{workloadId}/events"
+    ]
+   },
+   "savvycal": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "duration": "integer",
+     "buffer_before": "integer",
+     "buffer_after": "integer",
+     "original_start_time": "string",
+     "attendees": "array",
+     "conferencing": "object",
+     "payment": "object",
+     "scope": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "attendee": "object",
+     "fields": "object"
+    },
+    "evidence": [
+     "openapi/_original/savvycal-meetings-openapi.yml#GET /events",
+     "openapi/_original/savvycal-meetings-openapi.yml#GET /events/{event_id}",
+     "openapi/_original/savvycal-meetings-openapi.yml#POST /links/{link_id}/events"
+    ]
+   },
+   "spruce-health": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "events": "array",
+     "hasMore": "boolean",
+     "paginationToken": "string"
+    },
+    "evidence": [
+     "openapi/_original/spruce-health-openapi.json#GET /webhooks/endpoints/{endpointId}/events",
+     "openapi/_original/spruce-health-webhooks-openapi.yml#GET /webhooks/endpoints/{endpointId}/events"
+    ]
+   },
+   "weave": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "data": "array",
+     "id": "string",
+     "type": "string",
+     "location_id": "string",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/weave-openapi.yml#GET /v1/events",
+     "openapi/_original/weave-openapi.yml#GET /v3/calendars/events"
+    ]
+   },
+   "zoca": {
+    "segments": [
+     "events",
+     "event"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "scan": "object",
+     "businessLat": "number",
+     "businessLng": "number",
+     "points": "array",
+     "heroMetrics": "object"
+    },
+    "evidence": [
+     "openapi/_original/zoca-platform-openapi.yml#POST /events",
+     "openapi/_original/zoca-platform-swagger.json#POST /events",
+     "openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/hubspot/events/send",
+     "openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/pipedrive/process/moengage/event",
+     "openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/social-media/moengage/event",
+     "openapi/_original/zoca-tasks-swagger.json#POST /tasks/api/v1/hubspot/events/send",
+     "openapi/_original/zoca-tasks-swagger.json#POST /tasks/api/v1/pipedrive/process/moengage/event",
+     "openapi/_original/zoca-tasks-swagger.json#POST /tasks/api/v1/social-media/moengage/event"
+    ]
+   }
+  },
+  "appointment": {
+   "acuity-scheduling": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/acuity-scheduling-openapi.yml#GET /appointments",
+     "openapi/_original/acuity-scheduling-openapi.yml#POST /appointments",
+     "openapi/_original/acuity-scheduling-openapi.yml#PUT /appointments/{id}"
+    ]
+   },
+   "agendapro": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "start_time": "string",
+     "end_time": "string",
+     "status_id": "integer",
+     "status": "object",
+     "service_id": "integer",
+     "service": "object",
+     "service_provider_id": "integer",
+     "service_provider": "object",
+     "client_id": "integer",
+     "location_id": "integer",
+     "price": "string",
+     "list_price": "string",
+     "discount": "string",
+     "notes": "string",
+     "scheduled": "boolean",
+     "time_resource_id": "integer",
+     "company_id": "integer",
+     "sale": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "provider_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/bookings",
+     "openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/bookings/{id}",
+     "openapi/_original/agendapro-connect-v3-openapi.yml#PATCH /v3/bookings/{id}",
+     "openapi/_original/agendapro-connect-v3-openapi.yml#POST /v3/bookings",
+     "openapi/_original/platform-connect-v3.json#GET /v3/bookings",
+     "openapi/_original/platform-connect-v3.json#GET /v3/bookings/{id}",
+     "openapi/_original/platform-connect-v3.json#PATCH /v3/bookings/{id}",
+     "openapi/_original/platform-connect-v3.json#POST /v3/bookings"
+    ]
+   },
+   "avoca": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "session_id": "string",
+     "team_id": "integer",
+     "scheduler_id": "integer",
+     "status": "string",
+     "customer_info": "object",
+     "issue_type": [
+      "string",
+      "null"
+     ],
+     "job_type": [
+      "string",
+      "null"
+     ],
+     "selected_date": [
+      "string",
+      "null"
+     ],
+     "selected_time": [
+      "string",
+      "null"
+     ],
+     "utm": "object",
+     "google_ads": "object",
+     "st_job_id": [
+      "integer",
+      "null"
+     ],
+     "started_at": [
+      "string",
+      "null"
+     ],
+     "completed_at": [
+      "string",
+      "null"
+     ],
+     "last_activity_at": [
+      "string",
+      "null"
+     ],
+     "events": "array"
+    },
+    "evidence": [
+     "openapi/_original/avoca-openapi-original.json#GET /api/v1/bookings",
+     "openapi/_original/avoca-openapi-original.json#GET /api/v1/teams/{teamId}/bookings",
+     "openapi/_original/avoca-openapi-original.json#GET /api/v1/teams/{teamId}/bookings/{bookingId}"
+    ]
+   },
+   "cal-com": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "number",
+     "uid": "string",
+     "title": "string",
+     "description": "string",
+     "hosts": "array",
+     "status": "string",
+     "cancellationReason": "string",
+     "cancelledByEmail": "string",
+     "reschedulingReason": "string",
+     "rescheduledByEmail": "string",
+     "rescheduledFromUid": "string",
+     "rescheduledToUid": "string",
+     "start": "string",
+     "end": "string",
+     "duration": "number",
+     "eventTypeId": "number",
+     "eventType": "object",
+     "eventUuid": "string",
+     "meetingUrl": "string",
+     "location": "string",
+     "absentHost": "boolean",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "metadata": "object",
+     "rating": "number",
+     "icsUid": "string",
+     "attendees": "array",
+     "guests": "array",
+     "bookingFieldsResponses": "object",
+     "attendee": null,
+     "leadEnrichmentOptOut": "boolean",
+     "eventTypeSlug": "string",
+     "username": "string",
+     "teamSlug": "string",
+     "organizationSlug": "string",
+     "usernames": "array",
+     "lengthInMinutes": "number",
+     "routing": null,
+     "emailVerificationCode": "string",
+     "allowConflicts": "boolean",
+     "allowBookingOutOfBounds": "boolean",
+     "skipBookingLimits": "boolean",
+     "type": "string",
+     "registrationId": "string",
+     "name": "string",
+     "email": "string",
+     "phoneNumber": "string",
+     "rsvpResponse": "string",
+     "responses": "object",
+     "locationId": "string",
+     "checkedInAt": "string",
+     "checkedInByUserId": "number",
+     "avatarUrl": "string",
+     "payment": "object",
+     "noShow": "boolean",
+     "decidedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/cal-com-openapi.json#GET /v2/bookings",
+     "openapi/_original/cal-com-openapi.json#GET /v2/bookings/{bookingUid}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/events/{uuid}/bookings",
+     "openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/bookings",
+     "openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/teams/{teamId}/bookings",
+     "openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/users/{userId}/bookings",
+     "openapi/_original/cal-com-openapi.json#GET /v2/teams/{teamId}/bookings",
+     "openapi/_original/cal-com-openapi.json#POST /v2/bookings"
+    ]
+   },
+   "calendly": {
+    "segments": [
+     "scheduled_events"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "uri": "string",
+     "name": [
+      "string",
+      "null"
+     ],
+     "meeting_notes_plain": [
+      "string",
+      "null"
+     ],
+     "meeting_notes_html": "string",
+     "status": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "event_type": "string",
+     "location": null,
+     "invitees_counter": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "event_memberships": "array",
+     "event_guests": "array",
+     "cancellation": "object",
+     "calendar_event": "object",
+     "collection": "array",
+     "pagination": "object"
+    },
+    "evidence": [
+     "openapi/_original/calendly-openapi.yml#GET /scheduled_events",
+     "openapi/_original/calendly-openapi.yml#GET /scheduled_events/{uuid}"
+    ]
+   },
+   "cliniko": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "bookings": "array",
+     "total_entries": "integer",
+     "links": "object",
+     "id": "integer",
+     "starts_at": "string",
+     "ends_at": "string",
+     "notes": "string",
+     "max_attendees": "integer",
+     "patient_ids": "array",
+     "repeat_rule": "object",
+     "deleted_at": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "appointment_type": "object",
+     "business": "object",
+     "practitioner": "object",
+     "conflicts": "object"
+    },
+    "evidence": [
+     "openapi/_original/cliniko-openapi.yml#GET /bookings",
+     "openapi/_original/cliniko-openapi.yml#GET /bookings/{id}"
+    ]
+   },
+   "digitail": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "event_id": "integer",
+     "clinic_id": "integer",
+     "room_id": "integer",
+     "guest": "boolean",
+     "pet_id": "integer",
+     "record_id": "integer",
+     "status": "string",
+     "datetime": "string",
+     "end_datetime": "string",
+     "datetime_start_utc": "string",
+     "datetime_end_utc": "string",
+     "observations": "string",
+     "user_note": "string",
+     "pet_name": "string",
+     "owner_name": "string",
+     "patient": "object",
+     "room": null,
+     "event": "object",
+     "vet": null,
+     "owner_email": "string",
+     "owner_phone": "string",
+     "reminder_notifications": "object",
+     "newRequests": "array",
+     "consentForms": "array",
+     "video_link": "string",
+     "notification_message": "string",
+     "cancellation_reason": "string",
+     "recurrence": "string",
+     "has_google_cal_error": "boolean",
+     "duration": "integer",
+     "occasion": "string",
+     "token": "string",
+     "visit_type_id": "integer",
+     "visit_type": "object",
+     "last_confirmed_at": "string",
+     "confirmed_by": "string",
+     "confirmation_source": "string",
+     "reconfirmed": "boolean",
+     "is_reschedulable": "boolean",
+     "is_cancelable": "boolean",
+     "drop_off": "object",
+     "vet_id": "integer",
+     "patient_id": "integer",
+     "examination_id": "integer",
+     "printable_file_ids": "array",
+     "service_package_ids": "array",
+     "source": "integer",
+     "requires_payment_deposit": "boolean",
+     "pet_parent": "object",
+     "pet": "object",
+     "recurrence_update_mode": "string",
+     "clinic": "object",
+     "payment_deposits": "object",
+     "pet_parent_name": "string",
+     "pet_parent_email": "string",
+     "pet_parent_phone": "string",
+     "revenue": "string",
+     "utm_source": "string",
+     "services": "array"
+    },
+    "evidence": [
+     "openapi/_original/digitail-openapi.json#GET /api/v1/appointments",
+     "openapi/_original/digitail-openapi.json#GET /api/v1/appointments/{id}",
+     "openapi/_original/digitail-openapi.json#GET /api/v1/reports/appointments",
+     "openapi/_original/digitail-openapi.json#POST /api/v1/appointments",
+     "openapi/_original/digitail-openapi.json#PUT /api/v1/appointments/{id}"
+    ]
+   },
+   "elation-health": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "scheduled_date": "string",
+     "duration": "integer",
+     "reason": "string",
+     "description": "string",
+     "patient": "string",
+     "physician": "integer",
+     "practice": "integer",
+     "time_slot_type": "string",
+     "service_location": "integer",
+     "appointment_type_id": [
+      "integer",
+      "null"
+     ],
+     "billing_details": null,
+     "created_date": [
+      "string",
+      "null"
+     ],
+     "deleted_date": [
+      "string",
+      "null"
+     ],
+     "id": "integer",
+     "instructions": [
+      "string",
+      "null"
+     ],
+     "is_blocking": "boolean",
+     "last_modified_date": "string",
+     "metadata": [
+      "object",
+      "null"
+     ],
+     "mode": "string",
+     "payment": null,
+     "recurring_event_schedule": [
+      "integer",
+      "null"
+     ],
+     "status": null,
+     "telehealth_details": [
+      "string",
+      "null"
+     ],
+     "time_slot_status": null,
+     "transportation_details": null,
+     "count": "integer",
+     "next": "string",
+     "previous": "string"
+    },
+    "evidence": [
+     "openapi/_original/elation-api-settings.json#DELETE /appointments/{id}/",
+     "openapi/_original/elation-api-settings.json#GET /appointments/",
+     "openapi/_original/elation-api-settings.json#GET /appointments/{id}/",
+     "openapi/_original/elation-api-settings.json#PATCH /appointments/{id}/",
+     "openapi/_original/elation-api-settings.json#POST /appointments/",
+     "openapi/_original/elation-api-settings.json#PUT /appointments/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#DELETE /api/2.0/appointments/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/appointments/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/appointments/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#PATCH /api/2.0/appointments/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#POST /api/2.0/appointments/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#PUT /api/2.0/appointments/{id}/"
+    ]
+   },
+   "gingr": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "integer",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/gingr-openapi.json#GET /v1/bookings",
+     "openapi/_original/gingr-openapi.json#GET /v1/bookings/{bookingId}",
+     "openapi/_original/gingr-openapi.json#POST /v1/bookings",
+     "openapi/_original/gingr-openapi.json#PUT /v1/bookings/{bookingId}"
+    ]
+   },
+   "housecall-pro": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/housecall-pro-public-api-openapi.yml#GET /jobs/{job_id}/appointments"
+    ]
+   },
+   "intakeq": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "Id": "string",
+     "ClientId": "integer",
+     "ClientName": "string",
+     "PractitionerId": "string",
+     "ServiceId": "string",
+     "ServiceName": "string",
+     "LocationId": "string",
+     "Status": "string",
+     "StartDate": "integer",
+     "Duration": "integer",
+     "Price": "number",
+     "UtcDateTime": "integer",
+     "SendClientEmailNotification": "boolean",
+     "ReminderType": "string"
+    },
+    "evidence": [
+     "openapi/_original/intakeq-openapi.yml#GET /appointments",
+     "openapi/_original/intakeq-openapi.yml#GET /appointments/{appointmentId}",
+     "openapi/_original/intakeq-openapi.yml#POST /appointments",
+     "openapi/_original/intakeq-openapi.yml#PUT /appointments"
+    ]
+   },
+   "jane-app": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "start_at": "string",
+     "end_at": "string",
+     "staff_member_id": "string",
+     "patient_id": "string",
+     "location_id": "string",
+     "treatment_id": "string",
+     "first_visit": "boolean",
+     "cancelled_at": [
+      "string",
+      "null"
+     ],
+     "cancelled_reason": [
+      "string",
+      "null"
+     ],
+     "booked_at": "string",
+     "no_show_at": [
+      "string",
+      "null"
+     ],
+     "arrived_at": [
+      "string",
+      "null"
+     ],
+     "archived_at": [
+      "string",
+      "null"
+     ],
+     "checked_in_at": [
+      "string",
+      "null"
+     ],
+     "state": "string"
+    },
+    "evidence": [
+     "openapi/_original/jane-app-jdp-openapi.yml#GET /api/2026-01-01/appointments",
+     "openapi/_original/jane-app-jdp-openapi.yml#GET /api/2026-01-01/appointments/{appointment_id}"
+    ]
+   },
+   "launch27": {
+    "segments": [
+     "bookings",
+     "booking"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "custom": "boolean",
+     "unit": "string",
+     "quantity": "integer",
+     "id": "integer",
+     "ga_transaction": "object",
+     "ga_item": "object",
+     "location_id": "integer",
+     "user": "object",
+     "address": "string",
+     "city": "string",
+     "state": "string",
+     "zip": "string",
+     "phone": "string",
+     "sms_notifications": "boolean",
+     "frequency_id": "integer",
+     "service_date": "string",
+     "arrival_window": "integer",
+     "services": "array",
+     "discount_code": "string",
+     "tip": "number",
+     "tip_recurring": "boolean",
+     "payment_method": "string",
+     "stripe_token": "string",
+     "customer_notes": "string",
+     "custom_fields": "array",
+     "digest": "string",
+     "active": "boolean",
+     "completed": "boolean",
+     "name": "string",
+     "email": "string",
+     "frequency": "object",
+     "payment_method_info": "object",
+     "summary": "object",
+     "actions": "object",
+     "original_booking_id": "integer",
+     "create_next_recurring": "object"
+    },
+    "evidence": [
+     "openapi/_original/launch27-openapi.yml#GET /customer/bookings",
+     "openapi/_original/launch27-openapi.yml#GET /customer/bookings/{id}",
+     "openapi/_original/launch27-openapi.yml#GET /policy/booking",
+     "openapi/_original/launch27-openapi.yml#POST /booking",
+     "openapi/_original/launch27-openapi.yml#POST /customer/bookings",
+     "openapi/_original/launch27-openapi.yml#PUT /customer/bookings/{id}"
+    ]
+   },
+   "leandata": {
+    "segments": [
+     "meetings"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/leandata-bookit-openapi.yml#GET /v1/meetings"
+    ]
+   },
+   "luma-health": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "_id": "string",
+     "user": "string",
+     "deleted": "number",
+     "createdBy": "string",
+     "updatedBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "patient": "string",
+     "provider": "string",
+     "facility": "string",
+     "type": "string",
+     "date": "string",
+     "duration": "integer",
+     "source": "string",
+     "status": "string",
+     "response": "array",
+     "page": "integer",
+     "size": "integer"
+    },
+    "evidence": [
+     "openapi/_original/luma-health-openapi.yaml#DELETE /appointments/{appointmentId}",
+     "openapi/_original/luma-health-openapi.yaml#GET /appointments",
+     "openapi/_original/luma-health-openapi.yaml#GET /appointments/{appointmentId}",
+     "openapi/_original/luma-health-openapi.yaml#POST /appointments",
+     "openapi/_original/luma-health-openapi.yaml#PUT /appointments/{appointmentId}"
+    ]
+   },
+   "marubox": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "start": "string",
+     "end": "string",
+     "hostTimezone": "string",
+     "eventType": "object",
+     "booker": "object",
+     "answers": "array",
+     "bookerNotes": [
+      "string",
+      "null"
+     ],
+     "location": null,
+     "joinUrl": [
+      "string",
+      "null"
+     ],
+     "source": "string",
+     "payment": null,
+     "cancellation": null,
+     "manageUrl": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "eventTypeId": "string",
+     "notes": "string",
+     "notify": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/marubox-openapi.json#GET /bookings",
+     "openapi/_original/marubox-openapi.json#GET /bookings/{id}",
+     "openapi/_original/marubox-openapi.json#POST /bookings"
+    ]
+   },
+   "momence": {
+    "segments": [
+     "bookings",
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "page": "integer",
+     "pageSize": "integer",
+     "totalCount": "integer",
+     "sortBy": "string",
+     "sortOrder": "string",
+     "id": "integer",
+     "createdAt": "string",
+     "cancelledAt": "string",
+     "startsAt": "string",
+     "endsAt": "string",
+     "durationInMinutes": "number",
+     "priceInCurrency": "number",
+     "depositInCurrency": "string",
+     "isDepositPaid": "boolean",
+     "currency": "string",
+     "isPaid": "boolean",
+     "capacity": "integer",
+     "board": "object",
+     "service": "object",
+     "serviceVariant": null,
+     "teacher": null,
+     "additionalTeacher": null,
+     "isInPerson": "boolean",
+     "inPersonLocation": null,
+     "onlineStreamUrl": "string",
+     "onlineStreamPassword": "string",
+     "member": "object",
+     "roomSpotId": "integer",
+     "checkedIn": "boolean",
+     "ticketsBought": "integer",
+     "isRecurring": "boolean",
+     "recurringBookingId": "integer",
+     "waitlistBookingId": "integer",
+     "memberId": "integer",
+     "useBoughtMembershipIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/momence-openapi.yml#GET /api/v2/host/members/{memberId}/appointments",
+     "openapi/_original/momence-openapi.yml#GET /api/v2/host/sessions/{sessionId}/bookings",
+     "openapi/_original/momence-openapi.yml#POST /api/v2/host/sessions/{sessionId}/waitlist/bookings"
+    ]
+   },
+   "nexhealth": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "patient_id": "integer",
+     "provider_id": "integer",
+     "provider_name": "string",
+     "start_time": "string",
+     "confirmed": "boolean",
+     "patient_missed": "boolean",
+     "created_at": "string",
+     "updated_at": "string",
+     "note": "string",
+     "end_time": "string",
+     "unavailable": "boolean",
+     "cancelled": "boolean",
+     "timezone": "string",
+     "institution_id": "integer",
+     "appointment_type_id": "integer",
+     "checkin_at": "string",
+     "location_id": "integer",
+     "foreign_id": "string",
+     "foreign_id_type": "string",
+     "misc": "object",
+     "last_sync_time": "string",
+     "patient_confirmed": "boolean",
+     "created_by_user_id": "integer",
+     "is_guardian": "boolean",
+     "patient_confirmed_at": "string",
+     "cancelled_at": "string",
+     "is_new_clients_patient": "boolean",
+     "confirmed_at": "string",
+     "sooner_if_possible": "boolean",
+     "operatory_id": "integer",
+     "checked_out": "boolean",
+     "checked_out_at": "string",
+     "referrer": "string",
+     "is_past_patient": "boolean",
+     "timezone_offset": "string",
+     "patient": "object",
+     "operatory": "object",
+     "appointment_type": "object",
+     "procedures": "array",
+     "descriptors": "array",
+     "booking_details": "object",
+     "appt": "object",
+     "stripe_client_secret": "string",
+     "appointments_per_timeslot": "integer"
+    },
+    "evidence": [
+     "openapi/_original/nexhealth-openapi-original.json#GET /appointments",
+     "openapi/_original/nexhealth-openapi-original.json#GET /appointments/{id}",
+     "openapi/_original/nexhealth-openapi-original.json#PATCH /appointments/{id}",
+     "openapi/_original/nexhealth-openapi-original.json#POST /appointments"
+    ]
+   },
+   "nylas": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "request_id": "string",
+     "data": "object",
+     "booking_id": "string",
+     "event_id": "string",
+     "title": "string",
+     "organizer": "object",
+     "status": "string",
+     "description": "string",
+     "start_time": "integer",
+     "end_time": "integer",
+     "master_id": "string",
+     "calendar_id": "string",
+     "participants": "array",
+     "guest": "object",
+     "timezone": "string",
+     "email_language": "string",
+     "additional_guests": "array",
+     "additional_fields": "object",
+     "salt": "string",
+     "cancellation_reason": "string"
+    },
+    "evidence": [
+     "openapi/_original/nylas-api-openapi.yml#DELETE /v3/scheduling/bookings/{booking_id}",
+     "openapi/_original/nylas-api-openapi.yml#GET /v3/scheduling/bookings/{booking_id}",
+     "openapi/_original/nylas-api-openapi.yml#PATCH /v3/scheduling/bookings/{booking_id}",
+     "openapi/_original/nylas-api-openapi.yml#POST /v3/scheduling/bookings",
+     "openapi/_original/nylas-api-openapi.yml#PUT /v3/scheduling/bookings/{booking_id}"
+    ]
+   },
+   "qminder": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "publicId": "string",
+     "lineId": "integer",
+     "firstName": "string",
+     "lastName": "string",
+     "phoneNumber": "string",
+     "email": "string",
+     "languageCode": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "assigneeId": "integer",
+     "fields": "array",
+     "labels": "array"
+    },
+    "evidence": [
+     "openapi/_original/qminder-openapi-original.json#PATCH /v1/appointments/{ticketId}",
+     "openapi/_original/qminder-openapi-original.json#POST /v1/appointments"
+    ]
+   },
+   "servicetitan": {
+    "segments": [
+     "appointments",
+     "bookings"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "source": "string",
+     "name": "string",
+     "address": "object",
+     "customerType": "string",
+     "start": "string",
+     "summary": "string",
+     "campaignId": "integer",
+     "businessUnitId": "integer",
+     "isFirstTimeClient": "boolean",
+     "uploadedImages": "array",
+     "status": "string",
+     "modifiedOn": "string",
+     "jobId": "integer",
+     "appointmentNumber": "string",
+     "end": "string",
+     "arrivalWindowStart": "string",
+     "arrivalWindowEnd": "string",
+     "specialInstructions": "string",
+     "createdOn": "string",
+     "customerId": "integer",
+     "unused": "boolean",
+     "technicianIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/servicetitan-crm-api-openapi.yml#GET /bookings",
+     "openapi/_original/servicetitan-crm-api-openapi.yml#POST /bookings",
+     "openapi/_original/servicetitan-jpm-api-openapi.yml#GET /appointments",
+     "openapi/_original/servicetitan-jpm-api-openapi.yml#GET /appointments/{id}",
+     "openapi/_original/servicetitan-jpm-api-openapi.yml#PATCH /appointments/{id}",
+     "openapi/_original/servicetitan-jpm-api-openapi.yml#POST /appointments"
+    ]
+   },
+   "skedulo": {
+    "segments": [
+     "meetings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "hostUrl": "string",
+     "inviteeUrl": "string",
+     "id": "string",
+     "password": "string",
+     "zoom": "object",
+     "teams": "object",
+     "topic": "string",
+     "agenda": "string",
+     "startTime": "string",
+     "duration": "integer",
+     "hostResourceId": "string"
+    },
+    "evidence": [
+     "openapi/_original/skedulo-virtualmeetings-openapi.yml#DELETE /meetings/{id}",
+     "openapi/_original/skedulo-virtualmeetings-openapi.yml#GET /meetings/{id}",
+     "openapi/_original/skedulo-virtualmeetings-openapi.yml#POST /meetings",
+     "openapi/_original/skedulo-virtualmeetings-openapi.yml#PUT /meetings/{id}"
+    ]
+   },
+   "spurwing": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "appointments": "array",
+     "appointmentsCount": "integer",
+     "id": "string",
+     "provider_id": "string",
+     "appointment_type_id": "string",
+     "datetime": "string"
+    },
+    "evidence": [
+     "openapi/_original/spurwing-openapi.yml#DELETE /appointments/{appointment_id}",
+     "openapi/_original/spurwing-openapi.yml#GET /appointments",
+     "openapi/_original/spurwing-openapi.yml#POST /appointments"
+    ]
+   },
+   "tutorcruncher": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "results": "array",
+     "id": "integer",
+     "service": "integer",
+     "start": "string",
+     "finish": "string",
+     "topic": "string",
+     "location": "string",
+     "recipients": "array",
+     "contractors": "array"
+    },
+    "evidence": [
+     "openapi/_original/tutorcruncher-openapi.yml#DELETE /appointments/{id}/",
+     "openapi/_original/tutorcruncher-openapi.yml#GET /appointments/",
+     "openapi/_original/tutorcruncher-openapi.yml#GET /appointments/{id}/",
+     "openapi/_original/tutorcruncher-openapi.yml#POST /appointments/",
+     "openapi/_original/tutorcruncher-openapi.yml#POST /appointments/{id}/"
+    ]
+   },
+   "weave": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "person_id": "string",
+     "type": "string",
+     "status": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "provider": "string"
+    },
+    "evidence": [
+     "openapi/_original/weave-openapi.yml#GET /api/v2/appointments"
+    ]
+   },
+   "znanylekarz": {
+    "segments": [
+     "bookings"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "_items": "array",
+     "page": "integer",
+     "limit": "integer",
+     "pages": "integer",
+     "total": "integer",
+     "id": "string",
+     "status": "string",
+     "start_at": "string",
+     "end_at": "string",
+     "duration": "integer",
+     "booked_by": "string",
+     "canceled_by": "string",
+     "booked_at": "string",
+     "canceled_at": "string",
+     "moving": null,
+     "patient": "object",
+     "address_service": null,
+     "comment": "string",
+     "presence": "string",
+     "insurance": null,
+     "visit_payment": "boolean",
+     "visit_payment_status": "string",
+     "videocall_url": "string",
+     "reason": "string"
+    },
+    "evidence": [
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}",
+     "openapi/_original/znanylekarz-integrations-api.yml#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/bookings/{booking_id}"
+    ]
+   },
+   "zoca": {
+    "segments": [
+     "booking",
+     "bookings",
+     "meetings",
+     "appointments"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "number",
+     "entityId": "string",
+     "attribute": "string",
+     "value": "object",
+     "metadata": "object",
+     "createdAt": "object",
+     "sale": "object",
+     "payments": "array",
+     "summary": "object",
+     "scan": "object",
+     "businessLat": "number",
+     "businessLng": "number",
+     "points": "array",
+     "heroMetrics": "object"
+    },
+    "evidence": [
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /scheduling/policies/booking/{id}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /entities/{entityId}/hubspot/meetings",
+     "openapi/_original/zoca-platform-openapi.yml#GET /entities/{entityId}/meetings",
+     "openapi/_original/zoca-platform-openapi.yml#GET /frontdesk/bookings/{entityId}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/bookings",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/bookings/{id}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/checkout/booking/{bookingId}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/policies/booking",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/policies/booking/{id}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /scheduling/sales/booking/{bookingId}",
+     "openapi/_original/zoca-platform-openapi.yml#POST /scheduling/bookings",
+     "openapi/_original/zoca-platform-openapi.yml#POST /scheduling/policies/booking"
+    ]
+   },
+   "zocdoc": {
+    "segments": [
+     "appointments"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "request_id": "string",
+     "page": "integer",
+     "page_size": "integer",
+     "total_count": "integer",
+     "next_url": "string",
+     "appointment_id": "string",
+     "appointment_status": "string",
+     "developer_patient_id": "string",
+     "is_provider_resource": "boolean",
+     "location_phone_number": "string",
+     "location_phone_extension": "string",
+     "waiting_room_path": "string",
+     "confirmation_type": "string",
+     "start_time": "string",
+     "created_time_utc": "string",
+     "last_modified_time_utc": "string",
+     "provider_location_id": "string",
+     "practice_id": "string",
+     "visit_reason_id": "string",
+     "visit_type": "string",
+     "patient_type": "string",
+     "notes": "string",
+     "cancellation_reason": "string",
+     "source": "string",
+     "patient": "object"
+    },
+    "evidence": [
+     "openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/appointments",
+     "openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/appointments/{appointment_id}",
+     "openapi/_original/zocdoc-zocdoc-api-openapi.yml#POST /v1/appointments"
+    ]
+   }
+  },
+  "availability": {
+   "7shifts": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "user_id": "integer",
+     "status": "string",
+     "week_type": "string",
+     "availability": "object",
+     "created": "string",
+     "modified": "string"
+    },
+    "evidence": [
+     "openapi/_original/7shifts-openapi.yml#GET /v2/company/{company_id}/availability"
+    ]
+   },
+   "agendapro": {
+    "segments": [
+     "available_slots"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "slots": "array",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/available_slots",
+     "openapi/_original/platform-connect-v3.json#GET /v3/available_slots"
+    ]
+   },
+   "aurinko": {
+    "segments": [
+     "freebusy",
+     "availability"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "start": "string",
+     "end": "string",
+     "status": "string",
+     "timeMin": "string",
+     "timeMax": "string",
+     "emails": "array",
+     "profileIds": "array",
+     "profileNames": "array",
+     "required": "string"
+    },
+    "evidence": [
+     "openapi/_original/aurinko-openapi.json#POST /v1/book/group/profiles/dynamic/availability",
+     "openapi/_original/aurinko-openapi.json#POST /v1/calendars/freeBusy"
+    ]
+   },
+   "cal-com": {
+    "segments": [
+     "slots"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cal-com-openapi.json#GET /v2/slots"
+    ]
+   },
+   "cronofy": {
+    "segments": [
+     "free_busy",
+     "availability"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "pages": "object",
+     "free_busy": "array",
+     "start": "string",
+     "end": "string",
+     "participants": "array",
+     "required_duration": "object",
+     "available_periods": "array"
+    },
+    "evidence": [
+     "openapi/_original/cronofy-openapi.yml#GET /free_busy",
+     "openapi/_original/cronofy-openapi.yml#POST /availability"
+    ]
+   },
+   "elation-health": {
+    "segments": [
+     "availabilities"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "end_time": "string",
+     "id": "integer",
+     "provider_id": "integer",
+     "service_location_id": [
+      "integer",
+      "null"
+     ],
+     "start_time": "string",
+     "timezone": "string",
+     "use_service_location_timezone": "boolean",
+     "weekday": "integer",
+     "appointment_types": "array"
+    },
+    "evidence": [
+     "openapi/_original/elation-api-settings.json#GET /physicians/{id}/availabilities",
+     "openapi/_original/elation-api-settings.json#PUT /physicians/{id}/availabilities",
+     "openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/physicians/{id}/availabilities/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#PUT /api/2.0/physicians/{id}/availabilities/",
+     "openapi/_original/elation-practice-api.json#GET /api/2.0/physicians/{id}/availabilities/",
+     "openapi/_original/elation-practice-api.json#PUT /api/2.0/physicians/{id}/availabilities/"
+    ]
+   },
+   "google-calendar": {
+    "segments": [
+     "freebusy"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "kind": "string",
+     "timeMin": "string",
+     "timeMax": "string",
+     "calendars": "object",
+     "id": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#POST /freeBusy"
+    ]
+   },
+   "humanity": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "integer",
+     "employee_id": "integer",
+     "company_id": "integer",
+     "start_time": "string",
+     "end_time": "string",
+     "series_id": "string",
+     "title": "string",
+     "note": "string",
+     "created_at": "string",
+     "created_by": "integer",
+     "updated_at": "string",
+     "updated_by": null,
+     "deleted_at": null,
+     "deleted_by": null,
+     "rejected_note": null,
+     "series": "object"
+    },
+    "evidence": [
+     "openapi/_original/humanity-default-openapi.yml#GET /employees/availability/{availability_id}",
+     "openapi/_original/humanity-default-openapi.yml#POST /employees/availability"
+    ]
+   },
+   "luma-health": {
+    "segments": [
+     "availabilities"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "response": "array",
+     "page": "integer",
+     "size": "integer",
+     "_id": "string",
+     "user": "string",
+     "deleted": "number",
+     "createdBy": "string",
+     "updatedBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "filters": "object",
+     "provider": "string",
+     "facility": "string",
+     "appointmentType": "string",
+     "date": "string",
+     "duration": "integer",
+     "endDate": "string",
+     "externalId": "object",
+     "status": "object",
+     "offer": "string",
+     "locked": "boolean",
+     "booked": "boolean",
+     "notes": "string"
+    },
+    "evidence": [
+     "openapi/_original/luma-health-openapi.yaml#GET /availabilities",
+     "openapi/_original/luma-health-openapi.yaml#GET /availabilities/{availabilitiesId}",
+     "openapi/_original/luma-health-openapi.yaml#PUT /availabilities/{availabilitiesId}"
+    ]
+   },
+   "marubox": {
+    "segments": [
+     "slots"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "slots": "array",
+     "calendarBlocked": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/marubox-openapi.json#GET /event-types/{id}/slots"
+    ]
+   },
+   "mindbody": {
+    "segments": [
+     "availabilities",
+     "availability"
+    ],
+    "operations": [
+     "DELETE collection",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "StaffMembers": "array",
+     "Errors": "array",
+     "Test": "boolean",
+     "LocationID": "integer",
+     "StaffIDs": "array",
+     "ProgramIDs": "array",
+     "StartDateTime": "string",
+     "EndDateTime": "string",
+     "DaysOfWeek": "array",
+     "UnavailableDescription": "string",
+     "IsUnavailable": "boolean",
+     "PublicDisplay": "string",
+     "AvailabilityIds": "array",
+     "ProgramIds": "array",
+     "LocationId": "integer"
+    },
+    "evidence": [
+     "openapi/_original/mindbody-public-api-v6-openapi-original.yml#DELETE /public/v6/appointment/availability",
+     "openapi/_original/mindbody-public-api-v6-openapi-original.yml#POST /public/v6/appointment/availabilities",
+     "openapi/_original/mindbody-public-api-v6-openapi-original.yml#PUT /public/v6/appointment/availabilities"
+    ]
+   },
+   "nexhealth": {
+    "segments": [
+     "available_slots"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "lid": "integer",
+     "pid": "integer",
+     "operatory_id": "integer",
+     "slots": "array",
+     "next_available_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/nexhealth-openapi-original.json#GET /available_slots"
+    ]
+   },
+   "nylas": {
+    "segments": [
+     "availability",
+     "free-busy"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "request_id": "string",
+     "data": "object",
+     "order": "array",
+     "time_slots": [
+      "array",
+      "null"
+     ],
+     "availability_rules": "object",
+     "duration_minutes": "integer",
+     "end_time": "integer",
+     "interval_minutes": "integer",
+     "participants": "array",
+     "round_to": "integer",
+     "start_time": "integer",
+     "email": "string",
+     "error": "string",
+     "object": "string",
+     "emails": "array",
+     "tentative_as_busy": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/nylas-api-openapi.yml#GET /v3/scheduling/availability",
+     "openapi/_original/nylas-api-openapi.yml#POST /v3/calendars/availability",
+     "openapi/_original/nylas-api-openapi.yml#POST /v3/grants/{grant_id}/calendars/free-busy"
+    ]
+   },
+   "reclaim-ai": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "eventType": "string",
+     "assignmentId": "integer",
+     "smartSeriesLineageId": "integer",
+     "status": "string",
+     "interval": null,
+     "free": "boolean",
+     "locked": "boolean",
+     "isForceFree": "boolean",
+     "isForceBusy": "boolean",
+     "isDamped": "boolean",
+     "isPublic": "boolean",
+     "responseStatus": "string",
+     "source": "string",
+     "sourceKey": "string",
+     "eventMetadata": null,
+     "title": "string",
+     "eventSubType": "string",
+     "isRecurring": "boolean",
+     "attendeeCount": "integer",
+     "hasVip": "boolean",
+     "priorityLevel": "string",
+     "isOrganizer": "boolean",
+     "parentId": "string"
+    },
+    "evidence": [
+     "openapi/_original/reclaim-ai-openapi.yml#GET /api/smart-meetings/availability/{seriesId}"
+    ]
+   },
+   "runai": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "isAvailable": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/runai-openapi-original.json#GET /api/v1/org-unit/reports/availability"
+    ]
+   },
+   "shyft": {
+    "segments": [
+     "availabilities"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/shyft-customer-openapi-original.json#POST /api/customer/user_role/locations/{location_id}/availabilities"
+    ]
+   },
+   "skedulo": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "result": "object",
+     "resourceIds": "array",
+     "start": "string",
+     "end": "string",
+     "availability": "boolean",
+     "unavailability": "boolean",
+     "availabilityFilterValues": "array",
+     "availabilityFilterEntityIds": "object"
+    },
+    "evidence": [
+     "openapi/_original/skedulo-availability-openapi.yml#GET /availability",
+     "openapi/_original/skedulo-availability-openapi.yml#POST /availability"
+    ]
+   },
+   "teachworks": {
+    "segments": [
+     "availabilities"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/teachworks-openapi.yml#GET /availabilities",
+     "openapi/_original/teachworks-openapi.yml#GET /availabilities/{id}"
+    ]
+   },
+   "tutorcruncher": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/tutorcruncher-openapi.yml#GET /contractors/{id}/availability/"
+    ]
+   },
+   "znanylekarz": {
+    "segments": [
+     "slots"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "_items": "array",
+     "address_services": "array",
+     "start": "string",
+     "end": "string",
+     "insurance_accepted": "string",
+     "insurance_providers": "array"
+    },
+    "evidence": [
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots/{date}",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#PUT /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots",
+     "openapi/_original/znanylekarz-integrations-api.yml#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots/{date}",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots",
+     "openapi/_original/znanylekarz-integrations-api.yml#PUT /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/slots"
+    ]
+   },
+   "zoca": {
+    "segments": [
+     "slots",
+     "availability"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "scan": "object",
+     "businessLat": "number",
+     "businessLng": "number",
+     "points": "array",
+     "heroMetrics": "object"
+    },
+    "evidence": [
+     "openapi/_original/zoca-platform-openapi.yml#GET /acuity/slots",
+     "openapi/_original/zoca-platform-openapi.yml#POST /vagaro/{entityId}/availability",
+     "openapi/_original/zoca-platform-swagger.json#GET /acuity/slots",
+     "openapi/_original/zoca-platform-swagger.json#POST /vagaro/{entityId}/availability",
+     "openapi/_original/zoca-tasks-openapi.yml#GET /tasks/api/v1/frontdesk/widget/{entityId}/availability",
+     "openapi/_original/zoca-tasks-openapi.yml#GET /tasks/api/v1/frontdesk/widget/{entityId}/slots",
+     "openapi/_original/zoca-tasks-openapi.yml#POST /tasks/api/v1/scrape/slots",
+     "openapi/_original/zoca-tasks-swagger.json#GET /tasks/api/v1/frontdesk/widget/{entityId}/availability",
+     "openapi/_original/zoca-tasks-swagger.json#GET /tasks/api/v1/frontdesk/widget/{entityId}/slots",
+     "openapi/_original/zoca-tasks-swagger.json#POST /tasks/api/v1/scrape/slots"
+    ]
+   },
+   "zocdoc": {
+    "segments": [
+     "availability"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "request_id": "string",
+     "provider_location_id": "string",
+     "first_availability": "object",
+     "timeslots": "array"
+    },
+    "evidence": [
+     "openapi/_original/zocdoc-zocdoc-api-openapi.yml#GET /v1/provider_locations/availability"
+    ]
+   }
+  },
+  "service": {
+   "agendapro": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "uuid": "string",
+     "name": "string",
+     "active": "boolean",
+     "price": "string",
+     "discount": "string",
+     "has_discount": "boolean",
+     "duration": "integer",
+     "description": "string",
+     "type": "string",
+     "online_booking": "boolean",
+     "online_payment": "object",
+     "outcall": "boolean",
+     "is_video": "boolean",
+     "category": "object",
+     "image": "object",
+     "location_id": "integer",
+     "company_id": "integer",
+     "favorite": "boolean",
+     "created_at": "string",
+     "updated_at": "string",
+     "images": "array",
+     "providers": "array"
+    },
+    "evidence": [
+     "openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/services",
+     "openapi/_original/agendapro-connect-v3-openapi.yml#GET /v3/services/{id}",
+     "openapi/_original/platform-connect-v3.json#GET /v3/services",
+     "openapi/_original/platform-connect-v3.json#GET /v3/services/{id}"
+    ]
+   },
+   "alayacare": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "alayacare_service_code_id": "integer",
+     "alayacare_service_id": "integer",
+     "service_code_name": "string",
+     "service_id": "string",
+     "service_name": "string",
+     "service_start_date": "string",
+     "service_status": "string",
+     "service_reason": "string",
+     "id": "integer",
+     "external_id": "string",
+     "billable_rate": "number",
+     "name": "string",
+     "client": "object",
+     "start_date": "string",
+     "projected_end_date": "string",
+     "notes": "string",
+     "service_instructions": "string",
+     "use_client_address": "boolean",
+     "funder_details": "object",
+     "guid_funder_breakdowns": "array",
+     "funding_methodology": "string",
+     "service_code_id": "integer",
+     "employee": "object",
+     "profile": "object",
+     "import_id": "string",
+     "add_to_associated_employees": "boolean",
+     "reports": "array",
+     "report_ids": "array",
+     "form_ids": "array",
+     "activity_code_ids": "array",
+     "service_tags": "array",
+     "cost_centre_id": "integer",
+     "skills": "array",
+     "service_accounting": "object",
+     "program_creation_data": "object",
+     "cost_centre": "object",
+     "funders": "array",
+     "patient": "object",
+     "provider_details": "object",
+     "status_end_date": "string",
+     "status_reason": "string",
+     "status_start_date": "string",
+     "primary_employee_id": "integer",
+     "primary_employee_external_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/alayacare-services-openapi.yml#GET /services",
+     "openapi/_original/alayacare-services-openapi.yml#GET /services/{alayacare_service_id}",
+     "openapi/_original/alayacare-services-openapi.yml#POST /services",
+     "openapi/_original/alayacare-services-openapi.yml#PUT /services/{alayacare_service_id}"
+    ]
+   },
+   "cal-com": {
+    "segments": [
+     "event-types"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "number",
+     "lengthInMinutes": "number",
+     "lengthInMinutesOptions": "array",
+     "title": "string",
+     "slug": "string",
+     "description": "string",
+     "locations": "array",
+     "disableGuests": "boolean",
+     "slotInterval": "number",
+     "minimumBookingNotice": "number",
+     "beforeEventBuffer": "number",
+     "afterEventBuffer": "number",
+     "recurrence": "object",
+     "metadata": "object",
+     "price": "number",
+     "currency": "string",
+     "lockTimeZoneToggleOnBookingPage": "boolean",
+     "seatsPerTimeSlot": "number",
+     "forwardParamsSuccessRedirect": "boolean",
+     "successRedirectUrl": "string",
+     "isInstantEvent": "boolean",
+     "seatsShowAvailabilityCount": "boolean",
+     "scheduleId": "number",
+     "bookingLimitsCount": null,
+     "bookerActiveBookingsLimit": "object",
+     "onlyShowFirstAvailableSlot": "boolean",
+     "bookingLimitsDuration": null,
+     "bookingWindow": "array",
+     "bookerLayouts": "object",
+     "confirmationPolicy": null,
+     "bookingProposalCount": "number",
+     "requiresBookerEmailVerification": "boolean",
+     "skipAttendeeEmailDeliverabilityCheck": "boolean",
+     "emailSettings": null,
+     "hideCalendarNotes": "boolean",
+     "color": "object",
+     "seats": "object",
+     "offsetStart": "number",
+     "customName": "string",
+     "destinationCalendar": "object",
+     "useDestinationCalendarEmail": "boolean",
+     "hideCalendarEventDetails": "boolean",
+     "hideOrganizerEmail": "boolean",
+     "calVideoSettings": null,
+     "hidden": "boolean",
+     "bookingRequiresAuthentication": "boolean",
+     "disableCancelling": null,
+     "disableRescheduling": null,
+     "interfaceLanguage": "string",
+     "weekStart": "string",
+     "allowReschedulingPastBookings": "boolean",
+     "allowReschedulingCancelledBookings": "boolean",
+     "showOptimizedSlots": "boolean",
+     "useIsolatedAvailability": "boolean",
+     "privateNoteEnabled": "boolean",
+     "privateNoteMode": null,
+     "privateNoteTemplate": "string",
+     "ownerId": "number",
+     "users": "array",
+     "bookingUrl": "string",
+     "bookingFields": "array",
+     "crm": null,
+     "calendarInvites": null,
+     "allowAffectingUpcomingBookings": "boolean",
+     "teamId": "number",
+     "parentEventTypeId": "number",
+     "hosts": "array",
+     "assignAllTeamMembers": "boolean",
+     "schedulingType": "string",
+     "team": "object",
+     "rescheduleWithSameRoundRobinHost": "boolean",
+     "allowRRHostChoiceOnReschedule": "boolean",
+     "isRRWeightsEnabled": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/cal-com-openapi.json#DELETE /v2/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#DELETE /v2/organizations/{orgId}/teams/{teamId}/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#DELETE /v2/teams/{teamId}/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/event-types",
+     "openapi/_original/cal-com-openapi.json#GET /v2/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/teams/event-types",
+     "openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/teams/{teamId}/event-types",
+     "openapi/_original/cal-com-openapi.json#GET /v2/organizations/{orgId}/teams/{teamId}/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#GET /v2/teams/{teamId}/event-types",
+     "openapi/_original/cal-com-openapi.json#GET /v2/teams/{teamId}/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#PATCH /v2/event-types/{eventTypeId}",
+     "openapi/_original/cal-com-openapi.json#PATCH /v2/organizations/{orgId}/teams/{teamId}/event-types/{eventTypeId}"
+    ]
+   },
+   "calendly": {
+    "segments": [
+     "event_types"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "collection": "array",
+     "pagination": "object",
+     "active": "boolean",
+     "admin_managed": "boolean",
+     "booking_method": "string",
+     "color": "string",
+     "created_at": "string",
+     "custom_questions": "array",
+     "deleted_at": [
+      "string",
+      "null"
+     ],
+     "description_html": [
+      "string",
+      "null"
+     ],
+     "description_plain": [
+      "string",
+      "null"
+     ],
+     "duration": "number",
+     "duration_options": [
+      "array",
+      "null"
+     ],
+     "internal_note": [
+      "string",
+      "null"
+     ],
+     "is_paid": "boolean",
+     "kind": "string",
+     "locale": "string",
+     "locations": [
+      "array",
+      "null"
+     ],
+     "name": [
+      "string",
+      "null"
+     ],
+     "pooling_type": null,
+     "position": "integer",
+     "profile": "object",
+     "scheduling_url": "string",
+     "secret": "boolean",
+     "slug": [
+      "string",
+      "null"
+     ],
+     "type": "string",
+     "updated_at": "string",
+     "uri": "string",
+     "owner": "string",
+     "description": "string"
+    },
+    "evidence": [
+     "openapi/_original/calendly-openapi.yml#GET /event_types",
+     "openapi/_original/calendly-openapi.yml#GET /event_types/{uuid}",
+     "openapi/_original/calendly-openapi.yml#PATCH /event_types/{uuid}",
+     "openapi/_original/calendly-openapi.yml#POST /event_types"
+    ]
+   },
+   "cliniko": {
+    "segments": [
+     "appointment_types"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "appointment_types": "array",
+     "total_entries": "integer",
+     "links": "object",
+     "id": "string",
+     "name": "string",
+     "category": "string",
+     "description": "string",
+     "color": "string",
+     "duration_in_minutes": "integer",
+     "max_attendees": "integer",
+     "show_in_online_bookings": "boolean",
+     "created_at": "string",
+     "updated_at": "string",
+     "billable_item": "object",
+     "product": "object",
+     "practitioners": "object",
+     "treatment_note_template": "object"
+    },
+    "evidence": [
+     "openapi/_original/cliniko-openapi.yml#GET /appointment_types",
+     "openapi/_original/cliniko-openapi.yml#GET /appointment_types/{id}"
+    ]
+   },
+   "cronitor": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cronitor-openapi.json#GET /api/integrations/services"
+    ]
+   },
+   "elation-health": {
+    "segments": [
+     "appointment_types"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "abbreviation": "string",
+     "color": "string",
+     "default_duration": "integer",
+     "description": "string",
+     "patient_forms_hours_prior": "integer",
+     "is_telehealth": "boolean",
+     "name": "string",
+     "created_date": [
+      "string",
+      "null"
+     ],
+     "deleted_date": [
+      "string",
+      "null"
+     ],
+     "elation_note_template_ids": "array",
+     "id": "integer",
+     "patient_bookable": "boolean",
+     "patient_form_hours_prior": "integer",
+     "patient_forms": "array",
+     "practice": "integer",
+     "sequence": "integer",
+     "visit_note_format": null,
+     "visit_note_templates": "array",
+     "visit_note_type": [
+      "integer",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/elation-api-settings.json#GET /appointment_types/",
+     "openapi/_original/elation-api-settings.json#GET /appointment_types/{id}",
+     "openapi/_original/elation-api-settings.json#PATCH /appointment_types/{id}",
+     "openapi/_original/elation-health-api-full-openapi.yaml#DELETE /api/2.0/appointment_types/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/appointment_types/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#GET /api/2.0/appointment_types/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#PATCH /api/2.0/appointment_types/{id}/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#POST /api/2.0/appointment_types/",
+     "openapi/_original/elation-health-api-full-openapi.yaml#PUT /api/2.0/appointment_types/{id}/",
+     "openapi/_original/elation-scheduling-api.json#DELETE /api/2.0/appointment_types/{id}/",
+     "openapi/_original/elation-scheduling-api.json#GET /api/2.0/appointment_types/",
+     "openapi/_original/elation-scheduling-api.json#GET /api/2.0/appointment_types/{id}/"
+    ]
+   },
+   "gingr": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "PUT collection"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/gingr-openapi.json#PUT /v1/bookings/{bookingId}/services"
+    ]
+   },
+   "launch27": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "price": "number",
+     "commercial": "boolean",
+     "discount_by_frequency": "boolean",
+     "discount_by_code": "boolean",
+     "hourly": "object",
+     "extras": "array",
+     "pricing_parameters": "array"
+    },
+    "evidence": [
+     "openapi/_original/launch27-openapi.yml#GET /booking/services"
+    ]
+   },
+   "luma-health": {
+    "segments": [
+     "appointmenttypes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "_id": "string",
+     "user": "string",
+     "deleted": "number",
+     "createdBy": "string",
+     "updatedBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "name": "string",
+     "alternativeName": "string",
+     "description": "string",
+     "duration": "string",
+     "externalId": "object",
+     "visible": "integer",
+     "dependents": "array",
+     "response": "array",
+     "page": "integer",
+     "size": "integer",
+     "deletedBy": "string",
+     "deletedAt": "string",
+     "specialty": "string",
+     "refId": "string",
+     "ref": "string"
+    },
+    "evidence": [
+     "openapi/_original/luma-health-openapi.yaml#DELETE /appointmentTypes/{appointmentTypeId}",
+     "openapi/_original/luma-health-openapi.yaml#DELETE /specialties/{specialtyId}/appointmentTypes/{appointmentTypeId}",
+     "openapi/_original/luma-health-openapi.yaml#GET /appointmentTypes",
+     "openapi/_original/luma-health-openapi.yaml#GET /appointmentTypes/{appointmentTypeId}",
+     "openapi/_original/luma-health-openapi.yaml#GET /specialties/{specialtyId}/appointmentTypes",
+     "openapi/_original/luma-health-openapi.yaml#POST /appointmentTypes",
+     "openapi/_original/luma-health-openapi.yaml#POST /specialties/{specialtyId}/appointmentTypes/{appointmentTypeId}",
+     "openapi/_original/luma-health-openapi.yaml#PUT /appointmentTypes/{appointmentTypeId}"
+    ]
+   },
+   "marubox": {
+    "segments": [
+     "event-types"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "nameI18n": "object",
+     "description": [
+      "string",
+      "null"
+     ],
+     "slug": "string",
+     "durationMinutes": "integer",
+     "visibility": "string",
+     "active": "boolean",
+     "bookingUrl": [
+      "string",
+      "null"
+     ],
+     "price": null,
+     "payOnArrival": "boolean",
+     "locationKind": "string",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/marubox-openapi.json#GET /event-types"
+    ]
+   },
+   "mindbody": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "PaginationResponse": "object",
+     "Services": "array",
+     "Price": "number",
+     "OnlinePrice": "number",
+     "TaxIncluded": "number",
+     "ProgramId": "integer",
+     "TaxRate": "number",
+     "ProductId": "integer",
+     "Id": "string",
+     "Name": "string",
+     "Count": "integer",
+     "SellOnline": "boolean",
+     "SaleInContractOnly": "boolean",
+     "Type": "string",
+     "ExpirationType": "string",
+     "ExpirationUnit": "string",
+     "ExpirationLength": "integer",
+     "RevenueCategory": "string",
+     "MembershipId": "integer",
+     "SellAtLocationIds": "array",
+     "UseAtLocationIds": "array",
+     "Priority": "string",
+     "IsIntroOffer": "boolean",
+     "IntroOfferType": "string",
+     "IsThirdPartyDiscountPricing": "boolean",
+     "Program": "string",
+     "Discontinued": "boolean",
+     "RestrictToMembershipIds": "array",
+     "ApplyMemberDiscountsOfMembershipIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/mindbody-public-api-v6-openapi-original.yml#GET /public/v6/sale/services",
+     "openapi/_original/mindbody-public-api-v6-openapi-original.yml#PUT /public/v6/sale/services"
+    ]
+   },
+   "mv-sistemas": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "price": "number",
+     "clinicValue": "number",
+     "activated": "boolean",
+     "duration": "integer",
+     "tuss": "object",
+     "subscription": "object",
+     "externalId": "string",
+     "passThroughValue": "number",
+     "preparation": "string",
+     "returnTime": "integer",
+     "minAge": "integer",
+     "maxAge": "integer",
+     "gender": "string",
+     "scheduleOnline": "boolean",
+     "insurances": "array",
+     "financialAccount": "object",
+     "returnService": null,
+     "segment": null,
+     "scheduled": "boolean",
+     "consentTermId": "integer",
+     "consultationType": "string"
+    },
+    "evidence": [
+     "openapi/_original/mv-sistemas-clinic-connect-openapi.yaml#GET /v1/services",
+     "openapi/_original/mv-sistemas-clinic-connect-openapi.yaml#POST /v1/services"
+    ]
+   },
+   "nexhealth": {
+    "segments": [
+     "appointment_types"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "parent_type": "string",
+     "parent_id": "integer",
+     "minutes": "integer",
+     "bookable_online": "boolean",
+     "descriptors": "array",
+     "location_id": "integer",
+     "appointment_type": "object"
+    },
+    "evidence": [
+     "openapi/_original/nexhealth-openapi-original.json#DELETE /appointment_types/{id}",
+     "openapi/_original/nexhealth-openapi-original.json#GET /appointment_types",
+     "openapi/_original/nexhealth-openapi-original.json#GET /appointment_types/{id}",
+     "openapi/_original/nexhealth-openapi-original.json#PATCH /appointment_types/{id}",
+     "openapi/_original/nexhealth-openapi-original.json#POST /appointment_types"
+    ]
+   },
+   "nomad": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "ID": "string",
+     "ServiceName": "string",
+     "Namespace": "string",
+     "NodeID": "string",
+     "Datacenter": "string",
+     "JobID": "string",
+     "AllocID": "string",
+     "Tags": "array",
+     "Address": "string",
+     "Port": "integer",
+     "CreateIndex": "integer",
+     "ModifyIndex": "integer",
+     "Services": "array"
+    },
+    "evidence": [
+     "openapi/_original/nomad-http-api-openapi.yml#GET /allocation/{allocID}/services",
+     "openapi/_original/nomad-http-api-openapi.yml#GET /services"
+    ]
+   },
+   "servicefusion": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "price": "number",
+     "cost": "number",
+     "taxable": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/servicefusion-openapi.yml#GET /services",
+     "openapi/_original/servicefusion-openapi.yml#POST /services"
+    ]
+   },
+   "servicetitan": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "code": "string",
+     "displayName": "string",
+     "description": "string",
+     "warranty": "object",
+     "categories": "array",
+     "price": "number",
+     "memberPrice": "number",
+     "addOnPrice": "number",
+     "addOnMemberPrice": "number",
+     "taxable": "boolean",
+     "account": "string",
+     "hours": "number",
+     "isLabor": "boolean",
+     "recommendations": "array",
+     "upgrades": "array",
+     "commissionBonus": "object",
+     "paysCommission": "boolean",
+     "active": "boolean",
+     "modifiedOn": "string"
+    },
+    "evidence": [
+     "openapi/_original/servicetitan-pricebook-api-openapi.yml#DELETE /services/{id}",
+     "openapi/_original/servicetitan-pricebook-api-openapi.yml#GET /services",
+     "openapi/_original/servicetitan-pricebook-api-openapi.yml#GET /services/{id}",
+     "openapi/_original/servicetitan-pricebook-api-openapi.yml#PATCH /services/{id}",
+     "openapi/_original/servicetitan-pricebook-api-openapi.yml#POST /services"
+    ]
+   },
+   "spurwing": {
+    "segments": [
+     "appointment_types"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "duration": "integer"
+    },
+    "evidence": [
+     "openapi/_original/spurwing-openapi.yml#GET /appointment_types.json"
+    ]
+   },
+   "teachworks": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/teachworks-openapi.yml#GET /services",
+     "openapi/_original/teachworks-openapi.yml#GET /services/{id}"
+    ]
+   },
+   "tutorcruncher": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "results": "array",
+     "id": "integer",
+     "name": "string",
+     "status": "string",
+     "dft_charge_type": "string",
+     "dft_charge_rate": "string",
+     "subject": "integer"
+    },
+    "evidence": [
+     "openapi/_original/tutorcruncher-openapi.yml#DELETE /services/{id}/",
+     "openapi/_original/tutorcruncher-openapi.yml#GET /services/",
+     "openapi/_original/tutorcruncher-openapi.yml#GET /services/{id}/",
+     "openapi/_original/tutorcruncher-openapi.yml#POST /services/",
+     "openapi/_original/tutorcruncher-openapi.yml#POST /services/{id}/"
+    ]
+   },
+   "weave": {
+    "segments": [
+     "appointment-types"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "data": "array"
+    },
+    "evidence": [
+     "openapi/_original/weave-openapi.yml#GET /api/v2/appointment-types"
+    ]
+   },
+   "znanylekarz": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "_items": "array",
+     "id": "string",
+     "name": "string",
+     "price": "integer",
+     "is_price_from": "boolean",
+     "is_default": "boolean",
+     "service_id": "string",
+     "description": "string",
+     "duration": "integer",
+     "is_visible": "boolean",
+     "allowed_patients": null,
+     "custom_name": "string",
+     "default_duration": "integer"
+    },
+    "evidence": [
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#GET /services",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#PATCH /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}",
+     "openapi/_original/znanylekarz-integrations-api-openapi.json#POST /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services",
+     "openapi/_original/znanylekarz-integrations-api.yml#DELETE /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}",
+     "openapi/_original/znanylekarz-integrations-api.yml#GET /services",
+     "openapi/_original/znanylekarz-integrations-api.yml#PATCH /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services/{address_service_id}",
+     "openapi/_original/znanylekarz-integrations-api.yml#POST /facilities/{facility_id}/doctors/{doctor_id}/addresses/{address_id}/services"
+    ]
+   },
+   "zoca": {
+    "segments": [
+     "services",
+     "appointment-types"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT collection"
+    ],
+    "properties": {
+     "id": "number",
+     "planId": "number",
+     "agentEntityId": "object",
+     "agentName": "string",
+     "internalAddonName": "string",
+     "externalAddonName": "string",
+     "active": "boolean",
+     "subscriptionId": "object",
+     "quantity": "object",
+     "trialEnd": "object",
+     "addonPricingId": "object",
+     "unitPriceCents": "object",
+     "entityId": "string",
+     "attribute": "string",
+     "value": "object",
+     "metadata": "object",
+     "createdAt": "object",
+     "message": "string",
+     "scan": "object",
+     "businessLat": "number",
+     "businessLng": "number",
+     "points": "array",
+     "heroMetrics": "object",
+     "services": "array",
+     "locationId": "string",
+     "merchantId": "string"
+    },
+    "evidence": [
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /addon-groups/{entityId}/{groupId}/services/{serviceId}",
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /addons/{entityId}/{addonId}/services/{serviceId}",
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /bundles/{entityId}/{bundleId}/services/{serviceVariationId}",
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /offers/{id}/services/{serviceId}",
+     "openapi/_original/zoca-platform-openapi.yml#DELETE /services/batch",
+     "openapi/_original/zoca-platform-openapi.yml#GET /acuity/appointment-types/{serviceName}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /content-queue/{entityId}/plan/services",
+     "openapi/_original/zoca-platform-openapi.yml#GET /offers/{id}/services",
+     "openapi/_original/zoca-platform-openapi.yml#GET /services/{entityId}",
+     "openapi/_original/zoca-platform-openapi.yml#GET /vagaro/{entityId}/services",
+     "openapi/_original/zoca-platform-openapi.yml#POST /addon-groups/{entityId}/{groupId}/services",
+     "openapi/_original/zoca-platform-openapi.yml#POST /addons/{entityId}/{addonId}/services"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "7shifts",
+    "acuity-scheduling",
+    "advancedmd",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "amazon-eventbridge-scheduler",
+    "apache-airflow",
+    "assembled",
+    "aurinko",
+    "avoca",
+    "aws-batch",
+    "best-practice",
+    "buildxact",
+    "cal-com",
+    "calendar-api-ma",
+    "calendarific",
+    "calendly",
+    "checkiday-national-holiday-api",
+    "chili-piper",
+    "cliniko",
+    "commusoft",
+    "connecteam",
+    "cronitor",
+    "cronofy",
+    "cyclecalcs",
+    "deputy",
+    "dexcare",
+    "digitail",
+    "elation-health",
+    "eventwren",
+    "fieldpulse",
+    "fulcrumpro",
+    "gingr",
+    "google-calendar",
+    "google-cloud-scheduler",
+    "google-workspace",
+    "gorilladesk",
+    "hami",
+    "harri",
+    "hashicorp-nomad",
+    "hhaexchange",
+    "holidays",
+    "honeybook",
+    "hootsuite",
+    "housecall-pro",
+    "humanity",
+    "intakeq",
+    "intelycare",
+    "jane-app",
+    "jobber",
+    "joblogic",
+    "later",
+    "launch27",
+    "leandata",
+    "luma",
+    "luma-health",
+    "marubox",
+    "microsoft-365",
+    "microsoft-azure-batch",
+    "microsoft-exchange",
+    "microsoft-outlook",
+    "mindbody",
+    "momence",
+    "mv-sistemas",
+    "nexhealth",
+    "nomad",
+    "nylas",
+    "optibus",
+    "oracle-primavera",
+    "planning-center",
+    "postiz",
+    "powerschool",
+    "publer",
+    "publora",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "rundeck",
+    "savvycal",
+    "servicefusion",
+    "servicem8",
+    "servicetitan",
+    "sesame-hr",
+    "shyft",
+    "simpro",
+    "skedulo",
+    "skimmer-pool",
+    "spruce-health",
+    "spurwing",
+    "teachworks",
+    "teambridge",
+    "tradify",
+    "tutorcruncher",
+    "volcano",
+    "weave",
+    "when-i-work",
+    "workiz",
+    "yodeck-signage",
+    "znanylekarz",
+    "zoca",
+    "zocdoc",
+    "zoho-mail",
+    "zuper"
+   ],
+   "kebab-case": [
+    "advancedmd",
+    "agendapro",
+    "alayacare",
+    "amazon-eventbridge-scheduler",
+    "apache-airflow",
+    "avoca",
+    "best-practice",
+    "buildxact",
+    "cal-com",
+    "calendar-api-ma",
+    "chili-piper",
+    "connecteam",
+    "cyclecalcs",
+    "dexcare",
+    "digitail",
+    "elation-health",
+    "fieldpulse",
+    "fulcrumpro",
+    "gingr",
+    "gorilladesk",
+    "hami",
+    "hhaexchange",
+    "hootsuite",
+    "humanity",
+    "jane-app",
+    "later",
+    "leandata",
+    "luma",
+    "luma-health",
+    "marubox",
+    "momence",
+    "mv-sistemas",
+    "nomad",
+    "nylas",
+    "optibus",
+    "planning-center",
+    "postiz",
+    "publer",
+    "publora",
+    "qminder",
+    "quinyx",
+    "reclaim-ai",
+    "runai",
+    "servicefusion",
+    "servicetitan",
+    "sesame-hr",
+    "shyft",
+    "skedulo",
+    "tutorcruncher",
+    "weave",
+    "when-i-work",
+    "znanylekarz",
+    "zoca",
+    "zocdoc"
+   ],
+   "snake_case": [
+    "7shifts",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "assembled",
+    "aurinko",
+    "avoca",
+    "calendly",
+    "cliniko",
+    "cronitor",
+    "cronofy",
+    "deputy",
+    "elation-health",
+    "harri",
+    "honeybook",
+    "housecall-pro",
+    "humanity",
+    "jane-app",
+    "later",
+    "launch27",
+    "nexhealth",
+    "optibus",
+    "planning-center",
+    "powerschool",
+    "publer",
+    "savvycal",
+    "servicem8",
+    "shyft",
+    "skedulo",
+    "spurwing",
+    "teachworks",
+    "weave",
+    "zocdoc",
+    "zuper"
+   ],
+   "camelCase": [
+    "airflow",
+    "apache-airflow",
+    "aurinko",
+    "best-practice",
+    "chili-piper",
+    "commusoft",
+    "connecteam",
+    "deputy",
+    "dexcare",
+    "digitail",
+    "fulcrumpro",
+    "google-calendar",
+    "google-workspace",
+    "hootsuite",
+    "intakeq",
+    "later",
+    "luma-health",
+    "microsoft-365",
+    "microsoft-azure-batch",
+    "microsoft-exchange",
+    "microsoft-outlook",
+    "mindbody",
+    "quinyx",
+    "reclaim-ai",
+    "runai",
+    "simpro",
+    "skedulo",
+    "spruce-health",
+    "workiz",
+    "zoca"
+   ],
+   "other": [
+    "advancedmd",
+    "amazon-eventbridge-scheduler",
+    "amazon-workmail",
+    "apache-airflow",
+    "ashby",
+    "ashby-hq",
+    "best-practice",
+    "elation-health",
+    "google-cloud-scheduler",
+    "hami",
+    "humanity",
+    "jane-app",
+    "later",
+    "leandata",
+    "microsoft-azure-batch",
+    "optibus",
+    "reclaim-ai",
+    "servicem8",
+    "shyft",
+    "volcano",
+    "when-i-work",
+    "zoca"
+   ],
+   "PascalCase": [
+    "advancedmd",
+    "best-practice",
+    "deputy",
+    "dexcare",
+    "hootsuite",
+    "joblogic",
+    "leandata",
+    "microsoft-exchange",
+    "mv-sistemas",
+    "reclaim-ai",
+    "shyft",
+    "skimmer-pool",
+    "wellnessliving"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "7shifts",
+    "advancedmd",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "assembled",
+    "aurinko",
+    "avoca",
+    "cal-com",
+    "calendar-api-ma",
+    "calendarific",
+    "calendly",
+    "checkiday-national-holiday-api",
+    "chili-piper",
+    "cliniko",
+    "commusoft",
+    "connecteam",
+    "cronitor",
+    "cronofy",
+    "cyclecalcs",
+    "deputy",
+    "dexcare",
+    "digitail",
+    "elation-health",
+    "eventwren",
+    "fieldpulse",
+    "fulcrumpro",
+    "gingr",
+    "google-calendar",
+    "google-workspace",
+    "gorilladesk",
+    "harri",
+    "hashicorp-nomad",
+    "holidays",
+    "honeybook",
+    "hootsuite",
+    "housecall-pro",
+    "humanity",
+    "intakeq",
+    "jane-app",
+    "joblogic",
+    "later",
+    "launch27",
+    "luma",
+    "luma-health",
+    "marubox",
+    "microsoft-azure-batch",
+    "mindbody",
+    "momence",
+    "mv-sistemas",
+    "nexhealth",
+    "nomad",
+    "nylas",
+    "optibus",
+    "oracle-primavera",
+    "planning-center",
+    "postiz",
+    "powerschool",
+    "publer",
+    "publora",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "rundeck",
+    "savvycal",
+    "servicefusion",
+    "servicetitan",
+    "sesame-hr",
+    "shyft",
+    "simpro",
+    "skedulo",
+    "skimmer-pool",
+    "spruce-health",
+    "spurwing",
+    "teachworks",
+    "teambridge",
+    "tutorcruncher",
+    "volcano",
+    "weave",
+    "wellnessliving",
+    "when-i-work",
+    "workiz",
+    "yodeck-signage",
+    "znanylekarz",
+    "zoca",
+    "zocdoc",
+    "zoho-mail",
+    "zuper"
+   ],
+   "snake_case": [
+    "7shifts",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "assembled",
+    "avoca",
+    "calendar-api-ma",
+    "calendarific",
+    "calendly",
+    "cliniko",
+    "cronitor",
+    "cronofy",
+    "cyclecalcs",
+    "dexcare",
+    "digitail",
+    "elation-health",
+    "eventwren",
+    "fieldpulse",
+    "gorilladesk",
+    "harri",
+    "honeybook",
+    "hootsuite",
+    "housecall-pro",
+    "humanity",
+    "jane-app",
+    "later",
+    "launch27",
+    "luma",
+    "momence",
+    "nexhealth",
+    "nomad",
+    "nylas",
+    "planning-center",
+    "publer",
+    "quinyx",
+    "reclaim-ai",
+    "runai",
+    "savvycal",
+    "shyft",
+    "skedulo",
+    "spurwing",
+    "teachworks",
+    "weave",
+    "wellnessliving",
+    "when-i-work",
+    "workiz",
+    "yodeck-signage",
+    "znanylekarz",
+    "zoca",
+    "zocdoc",
+    "zuper"
+   ],
+   "camelCase": [
+    "advancedmd",
+    "amazon-eventbridge-scheduler",
+    "aurinko",
+    "aws-batch",
+    "best-practice",
+    "cal-com",
+    "chili-piper",
+    "connecteam",
+    "cronitor",
+    "dexcare",
+    "fieldpulse",
+    "fulcrumpro",
+    "google-calendar",
+    "google-workspace",
+    "hootsuite",
+    "intakeq",
+    "joblogic",
+    "later",
+    "luma-health",
+    "marubox",
+    "microsoft-azure-batch",
+    "microsoft-exchange",
+    "microsoft-outlook",
+    "mindbody",
+    "momence",
+    "mv-sistemas",
+    "optibus",
+    "postiz",
+    "publer",
+    "publora",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "rundeck",
+    "servicetitan",
+    "sesame-hr",
+    "simpro",
+    "skedulo",
+    "skimmer-pool",
+    "spruce-health",
+    "teambridge",
+    "volcano",
+    "when-i-work",
+    "zoca",
+    "zoho-mail"
+   ],
+   "other": [
+    "7shifts",
+    "advancedmd",
+    "alayacare",
+    "buildxact",
+    "cliniko",
+    "cronofy",
+    "dexcare",
+    "digitail",
+    "elation-health",
+    "fieldpulse",
+    "fulcrumpro",
+    "gingr",
+    "gorilladesk",
+    "humanity",
+    "jane-app",
+    "later",
+    "luma-health",
+    "microsoft-365",
+    "microsoft-azure-batch",
+    "microsoft-exchange",
+    "microsoft-outlook",
+    "mindbody",
+    "mv-sistemas",
+    "nexhealth",
+    "servicem8",
+    "shyft",
+    "zuper"
+   ],
+   "PascalCase": [
+    "amazon-eventbridge-scheduler",
+    "amazon-workmail",
+    "fulcrumpro",
+    "hhaexchange",
+    "joblogic",
+    "mv-sistemas",
+    "oracle-primavera",
+    "skimmer-pool",
+    "zoca"
+   ],
+   "kebab-case": [
+    "advancedmd",
+    "microsoft-azure-batch",
+    "servicefusion"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "7shifts",
+    "acuity-scheduling",
+    "advancedmd",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "assembled",
+    "aurinko",
+    "avoca",
+    "best-practice",
+    "cal-com",
+    "calendar-api-ma",
+    "calendly",
+    "cliniko",
+    "commusoft",
+    "connecteam",
+    "cronitor",
+    "deputy",
+    "dexcare",
+    "digitail",
+    "elation-health",
+    "eventwren",
+    "fieldpulse",
+    "fulcrumpro",
+    "gingr",
+    "google-cloud-scheduler",
+    "harri",
+    "hashicorp-nomad",
+    "honeybook",
+    "hootsuite",
+    "humanity",
+    "jane-app",
+    "later",
+    "launch27",
+    "luma-health",
+    "marubox",
+    "microsoft-365",
+    "mv-sistemas",
+    "nexhealth",
+    "nylas",
+    "planning-center",
+    "postiz",
+    "publer",
+    "publora",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "rundeck",
+    "savvycal",
+    "servicefusion",
+    "servicem8",
+    "servicetitan",
+    "sesame-hr",
+    "skedulo",
+    "skimmer-pool",
+    "teachworks",
+    "tradify",
+    "tutorcruncher",
+    "volcano",
+    "when-i-work",
+    "yodeck-signage",
+    "znanylekarz",
+    "zoca",
+    "zoho-mail"
+   ],
+   "camelCase": [
+    "advancedmd",
+    "aurinko",
+    "avoca",
+    "aws-batch",
+    "best-practice",
+    "buildxact",
+    "cal-com",
+    "chili-piper",
+    "connecteam",
+    "cronitor",
+    "dexcare",
+    "digitail",
+    "fieldpulse",
+    "fulcrumpro",
+    "gingr",
+    "google-calendar",
+    "google-workspace",
+    "gorilladesk",
+    "harri",
+    "hootsuite",
+    "humanity",
+    "intakeq",
+    "intelycare",
+    "later",
+    "luma-health",
+    "microsoft-azure-batch",
+    "mindbody",
+    "momence",
+    "mv-sistemas",
+    "nomad",
+    "nylas",
+    "optibus",
+    "oracle-primavera",
+    "postiz",
+    "powerschool",
+    "publora",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "sesame-hr",
+    "simpro",
+    "skedulo",
+    "spruce-health",
+    "teambridge",
+    "zoca",
+    "zoho-mail"
+   ],
+   "snake_case": [
+    "7shifts",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "calendly",
+    "cronofy",
+    "digitail",
+    "elation-health",
+    "harri",
+    "hashicorp-nomad",
+    "hhaexchange",
+    "honeybook",
+    "housecall-pro",
+    "humanity",
+    "intelycare",
+    "jane-app",
+    "nexhealth",
+    "nylas",
+    "planning-center",
+    "publer",
+    "runai",
+    "savvycal",
+    "shyft",
+    "skedulo",
+    "spurwing",
+    "when-i-work",
+    "znanylekarz",
+    "zoca",
+    "zocdoc",
+    "zuper"
+   ],
+   "kebab-case": [
+    "elation-health",
+    "microsoft-365",
+    "microsoft-exchange",
+    "microsoft-outlook",
+    "mv-sistemas",
+    "runai",
+    "znanylekarz"
+   ],
+   "PascalCase": [
+    "amazon-eventbridge-scheduler",
+    "fulcrumpro",
+    "runai",
+    "workiz"
+   ],
+   "other": [
+    "microsoft-exchange",
+    "microsoft-outlook",
+    "workiz"
+   ]
+  },
+  "pagination_param": {
+   "page": [
+    "agendapro",
+    "alayacare",
+    "chili-piper",
+    "cliniko",
+    "cronitor",
+    "digitail",
+    "fieldpulse",
+    "gingr",
+    "harri",
+    "honeybook",
+    "housecall-pro",
+    "humanity",
+    "intakeq",
+    "later",
+    "luma-health",
+    "momence",
+    "mv-sistemas",
+    "nexhealth",
+    "optibus",
+    "postiz",
+    "powerschool",
+    "publer",
+    "publora",
+    "quinyx",
+    "savvycal",
+    "servicefusion",
+    "servicetitan",
+    "sesame-hr",
+    "shyft",
+    "simpro",
+    "skedulo",
+    "skimmer-pool",
+    "teachworks",
+    "teambridge",
+    "tutorcruncher",
+    "when-i-work",
+    "yodeck-signage",
+    "znanylekarz",
+    "zoca",
+    "zocdoc",
+    "zuper"
+   ],
+   "limit": [
+    "7shifts",
+    "agendapro",
+    "airflow",
+    "apache-airflow",
+    "aurinko",
+    "avoca",
+    "cal-com",
+    "connecteam",
+    "cyclecalcs",
+    "elation-health",
+    "fieldpulse",
+    "gorilladesk",
+    "harri",
+    "hootsuite",
+    "humanity",
+    "later",
+    "launch27",
+    "luma-health",
+    "marubox",
+    "nylas",
+    "oracle-primavera",
+    "postiz",
+    "publora",
+    "qminder",
+    "reclaim-ai",
+    "runai",
+    "sesame-hr",
+    "shyft",
+    "simpro",
+    "skedulo",
+    "volcano",
+    "weave",
+    "when-i-work",
+    "znanylekarz",
+    "zoca",
+    "zocdoc",
+    "zoho-mail"
+   ],
+   "offset": [
+    "airflow",
+    "apache-airflow",
+    "aurinko",
+    "avoca",
+    "cal-com",
+    "connecteam",
+    "elation-health",
+    "gorilladesk",
+    "harri",
+    "humanity",
+    "later",
+    "launch27",
+    "nylas",
+    "oracle-primavera",
+    "planning-center",
+    "runai",
+    "rundeck",
+    "skedulo",
+    "spurwing",
+    "workiz",
+    "zoca"
+   ],
+   "start": [
+    "advancedmd",
+    "cal-com",
+    "calendar-api-ma",
+    "checkiday-national-holiday-api",
+    "chili-piper",
+    "cyclecalcs",
+    "deputy",
+    "holidays",
+    "humanity",
+    "nexhealth",
+    "nylas",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "skedulo",
+    "weave",
+    "when-i-work",
+    "znanylekarz",
+    "zoho-mail"
+   ],
+   "page_size": [
+    "chili-piper",
+    "cronitor",
+    "elation-health",
+    "gingr",
+    "housecall-pro",
+    "later",
+    "momence",
+    "quinyx",
+    "servicetitan",
+    "simpro",
+    "skimmer-pool",
+    "spruce-health",
+    "spurwing",
+    "yodeck-signage",
+    "zoca",
+    "zocdoc"
+   ],
+   "cursor": [
+    "7shifts",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "avoca",
+    "cal-com",
+    "cyclecalcs",
+    "elation-health",
+    "hootsuite",
+    "marubox",
+    "quinyx",
+    "skedulo",
+    "zoca"
+   ],
+   "per_page": [
+    "agendapro",
+    "cliniko",
+    "digitail",
+    "honeybook",
+    "humanity",
+    "nexhealth",
+    "nomad",
+    "planning-center",
+    "savvycal",
+    "servicefusion",
+    "shyft",
+    "skedulo",
+    "teachworks"
+   ],
+   "count": [
+    "alayacare",
+    "buildxact",
+    "calendly",
+    "cyclecalcs",
+    "dexcare",
+    "hootsuite",
+    "microsoft-outlook",
+    "reclaim-ai",
+    "when-i-work",
+    "zuper"
+   ],
+   "page_token": [
+    "aurinko",
+    "calendly",
+    "google-calendar",
+    "google-workspace",
+    "nylas",
+    "quinyx",
+    "reclaim-ai"
+   ],
+   "skip": [
+    "buildxact",
+    "cal-com",
+    "dexcare",
+    "fulcrumpro",
+    "microsoft-exchange",
+    "microsoft-outlook"
+   ],
+   "after": [
+    "airflow",
+    "apache-airflow",
+    "luma",
+    "reclaim-ai",
+    "skedulo"
+   ],
+   "top": [
+    "buildxact",
+    "dexcare",
+    "microsoft-365",
+    "microsoft-exchange",
+    "microsoft-outlook"
+   ],
+   "before": [
+    "airflow",
+    "apache-airflow",
+    "luma",
+    "nylas"
+   ],
+   "max_results": [
+    "amazon-eventbridge-scheduler",
+    "amazon-workmail",
+    "google-calendar",
+    "google-workspace"
+   ],
+   "size": [
+    "elation-health",
+    "mv-sistemas",
+    "quinyx",
+    "teambridge"
+   ],
+   "next": [
+    "airflow",
+    "apache-airflow"
+   ]
+  },
+  "property": {
+   "lower": [
+    "7shifts",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "aurinko",
+    "avoca",
+    "cal-com",
+    "calendly",
+    "checkiday-national-holiday-api",
+    "cliniko",
+    "cronofy",
+    "digitail",
+    "elation-health",
+    "gingr",
+    "google-calendar",
+    "harri",
+    "humanity",
+    "jane-app",
+    "later",
+    "launch27",
+    "luma-health",
+    "marubox",
+    "microsoft-exchange",
+    "momence",
+    "mv-sistemas",
+    "nexhealth",
+    "nylas",
+    "optibus",
+    "planning-center",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "savvycal",
+    "servicefusion",
+    "servicetitan",
+    "skedulo",
+    "spruce-health",
+    "spurwing",
+    "tutorcruncher",
+    "weave",
+    "znanylekarz",
+    "zoca",
+    "zocdoc"
+   ],
+   "snake_case": [
+    "7shifts",
+    "agendapro",
+    "airflow",
+    "alayacare",
+    "apache-airflow",
+    "avoca",
+    "calendly",
+    "checkiday-national-holiday-api",
+    "cliniko",
+    "cronofy",
+    "digitail",
+    "elation-health",
+    "harri",
+    "humanity",
+    "jane-app",
+    "launch27",
+    "nexhealth",
+    "nylas",
+    "savvycal",
+    "spurwing",
+    "tutorcruncher",
+    "weave",
+    "wellnessliving",
+    "znanylekarz",
+    "zocdoc"
+   ],
+   "camelCase": [
+    "aurinko",
+    "cal-com",
+    "checkiday-national-holiday-api",
+    "digitail",
+    "google-calendar",
+    "later",
+    "luma-health",
+    "marubox",
+    "microsoft-exchange",
+    "momence",
+    "mv-sistemas",
+    "optibus",
+    "qminder",
+    "quinyx",
+    "recal",
+    "reclaim-ai",
+    "runai",
+    "servicetitan",
+    "skedulo",
+    "spruce-health",
+    "spurwing",
+    "zoca"
+   ],
+   "PascalCase": [
+    "intakeq",
+    "mindbody",
+    "nomad",
+    "optibus"
+   ],
+   "other": [
+    "luma-health",
+    "znanylekarz"
+   ]
+  }
+ }
+}

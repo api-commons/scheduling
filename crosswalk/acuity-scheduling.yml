@@ -1,0 +1,14 @@
+provider: acuity-scheduling
+apis_io: https://apis.io/providers/acuity-scheduling/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/acuity-scheduling-openapi.yml#GET /appointments
+    - openapi/_original/acuity-scheduling-openapi.yml#POST /appointments
+    - openapi/_original/acuity-scheduling-openapi.yml#PUT /appointments/{id}

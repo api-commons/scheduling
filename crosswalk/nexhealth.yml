@@ -1,0 +1,49 @@
+provider: nexhealth
+apis_io: https://apis.io/providers/nexhealth/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: id
+      start_at: start_time
+      end_at: end_time
+      created_at: created_at
+      service_id:
+      - appointment_type_id
+      - appointment_type
+      location_id: location_id
+      customer_id: patient_id
+      description: note
+      updated_at: updated_at
+      patient: patient
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/nexhealth-openapi-original.json#GET /appointments
+    - openapi/_original/nexhealth-openapi-original.json#GET /appointments/{id}
+    - openapi/_original/nexhealth-openapi-original.json#PATCH /appointments/{id}
+    - openapi/_original/nexhealth-openapi-original.json#POST /appointments
+  availability:
+    path_segment:
+    - available_slots
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nexhealth-openapi-original.json#GET /available_slots
+  service:
+    path_segment:
+    - appointment_types
+    properties:
+      id: id
+      name: name
+      duration: minutes
+      location_id: location_id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/nexhealth-openapi-original.json#DELETE /appointment_types/{id}
+    - openapi/_original/nexhealth-openapi-original.json#GET /appointment_types
+    - openapi/_original/nexhealth-openapi-original.json#GET /appointment_types/{id}
+    - openapi/_original/nexhealth-openapi-original.json#PATCH /appointment_types/{id}
+    - openapi/_original/nexhealth-openapi-original.json#POST /appointment_types

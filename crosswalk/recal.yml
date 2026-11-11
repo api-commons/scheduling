@@ -1,0 +1,31 @@
+provider: recal
+apis_io: https://apis.io/providers/recal/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendar
+    properties:
+      id: id
+      color: backgroundColor
+      is_primary: primary
+      time_zone: timeZone
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/recal-openapi.json#GET /v1/users/{userId}/calendar
+  calendar_event:
+    path_segment:
+    - events
+    properties:
+      description: description
+      attendees: attendees
+      id: id
+      location: location
+      end_at: end
+      start_at: start
+      calendar_id: calendarId
+      subject: subject
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/recal-openapi.json#GET /v1/users/{userId}/calendar/events

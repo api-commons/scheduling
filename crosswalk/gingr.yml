@@ -1,0 +1,17 @@
+provider: gingr
+apis_io: https://apis.io/providers/gingr/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - bookings
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/gingr-openapi.json#GET /v1/bookings
+    - openapi/_original/gingr-openapi.json#GET /v1/bookings/{bookingId}
+    - openapi/_original/gingr-openapi.json#POST /v1/bookings
+    - openapi/_original/gingr-openapi.json#PUT /v1/bookings/{bookingId}

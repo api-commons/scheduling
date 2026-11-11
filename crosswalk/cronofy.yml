@@ -1,0 +1,31 @@
+provider: cronofy
+apis_io: https://apis.io/providers/cronofy/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendars
+    properties:
+      id: calendar_id
+      name: name
+      color: color
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cronofy-openapi.yml#GET /calendars
+    - openapi/_original/cronofy-openapi.yml#POST /calendars
+  calendar_event:
+    path_segment:
+    - events
+    properties:
+      description: description
+      attendees: attendees
+      location: location
+      end_at: end
+      start_at: start
+      name: summary
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/cronofy-openapi.yml#DELETE /calendars/{calendar_id}/events
+    - openapi/_original/cronofy-openapi.yml#GET /events
+    - openapi/_original/cronofy-openapi.yml#POST /calendars/{calendar_id}/events

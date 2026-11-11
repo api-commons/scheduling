@@ -1,0 +1,12 @@
+provider: wellnessliving
+apis_io: https://apis.io/providers/wellnessliving/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  calendar:
+    path_segment:
+    - calendar
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wellnessliving-openapi.yml#GET /Wl/Appointment/Book/Schedule/Calendar.json

@@ -1,0 +1,868 @@
+context: scheduling
+name: Calendars and Scheduling
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Scheduling
+  - Calendar
+  providers_with_harvested_openapi: 112
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  service:
+    cronitor: /integrations/services are monitoring integrations
+    nomad: /allocation/{id}/services are infrastructure services
+    gingr: /bookings/{id}/services are add-ons on a pet-care booking, not a bookable type
+duplicates: {}
+shared_specs: {}
+concepts:
+  calendar:
+    segments_seen:
+      calendars: 7
+      calendar: 6
+    providers_exposing: 13
+    providers_with_readable_schema: 12
+    operations:
+    - operation: GET collection
+      providers: 12
+      share: 0.923
+      tier: core
+    - operation: POST collection
+      providers: 5
+      share: 0.385
+      tier: extended
+    - operation: GET item
+      providers: 4
+      share: 0.308
+      tier: extended
+    - operation: UPDATE item
+      providers: 4
+      share: 0.308
+      tier: extended
+    - operation: DELETE item
+      providers: 3
+      share: 0.231
+      tier: extended
+    - operation: DELETE collection
+      providers: 1
+      share: 0.077
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.077
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 8
+      share: 0.667
+      type: string
+      spellings:
+      - id
+      - calendar_id
+    - name: name
+      tier: core
+      providers: 6
+      share: 0.5
+      type: string
+      spellings:
+      - name
+      - summary
+    - name: color
+      tier: extended
+      providers: 5
+      share: 0.417
+      type: string
+      spellings:
+      - color
+      - hexColor
+      - hex_color
+      - backgroundColor
+    - name: description
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: string
+      spellings:
+      - description
+    - name: is_primary
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: boolean
+      spellings:
+      - primary
+      - is_primary
+    - name: time_zone
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: string
+      spellings:
+      - timeZone
+      - timezone
+    long_tail_count: 79
+    long_tail_sample:
+    - access_role
+    - location
+    - metadata
+    - provider
+    - a_date
+    - a_time
+    - a_timezone_data
+    - a_week_name
+    - access_domain_read
+    - allowed_online_meeting_providers
+    - attribute
+    - autocreate
+    - blocks
+    - calendar_deleted
+    - calendar_name
+    - calendar_primary
+    - calendar_readonly
+    - calendar_vehicle_assignments
+    - can_backwards
+    - can_edit
+    - can_share
+    - can_view_private_items
+    - change_key
+    - color_hex
+    - config_id
+    - connected
+    - connected_calendars
+    - created_at
+    - credential_id
+    - daily_tasks
+    - deduplication_policy
+    - default_online_meeting_provider
+    - default_reminders
+    - deployed_plans
+    - depot_id
+    - destination_calendar
+    - dt_date
+    - entity_id
+    - etag
+    - external_id
+  calendar_event:
+    segments_seen:
+      events: 9
+      event: 3
+    providers_exposing: 9
+    providers_with_readable_schema: 9
+    operations:
+    - operation: GET collection
+      providers: 8
+      share: 0.889
+      tier: core
+    - operation: POST collection
+      providers: 8
+      share: 0.889
+      tier: core
+    - operation: GET item
+      providers: 6
+      share: 0.667
+      tier: core
+    - operation: DELETE item
+      providers: 5
+      share: 0.556
+      tier: core
+    - operation: UPDATE item
+      providers: 5
+      share: 0.556
+      tier: core
+    - operation: DELETE collection
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    properties:
+    - name: description
+      tier: core
+      providers: 8
+      share: 0.889
+      type: string
+      spellings:
+      - description
+      - body
+    - name: attendees
+      tier: core
+      providers: 7
+      share: 0.778
+      type: array
+      spellings:
+      - attendees
+      - participants
+    - name: id
+      tier: core
+      providers: 7
+      share: 0.778
+      type: string
+      spellings:
+      - id
+      - uuid
+    - name: location
+      tier: core
+      providers: 7
+      share: 0.778
+      type: string
+      spellings:
+      - location
+      - conferencing
+    - name: end_at
+      tier: core
+      providers: 6
+      share: 0.667
+      type: object
+      spellings:
+      - end
+      - endTime
+    - name: start_at
+      tier: core
+      providers: 6
+      share: 0.667
+      type: object
+      spellings:
+      - start
+      - startTime
+    - name: name
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - title
+      - summary
+    - name: recurrence
+      tier: core
+      providers: 5
+      share: 0.556
+      type: object
+      spellings:
+      - recurrence
+      - recurring
+    - name: calendar_id
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - calendarId
+      - calendar_id
+    - name: organizer_id
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: object
+      spellings:
+      - organizer
+      - organizerId
+    - name: status
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - status
+    - name: created_at
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - createdTime
+      - createdAt
+      - created
+      - created_at
+    - name: etag
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - etag
+    - name: html_link
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - htmlLink
+      - html_link
+    - name: subject
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - subject
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - updated
+      - updated_at
+    long_tail_count: 175
+    long_tail_sample:
+    - capacity
+    - categories
+    - category
+    - event_id
+    - has_attachments
+    - i_cal_u_id
+    - locations
+    - online_meeting_provider
+    - online_meeting_url
+    - sensitivity
+    - show_as
+    - type
+    - visibility
+    - actor_id
+    - allocated_time_chunks
+    - allow_new_time_proposals
+    - assignment_id
+    - assignment_sub_id
+    - assist
+    - attachments
+    - background
+    - body_preview
+    - business_lat
+    - business_lng
+    - busy
+    - calendar_event_owner
+    - cancellation_reason
+    - cancelled_at
+    - category_override
+    - change_key
+    - changed_at
+    - check_in_closes_at
+    - check_in_opens_at
+    - color
+    - conference_call
+    - confirmed_count
+    - context
+    - cover_image_url
+    - created_date_time
+    - currency
+  appointment:
+    segments_seen:
+      appointments: 16
+      bookings: 12
+      meetings: 3
+      booking: 2
+      scheduled_events: 1
+    providers_exposing: 28
+    providers_with_readable_schema: 25
+    operations:
+    - operation: GET collection
+      providers: 25
+      share: 0.893
+      tier: core
+    - operation: GET item
+      providers: 21
+      share: 0.75
+      tier: core
+    - operation: POST collection
+      providers: 20
+      share: 0.714
+      tier: core
+    - operation: UPDATE item
+      providers: 13
+      share: 0.464
+      tier: extended
+    - operation: DELETE item
+      providers: 8
+      share: 0.286
+      tier: extended
+    - operation: POST item
+      providers: 1
+      share: 0.036
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.036
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 23
+      share: 0.92
+      type: integer
+      spellings:
+      - id
+      - uri
+      - record_id
+      - Id
+      - _id
+      - appointment_id
+    - name: start_at
+      tier: core
+      providers: 17
+      share: 0.68
+      type: string
+      spellings:
+      - start_time
+      - start
+      - start_at
+      - startTime
+      - starts_at
+      - StartDate
+      - startsAt
+    - name: status
+      tier: core
+      providers: 15
+      share: 0.6
+      type: string
+      spellings:
+      - status
+      - state
+      - Status
+    - name: end_at
+      tier: core
+      providers: 14
+      share: 0.56
+      type: string
+      spellings:
+      - end_time
+      - end
+      - end_at
+      - ends_at
+      - end_datetime
+      - endsAt
+      - endTime
+    - name: created_at
+      tier: extended
+      providers: 11
+      share: 0.44
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created_date
+      - createdOn
+    - name: service_id
+      tier: extended
+      providers: 11
+      share: 0.44
+      type: object
+      spellings:
+      - service
+      - appointment_type_id
+      - eventTypeId
+      - eventType
+      - appointment_type
+      - service_id
+      - event_type
+      - ServiceId
+    - name: location_id
+      tier: extended
+      providers: 9
+      share: 0.36
+      type: string
+      spellings:
+      - location_id
+      - location
+      - locationId
+      - LocationId
+    - name: customer_id
+      tier: extended
+      providers: 8
+      share: 0.32
+      type: integer
+      spellings:
+      - patient_id
+      - client_id
+      - attendee
+      - ClientId
+      - booker
+      - customerId
+    - name: description
+      tier: extended
+      providers: 8
+      share: 0.32
+      type: string
+      spellings:
+      - notes
+      - description
+      - note
+    - name: duration
+      tier: extended
+      providers: 7
+      share: 0.28
+      type: integer
+      spellings:
+      - duration
+      - Duration
+    - name: updated_at
+      tier: extended
+      providers: 7
+      share: 0.28
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+    - name: cancellation_reason
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: string
+      spellings:
+      - cancellation_reason
+      - reason
+      - cancellationReason
+    - name: name
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: string
+      spellings:
+      - name
+      - summary
+      - title
+    - name: patient
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: object
+      spellings:
+      - patient
+    - name: metadata
+      tier: extended
+      providers: 5
+      share: 0.2
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - custom
+      - custom_fields
+    - name: source
+      tier: extended
+      providers: 5
+      share: 0.2
+      type: string
+      spellings:
+      - source
+    long_tail_count: 339
+    long_tail_sample:
+    - canceled_at
+    - staff_id
+    - type
+    - email
+    - payment
+    - address
+    - booked_at
+    - cancellation
+    - checked_in_at
+    - datetime
+    - event_id
+    - guest
+    - page_size
+    - phone_number
+    - price
+    - provider
+    - request_id
+    - sale
+    - services
+    - time_zone
+    - topic
+    - user
+    - visit_type
+    - absent_host
+    - actions
+    - active
+    - additional_fields
+    - additional_guests
+    - additional_teacher
+    - address_service
+    - agenda
+    - allow_booking_out_of_bounds
+    - allow_conflicts
+    - answers
+    - appointment_number
+    - appointment_status
+    - appointments_count
+    - appointments_per_timeslot
+    - appt
+    - archived_at
+  availability:
+    segments_seen:
+      availability: 5
+      slots: 4
+      available_slots: 2
+      availabilities: 2
+      free-busy: 1
+    providers_exposing: 12
+    providers_with_readable_schema: 10
+    operations:
+    - operation: GET collection
+      providers: 12
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 3
+      share: 0.25
+      tier: extended
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.167
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.083
+      tier: long-tail
+    - operation: GET item
+      providers: 1
+      share: 0.083
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.083
+      tier: long-tail
+    properties:
+    - name: end_at
+      tier: core
+      providers: 5
+      share: 0.5
+      type: string
+      spellings:
+      - end_time
+      - end
+      - endDate
+    - name: start_at
+      tier: extended
+      providers: 4
+      share: 0.4
+      type: string
+      spellings:
+      - start_time
+      - start
+    long_tail_count: 61
+    long_tail_sample:
+    - id
+    - request_id
+    - address_services
+    - appointment_type
+    - appointment_types
+    - availability_filter_entity_ids
+    - availability_filter_values
+    - availability_rules
+    - booked
+    - business_lat
+    - business_lng
+    - calendar_blocked
+    - created_at
+    - created_by
+    - date
+    - deleted
+    - description
+    - duration
+    - duration_minutes
+    - email
+    - emails
+    - error
+    - external_id
+    - facility
+    - filters
+    - first_availability
+    - hero_metrics
+    - insurance_accepted
+    - insurance_providers
+    - interval_minutes
+    - items
+    - lid
+    - locked
+    - metadata
+    - next_available_date
+    - offer
+    - operatory_id
+    - order
+    - participants
+    - pid
+  service:
+    segments_seen:
+      services: 6
+      appointment_types: 4
+      event-types: 2
+      appointment-types: 2
+      event_types: 1
+      appointmenttypes: 1
+    providers_exposing: 15
+    providers_with_readable_schema: 15
+    operations:
+    - operation: GET collection
+      providers: 15
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 11
+      share: 0.733
+      tier: core
+    - operation: POST collection
+      providers: 9
+      share: 0.6
+      tier: core
+    - operation: DELETE item
+      providers: 8
+      share: 0.533
+      tier: core
+    - operation: UPDATE item
+      providers: 7
+      share: 0.467
+      tier: extended
+    - operation: POST item
+      providers: 3
+      share: 0.2
+      tier: extended
+    - operation: DELETE collection
+      providers: 1
+      share: 0.067
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.067
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 14
+      share: 0.933
+      type: string
+      spellings:
+      - id
+      - uuid
+      - uri
+      - _id
+      - service_id
+    - name: name
+      tier: core
+      providers: 13
+      share: 0.867
+      type: string
+      spellings:
+      - name
+      - title
+      - displayName
+    - name: description
+      tier: core
+      providers: 9
+      share: 0.6
+      type: string
+      spellings:
+      - description
+    - name: duration
+      tier: core
+      providers: 8
+      share: 0.533
+      type: integer
+      spellings:
+      - duration
+      - duration_in_minutes
+      - durationMinutes
+      - minutes
+    - name: created_at
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created_date
+    - name: is_active
+      tier: extended
+      providers: 7
+      share: 0.467
+      type: boolean
+      spellings:
+      - active
+      - hidden
+      - status
+    - name: price
+      tier: extended
+      providers: 6
+      share: 0.4
+      type: number
+      spellings:
+      - price
+    - name: updated_at
+      tier: extended
+      providers: 5
+      share: 0.333
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+    - name: color
+      tier: extended
+      providers: 4
+      share: 0.267
+      type: string
+      spellings:
+      - color
+    - name: location_id
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: integer
+      spellings:
+      - location_id
+      - locationId
+    - name: slug
+      tier: extended
+      providers: 3
+      share: 0.2
+      type: string
+      spellings:
+      - slug
+      - scheduling_url
+    long_tail_count: 184
+    long_tail_sample:
+    - booking_url
+    - category
+    - custom_name
+    - default_duration
+    - deleted_at
+    - locations
+    - metadata
+    - staff_ids
+    - type
+    - abbreviation
+    - account
+    - add_on_member_price
+    - add_on_price
+    - addon_pricing_id
+    - admin_managed
+    - after_event_buffer
+    - agent_entity_id
+    - agent_name
+    - allow_affecting_upcoming_bookings
+    - allow_rescheduling_cancelled_bookings
+    - allow_rescheduling_past_bookings
+    - allow_rr_host_choice_on_reschedule
+    - allowed_patients
+    - alternative_name
+    - appointment_type
+    - assign_all_team_members
+    - attribute
+    - before_event_buffer
+    - billable_item
+    - bookable_online
+    - booker_active_bookings_limit
+    - booker_layouts
+    - booking_fields
+    - booking_limits_count
+    - booking_limits_duration
+    - booking_method
+    - booking_proposal_count
+    - booking_requires_authentication
+    - booking_window
+    - business_lat

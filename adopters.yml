@@ -1,0 +1,228 @@
+context: scheduling
+generated: '2026-11-10'
+adopters:
+- provider: acuity-scheduling
+  apis_io: https://apis.io/providers/acuity-scheduling/
+  crosswalk: crosswalk/acuity-scheduling.yml
+  concepts:
+  - appointment
+- provider: agendapro
+  apis_io: https://apis.io/providers/agendapro/
+  crosswalk: crosswalk/agendapro.yml
+  concepts:
+  - appointment
+  - availability
+  - service
+- provider: aurinko
+  apis_io: https://apis.io/providers/aurinko/
+  crosswalk: crosswalk/aurinko.yml
+  concepts:
+  - calendar
+  - calendar_event
+- provider: avoca
+  apis_io: https://apis.io/providers/avoca/
+  crosswalk: crosswalk/avoca.yml
+  concepts:
+  - appointment
+- provider: cal-com
+  apis_io: https://apis.io/providers/cal-com/
+  crosswalk: crosswalk/cal-com.yml
+  concepts:
+  - appointment
+  - availability
+  - calendar
+  - calendar_event
+  - service
+- provider: calendly
+  apis_io: https://apis.io/providers/calendly/
+  crosswalk: crosswalk/calendly.yml
+  concepts:
+  - appointment
+  - service
+- provider: cliniko
+  apis_io: https://apis.io/providers/cliniko/
+  crosswalk: crosswalk/cliniko.yml
+  concepts:
+  - appointment
+  - service
+- provider: cronofy
+  apis_io: https://apis.io/providers/cronofy/
+  crosswalk: crosswalk/cronofy.yml
+  concepts:
+  - calendar
+  - calendar_event
+- provider: digitail
+  apis_io: https://apis.io/providers/digitail/
+  crosswalk: crosswalk/digitail.yml
+  concepts:
+  - appointment
+- provider: elation-health
+  apis_io: https://apis.io/providers/elation-health/
+  crosswalk: crosswalk/elation-health.yml
+  concepts:
+  - appointment
+  - availability
+  - service
+- provider: gingr
+  apis_io: https://apis.io/providers/gingr/
+  crosswalk: crosswalk/gingr.yml
+  concepts:
+  - appointment
+- provider: google-calendar
+  apis_io: https://apis.io/providers/google-calendar/
+  crosswalk: crosswalk/google-calendar.yml
+  concepts:
+  - calendar
+  - calendar_event
+- provider: housecall-pro
+  apis_io: https://apis.io/providers/housecall-pro/
+  crosswalk: crosswalk/housecall-pro.yml
+  concepts:
+  - appointment
+- provider: intakeq
+  apis_io: https://apis.io/providers/intakeq/
+  crosswalk: crosswalk/intakeq.yml
+  concepts:
+  - appointment
+- provider: jane-app
+  apis_io: https://apis.io/providers/jane-app/
+  crosswalk: crosswalk/jane-app.yml
+  concepts:
+  - appointment
+- provider: launch27
+  apis_io: https://apis.io/providers/launch27/
+  crosswalk: crosswalk/launch27.yml
+  concepts:
+  - appointment
+  - service
+- provider: leandata
+  apis_io: https://apis.io/providers/leandata/
+  crosswalk: crosswalk/leandata.yml
+  concepts:
+  - appointment
+- provider: luma-health
+  apis_io: https://apis.io/providers/luma-health/
+  crosswalk: crosswalk/luma-health.yml
+  concepts:
+  - appointment
+  - availability
+  - service
+- provider: marubox
+  apis_io: https://apis.io/providers/marubox/
+  crosswalk: crosswalk/marubox.yml
+  concepts:
+  - appointment
+  - availability
+  - service
+- provider: microsoft-exchange
+  apis_io: https://apis.io/providers/microsoft-exchange/
+  crosswalk: crosswalk/microsoft-exchange.yml
+  concepts:
+  - calendar
+  - calendar_event
+- provider: momence
+  apis_io: https://apis.io/providers/momence/
+  crosswalk: crosswalk/momence.yml
+  concepts:
+  - appointment
+- provider: nexhealth
+  apis_io: https://apis.io/providers/nexhealth/
+  crosswalk: crosswalk/nexhealth.yml
+  concepts:
+  - appointment
+  - availability
+  - service
+- provider: nylas
+  apis_io: https://apis.io/providers/nylas/
+  crosswalk: crosswalk/nylas.yml
+  concepts:
+  - appointment
+  - availability
+  - calendar
+  - calendar_event
+- provider: optibus
+  apis_io: https://apis.io/providers/optibus/
+  crosswalk: crosswalk/optibus.yml
+  concepts:
+  - calendar
+- provider: qminder
+  apis_io: https://apis.io/providers/qminder/
+  crosswalk: crosswalk/qminder.yml
+  concepts:
+  - appointment
+- provider: recal
+  apis_io: https://apis.io/providers/recal/
+  crosswalk: crosswalk/recal.yml
+  concepts:
+  - calendar
+  - calendar_event
+- provider: reclaim-ai
+  apis_io: https://apis.io/providers/reclaim-ai/
+  crosswalk: crosswalk/reclaim-ai.yml
+  concepts:
+  - calendar
+  - calendar_event
+- provider: servicetitan
+  apis_io: https://apis.io/providers/servicetitan/
+  crosswalk: crosswalk/servicetitan.yml
+  concepts:
+  - appointment
+  - service
+- provider: shyft
+  apis_io: https://apis.io/providers/shyft/
+  crosswalk: crosswalk/shyft.yml
+  concepts:
+  - calendar
+- provider: skedulo
+  apis_io: https://apis.io/providers/skedulo/
+  crosswalk: crosswalk/skedulo.yml
+  concepts:
+  - appointment
+  - availability
+- provider: spurwing
+  apis_io: https://apis.io/providers/spurwing/
+  crosswalk: crosswalk/spurwing.yml
+  concepts:
+  - appointment
+  - service
+- provider: tutorcruncher
+  apis_io: https://apis.io/providers/tutorcruncher/
+  crosswalk: crosswalk/tutorcruncher.yml
+  concepts:
+  - appointment
+  - availability
+  - service
+- provider: weave
+  apis_io: https://apis.io/providers/weave/
+  crosswalk: crosswalk/weave.yml
+  concepts:
+  - appointment
+  - service
+- provider: wellnessliving
+  apis_io: https://apis.io/providers/wellnessliving/
+  crosswalk: crosswalk/wellnessliving.yml
+  concepts:
+  - calendar
+- provider: znanylekarz
+  apis_io: https://apis.io/providers/znanylekarz/
+  crosswalk: crosswalk/znanylekarz.yml
+  concepts:
+  - appointment
+  - availability
+  - calendar
+  - service
+- provider: zoca
+  apis_io: https://apis.io/providers/zoca/
+  crosswalk: crosswalk/zoca.yml
+  concepts:
+  - appointment
+  - availability
+  - calendar
+  - calendar_event
+  - service
+- provider: zocdoc
+  apis_io: https://apis.io/providers/zocdoc/
+  crosswalk: crosswalk/zocdoc.yml
+  concepts:
+  - appointment
+  - availability

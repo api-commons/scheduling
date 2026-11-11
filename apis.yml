@@ -1,0 +1,55 @@
+aid: common-scheduling
+name: Calendars and Scheduling
+type: Common
+description: 'The common Calendars and Scheduling vocabulary, distilled from the harvested OpenAPI of 112 providers
+  in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common
+  names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Scheduling
+- Calendar
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/scheduling/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-scheduling:scheduling
+  name: Common Calendars and Scheduling Interface
+  description: The Calendars and Scheduling interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/scheduling
+  tags:
+  - Scheduling
+  - Calendar
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: calendar
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/schema/calendar.json
+  - type: JSONSchema
+    name: calendar_event
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/schema/calendar_event.json
+  - type: JSONSchema
+    name: appointment
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/schema/appointment.json
+  - type: JSONSchema
+    name: availability
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/schema/availability.json
+  - type: JSONSchema
+    name: service
+    url: https://raw.githubusercontent.com/api-commons/scheduling/main/schema/service.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/scheduling/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

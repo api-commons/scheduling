@@ -1,0 +1,15 @@
+provider: avoca
+apis_io: https://apis.io/providers/avoca/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - bookings
+    properties:
+      status: status
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/avoca-openapi-original.json#GET /api/v1/bookings
+    - openapi/_original/avoca-openapi-original.json#GET /api/v1/teams/{teamId}/bookings
+    - openapi/_original/avoca-openapi-original.json#GET /api/v1/teams/{teamId}/bookings/{bookingId}

@@ -1,0 +1,41 @@
+provider: tutorcruncher
+apis_io: https://apis.io/providers/tutorcruncher/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: id
+      start_at: start
+      service_id: service
+      location_id: location
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/tutorcruncher-openapi.yml#DELETE /appointments/{id}/
+    - openapi/_original/tutorcruncher-openapi.yml#GET /appointments/
+    - openapi/_original/tutorcruncher-openapi.yml#GET /appointments/{id}/
+    - openapi/_original/tutorcruncher-openapi.yml#POST /appointments/
+    - openapi/_original/tutorcruncher-openapi.yml#POST /appointments/{id}/
+  availability:
+    path_segment:
+    - availability
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/tutorcruncher-openapi.yml#GET /contractors/{id}/availability/
+  service:
+    path_segment:
+    - services
+    properties:
+      id: id
+      name: name
+      is_active: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/tutorcruncher-openapi.yml#DELETE /services/{id}/
+    - openapi/_original/tutorcruncher-openapi.yml#GET /services/
+    - openapi/_original/tutorcruncher-openapi.yml#GET /services/{id}/
+    - openapi/_original/tutorcruncher-openapi.yml#POST /services/
+    - openapi/_original/tutorcruncher-openapi.yml#POST /services/{id}/

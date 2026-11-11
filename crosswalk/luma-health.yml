@@ -1,0 +1,50 @@
+provider: luma-health
+apis_io: https://apis.io/providers/luma-health/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - appointments
+    properties:
+      id: _id
+      status: status
+      created_at: createdAt
+      duration: duration
+      updated_at: updatedAt
+      patient: patient
+      source: source
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/luma-health-openapi.yaml#DELETE /appointments/{appointmentId}
+    - openapi/_original/luma-health-openapi.yaml#GET /appointments
+    - openapi/_original/luma-health-openapi.yaml#GET /appointments/{appointmentId}
+    - openapi/_original/luma-health-openapi.yaml#POST /appointments
+    - openapi/_original/luma-health-openapi.yaml#PUT /appointments/{appointmentId}
+  availability:
+    path_segment:
+    - availabilities
+    properties:
+      end_at: endDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/luma-health-openapi.yaml#GET /availabilities
+    - openapi/_original/luma-health-openapi.yaml#GET /availabilities/{availabilitiesId}
+    - openapi/_original/luma-health-openapi.yaml#PUT /availabilities/{availabilitiesId}
+  service:
+    path_segment:
+    - appointmenttypes
+    properties:
+      id: _id
+      name: name
+      description: description
+      duration: duration
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/luma-health-openapi.yaml#DELETE /appointmentTypes/{appointmentTypeId}
+    - openapi/_original/luma-health-openapi.yaml#DELETE /specialties/{specialtyId}/appointmentTypes/{appointmentTypeId}
+    - openapi/_original/luma-health-openapi.yaml#GET /appointmentTypes
+    - openapi/_original/luma-health-openapi.yaml#GET /appointmentTypes/{appointmentTypeId}
+    - openapi/_original/luma-health-openapi.yaml#GET /specialties/{specialtyId}/appointmentTypes

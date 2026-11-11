@@ -1,0 +1,36 @@
+provider: launch27
+apis_io: https://apis.io/providers/launch27/
+context: scheduling
+generated: '2026-11-10'
+concepts:
+  appointment:
+    path_segment:
+    - bookings
+    - booking
+    properties:
+      id: id
+      status: state
+      location_id: location_id
+      name:
+      - name
+      - summary
+      metadata:
+      - custom
+      - custom_fields
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/launch27-openapi.yml#GET /customer/bookings
+    - openapi/_original/launch27-openapi.yml#GET /customer/bookings/{id}
+    - openapi/_original/launch27-openapi.yml#GET /policy/booking
+    - openapi/_original/launch27-openapi.yml#POST /booking
+    - openapi/_original/launch27-openapi.yml#POST /customer/bookings
+  service:
+    path_segment:
+    - services
+    properties:
+      id: id
+      name: name
+      price: price
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/launch27-openapi.yml#GET /booking/services
