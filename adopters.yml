@@ -1,5 +1,5 @@
 context: scheduling
-generated: '2026-11-10'
+generated: '2026-11-11'
 adopters:
 - provider: acuity-scheduling
   apis_io: https://apis.io/providers/acuity-scheduling/

@@ -18,7 +18,7 @@ generated. Every number below is a count of providers.
 | availability | 13 | 11 | end_at 64%, start_at 55% | slots 5, availability 5, available_slots 2, availabilities 2 |
 | service | 15 | 15 | id 93%, name 93%, description 60%, duration 53% | services 6, appointment_types 4, event-types 2, appointment-types 2 |
 
-Cohort: 112 providers with harvested OpenAPI, 38 crosswalks. Of the providers exposing a calendar: 38% create, 92% list, 31% fetch, 31% update, 23% delete. Generated 2026-11-10 by build.py.
+Cohort: 112 providers with harvested OpenAPI, 38 crosswalks. Of the providers exposing a calendar: 38% create, 92% list, 31% fetch, 31% update, 23% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

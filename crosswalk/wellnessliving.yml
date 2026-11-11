@@ -1,7 +1,7 @@
 provider: wellnessliving
 apis_io: https://apis.io/providers/wellnessliving/
 context: scheduling
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   calendar:
     path_segment:

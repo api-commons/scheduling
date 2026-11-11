@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Calendars and Scheduling (API Commons)
-  version: 0.1.0-draft.20261110
+  version: 0.1.0-draft.20261111
   description: 'The common Calendars and Scheduling interface, distilled from the harvested OpenAPI of 112 providers
     in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
     so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
@@ -104,7 +104,7 @@ paths:
     parameters:
     - $ref: '#/components/parameters/calendar_id'
     get:
-      operationId: listCalendarEvents
+      operationId: listEvents
       summary: List events
       tags:
       - Calendar Events
@@ -287,7 +287,7 @@ paths:
               schema: *id003
   /availability:
     get:
-      operationId: listAvailabilities
+      operationId: listAvailability
       summary: List availability
       tags:
       - Availabilities
